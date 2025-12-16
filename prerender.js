@@ -22,13 +22,26 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getPrerenderedPaths } from './prerender.config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const distPath = path.resolve(__dirname, 'dist');
 const templatePath = path.join(distPath, 'index.html');
+
+/**
+ * Routes to prerender - inline configuration to avoid import issues
+ */
+const prerenderRoutes = [
+  '/',
+  '/about',
+  '/fish-collagen-peptide',
+  '/fish-gelatin',
+  '/applications/fish-collagen-peptide',
+  '/applications/fish-gelatin',
+  '/contact',
+  '/inquiry',
+];
 
 /**
  * Create directory if it doesn't exist
@@ -92,17 +105,14 @@ function prerender() {
     process.exit(1);
   }
   
-  // Get all routes to prerender
-  const routes = getPrerenderedPaths();
-  
-  console.log(`📄 Found ${routes.length} routes to prerender:\n`);
-  routes.forEach(route => console.log(`   - ${route}`));
+  console.log(`📄 Found ${prerenderRoutes.length} routes to prerender:\n`);
+  prerenderRoutes.forEach(route => console.log(`   - ${route}`));
   console.log('');
   
   // Prerender each route
-  routes.forEach(prerenderRoute);
+  prerenderRoutes.forEach(prerenderRoute);
   
-  console.log(`\n✨ Prerendering complete! Generated ${routes.length} static HTML files.\n`);
+  console.log(`\n✨ Prerendering complete! Generated ${prerenderRoutes.length} static HTML files.\n`);
   console.log('📁 Output structure:');
   console.log('   dist/');
   console.log('   ├── index.html (/)');
