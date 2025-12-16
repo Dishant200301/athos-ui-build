@@ -1,11 +1,12 @@
 import { Mail, Youtube, Instagram, Facebook, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const usefulLinks = [
-  { label: "About Us", href: "#about" },
-  { label: "Fish Collagen Peptide", href: "#benefits" },
-  { label: "Fish Gelatin", href: "#" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "About Us", href: "/about" },
+  { label: "Fish Collagen Peptide", href: "/fish-collagen-peptide" },
+  { label: "Fish Gelatin", href: "/fish-gelatin" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const Footer = () => {
@@ -60,13 +61,13 @@ const Footer = () => {
               <ul className="space-y-4">
                 {usefulLinks.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="flex items-center gap-2 text-secondary-foreground/90 hover:text-secondary-foreground transition-colors"
                     >
                       <ChevronRight className="w-4 h-4" />
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

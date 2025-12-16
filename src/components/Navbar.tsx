@@ -64,9 +64,11 @@ const Navbar = () => {
         </ul>
 
         {/* Inquiry Button */}
-        <Button className="hidden lg:flex btn-primary">
-          Inquiry
-        </Button>
+        <Link to="/inquiry">
+          <Button className="hidden lg:flex btn-primary">
+            Inquiry
+          </Button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -113,7 +115,9 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-              <Button className="w-full btn-primary mt-2">Inquiry</Button>
+              <Link to="/inquiry" onClick={() => setMobileMenuOpen(false)}>
+                <Button className="w-full btn-primary mt-2">Inquiry</Button>
+              </Link>
             </li>
           </ul>
         </div>
