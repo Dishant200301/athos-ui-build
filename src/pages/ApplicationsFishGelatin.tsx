@@ -16,7 +16,7 @@ const ApplicationsFishGelatin = () => {
 
             <main className="flex-1">
                 {/* Pharmaceutical Industry Section - Light Blue Background */}
-                <section className="py-12 md:py-16 bg-[#EDF5F8]">
+                <section className="py-12 px-0 md:py-16 md:px-4 bg-[#EDF5F8]">
                     <div className="max-w-[1200px] mx-auto px-4 md:px-0">
                         <h1 className="text-[28px] md:text-[32px] font-bold text-[#1D7AA3] mb-8">
                             Application of Athos Fish Gelatin in the Pharmaceutical Industry
@@ -138,7 +138,7 @@ const ApplicationsFishGelatin = () => {
                 </section>
 
                 {/* Food Industry Section - White Background */}
-                <section className="py-12 md:py-16 bg-white">
+                <section className="py-12 md:px-4 md:py-16 bg-white">
                     <div className="max-w-[1200px] mx-auto px-4 md:px-0">
                         <h1 className="text-[28px] md:text-[32px] font-bold text-[#1D7AA3] mb-8">
                             Application of Athos Fish Gelatin in the Food Industry

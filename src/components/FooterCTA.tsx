@@ -11,7 +11,7 @@ const FooterCTA = () => {
       }}
     >
       <div className="absolute top-[29px] left-1/2 -translate-x-1/2 text-center">
-        <h2 className="w-[565px] max-w-full text-[24px] md:text-[32px] leading-[38px] font-bold text-[#1D7AA3] mb-[25px]">
+        <h2 className="w-[565px] max-w-full text-[20px] md:text-[32px] leading-[38px] font-bold text-[#1D7AA3] mb-[25px]">
           Get in touch for a better connection.
         </h2>
 

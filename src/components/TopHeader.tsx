@@ -56,7 +56,7 @@ const TopHeader = () => {
 
           {/* Dropdown Menu */}
           {isDropdownOpen && (
-            <div className="absolute right-0 top-full bg-white border border-gray-200 rounded-md shadow-[0_4px_12px_rgba(0,0,0,0.1)] min-w-[180px] z-50 overflow-hidden py-1">
+            <div className="absolute right-0 top-full bg-white border border-gray-200 rounded-md shadow-[0_4px_12px_rgba(0,0,0,0.1)] min-w-[180px] z-[1000] overflow-hidden py-1">
               {languages.map((language) => (
                 <button
                   key={language.code}
