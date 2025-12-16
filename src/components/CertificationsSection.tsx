@@ -1,34 +1,77 @@
-const certifications = [
-  { name: "HALAL", abbr: "حلال" },
-  { name: "FSSC 22000", abbr: "FSSC" },
-  { name: "GMP", abbr: "GMP" },
-  { name: "ISO 9001", abbr: "9001" },
-  { name: "ISO 22000", abbr: "22000" },
-  { name: "HACCP", abbr: "HACCP" },
+const certificationLogos = [
+  "/image/logo-1.webp",
+  "/image/logo-2.webp",
+  "/image/logo-3.webp",
+  "/image/logo-4.webp",
+  "/image/logo-5.webp",
+  "/image/logo-6.webp",
+  "/image/logo-7.webp",
+  "/image/logo-8.webp",
+  "/image/logo-9.webp",
+  "/image/logo-10.webp",
 ];
 
 const CertificationsSection = () => {
+  // Triple the logos for seamless infinite scroll
+  const allLogos = [...certificationLogos, ...certificationLogos, ...certificationLogos];
+
+  // Calculate the width of 2 cards + gap (150px + 150px + 32px gap)
+  const cardWidth = 150;
+  const gap = 32;
+  const moveDistance = (cardWidth + gap) * 2; // Move 2 cards at a time
+
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-athos-dark">
-      <div className="container-custom">
+    <section className="py-16 md:py-20 lg:py-24 bg-white overflow-hidden max-w-[1200px] mx-auto">
+      <div className="px-4">
         <h2 className="text-2xl md:text-3xl lg:text-[32px] font-bold text-primary text-center mb-12">
           Globally Recognized Certifications
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 justify-items-center">
-          {certifications.map((cert) => (
-            <div
-              key={cert.name}
-              className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] bg-card rounded-[10px] border border-[#D6EAF1] flex flex-col items-center justify-center p-4"
-            >
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">
-                {cert.abbr}
+        {/* Infinite Scroll Container */}
+        <div className="relative">
+          <style>{`
+            @keyframes stepScroll {
+              0% {
+                transform: translateX(0);
+              }
+              20% {
+                transform: translateX(-${moveDistance}px);
+              }
+              40% {
+                transform: translateX(-${moveDistance * 2}px);
+              }
+              60% {
+                transform: translateX(-${moveDistance * 3}px);
+              }
+              80% {
+                transform: translateX(-${moveDistance * 4}px);
+              }
+              100% {
+                transform: translateX(-${moveDistance * 5}px);
+              }
+            }
+            .animate-step-scroll {
+              animation: stepScroll 15s ease-in-out infinite;
+            }
+            .animate-step-scroll:hover {
+              animation-play-state: paused;
+            }
+          `}</style>
+
+          <div className="flex gap-8 animate-step-scroll">
+            {allLogos.map((logo, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-[150px] h-[150px] flex items-center justify-center bg-white border border-athos-card-border rounded-lg p-2"
+              >
+                <img
+                  src={logo}
+                  alt={`Certification ${(index % certificationLogos.length) + 1}`}
+                  className="max-w-full max-h-full object-contain"
+                />
               </div>
-              <div className="text-xs md:text-sm text-muted-foreground text-center">
-                {cert.name}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

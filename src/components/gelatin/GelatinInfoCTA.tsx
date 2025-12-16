@@ -1,18 +1,17 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 
 const GelatinInfoCTA = () => {
   return (
-    <section className="py-12 md:py-16 bg-primary text-primary-foreground">
-      <div className="container-custom text-center">
-        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-[160%] max-w-4xl mx-auto mb-8">
-          World's Best Premium Quality Fish Gelatin
+    <section className="py-12 md:py-16 lg:py-28 text-primary">
+      <div className="max-w-[1300px] mx-auto px-4 text-center">
+        <h1 className="text-[20px] md:text-[28px] lg:text-[27px] font-bold leading-[140%] max-w-8xl mx-auto mb-8 xl:mb-12">
+          Athos Collagen Pvt. Ltd. is leading Manufacturer and Exporter of Fish Gelatin from India.
         </h1>
-        
+
         <Link to="/inquiry">
-          <Button variant="secondary" className="bg-background text-primary hover:bg-background/90">
+          <button className="bg-primary text-white px-6 py-2.5 rounded-tl-md rounded-br-md font-medium hover:bg-gray-100 transition-colors">
             Inquiry
-          </Button>
+          </button>
         </Link>
       </div>
     </section>

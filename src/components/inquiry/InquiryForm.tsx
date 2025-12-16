@@ -1,19 +1,6 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
 
 const InquiryForm = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     company: "",
     contactName: "",
@@ -22,174 +9,153 @@ const InquiryForm = () => {
     quantity: "",
     country: "",
     phone: "",
-    message: ""
+    message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Inquiry Submitted",
-      description: "Thank you for your inquiry. We will get back to you soon.",
-    });
-    setFormData({
-      company: "",
-      contactName: "",
-      email: "",
-      productName: "Fish Collagen Peptide",
-      quantity: "",
-      country: "",
-      phone: "",
-      message: ""
-    });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
-    <section className="py-12 md:py-16 bg-background">
-      <div className="container-custom max-w-4xl">
-        <h1 className="text-3xl md:text-[40px] font-bold text-primary mb-10">
+    <section className="bg-white py-12">
+      {/* CONTAINER */}
+      <div className="max-w-[1300px] mx-auto px-4 md:px-8 lg:px-8 xl:px-0">
+        {/* HEADING */}
+        <h1 className="text-[30px] md:text-[40px] font-bold text-[#1D7AA3] mb-4 ">
           Inquiry
         </h1>
-        
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Company Name - Full Width */}
+
+        {/* FORM */}
+        <form className="space-y-2">
+          {/* Company Name */}
           <div>
-            <Label htmlFor="company" className="text-muted-foreground">
+            <label className="block text-sm text-gray-600 mb-1">
               Company name
-            </Label>
-            <Input
-              id="company"
+            </label>
+            <input
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="mt-1"
+              className="w-full h-[40px] rounded-md border border-gray-300 px-3 focus:outline-none focus:border-[#1D7AA3]"
             />
           </div>
-          
-          {/* Row 1: Contact Name + Email */}
-          <div className="grid md:grid-cols-2 gap-4">
+
+          {/* Contact + Email */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <Label htmlFor="contactName" className="text-muted-foreground">
-                Contact Person Name<span className="text-destructive">*</span>
-              </Label>
-              <Input
-                id="contactName"
+              <label className="block text-sm text-gray-600 mb-1">
+                Contact Person Name *
+              </label>
+              <input
                 name="contactName"
+                required
                 value={formData.contactName}
                 onChange={handleChange}
-                required
-                className="mt-1"
+                className="w-full h-[40px] rounded-md border border-gray-300 px-3"
               />
             </div>
+
             <div>
-              <Label htmlFor="email" className="text-muted-foreground">
-                Email<span className="text-destructive">*</span>
-              </Label>
-              <Input
-                id="email"
-                name="email"
+              <label className="block text-sm text-gray-600 mb-1">
+                Email *
+              </label>
+              <input
                 type="email"
+                name="email"
+                required
                 value={formData.email}
                 onChange={handleChange}
-                required
-                className="mt-1"
+                className="w-full h-[40px] rounded-md border border-gray-300 px-3"
               />
             </div>
           </div>
-          
-          {/* Row 2: Product Name + Quantity */}
-          <div className="grid md:grid-cols-2 gap-4">
+
+          {/* Product + Quantity */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <Label htmlFor="productName" className="text-muted-foreground">
-                Product Name<span className="text-destructive">*</span>
-              </Label>
-              <Select
+              <label className="block text-sm text-gray-600 mb-1">
+                Product Name *
+              </label>
+              <select
+                className="w-full h-[44px] rounded-md border border-gray-300 px-3 bg-white"
                 value={formData.productName}
-                onValueChange={(value) => setFormData(prev => ({ ...prev, productName: value }))}
+                onChange={(e) =>
+                  setFormData({ ...formData, productName: e.target.value })
+                }
               >
-                <SelectTrigger className="mt-1">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="Fish Collagen Peptide">Fish Collagen Peptide</SelectItem>
-                  <SelectItem value="Fish Gelatin">Fish Gelatin</SelectItem>
-                </SelectContent>
-              </Select>
+                <option>Fish Collagen Peptide</option>
+                <option>Fish Gelatin</option>
+                <option>Fish Collagen Peptide & Fish Gelatin</option>
+              </select>
             </div>
+
             <div>
-              <Label htmlFor="quantity" className="text-muted-foreground">
-                Quantity<span className="text-destructive">*</span>
-              </Label>
-              <Input
-                id="quantity"
+              <label className="block text-sm text-gray-600 mb-1">
+                Quantity *
+              </label>
+              <input
                 name="quantity"
+                required
+                placeholder="Ex: 100 ton/kg/lb"
                 value={formData.quantity}
                 onChange={handleChange}
-                placeholder="Ex: 100 ton/kg/lb"
-                required
-                className="mt-1"
+                className="w-full h-[40px] rounded-md border border-gray-300 px-3"
               />
             </div>
           </div>
-          
-          {/* Row 3: Country + Phone */}
-          <div className="grid md:grid-cols-2 gap-4">
+
+          {/* Country + Phone */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <Label htmlFor="country" className="text-muted-foreground">
-                Country<span className="text-destructive">*</span>
-              </Label>
-              <Input
-                id="country"
+              <label className="block text-sm text-gray-600 mb-1">
+                Country *
+              </label>
+              <input
                 name="country"
+                required
                 value={formData.country}
                 onChange={handleChange}
-                required
-                className="mt-1"
+                className="w-full h-[40px] rounded-md border border-gray-300 px-3"
               />
             </div>
+
             <div>
-              <Label htmlFor="phone" className="text-muted-foreground">
-                Phone<span className="text-destructive">*</span>
-              </Label>
-              <Input
-                id="phone"
+              <label className="block text-sm text-gray-600 mb-1">
+                Phone *
+              </label>
+              <input
                 name="phone"
-                type="tel"
+                required
                 value={formData.phone}
                 onChange={handleChange}
-                required
-                className="mt-1"
+                className="w-full h-[40px] rounded-md border border-gray-300 px-3"
               />
             </div>
           </div>
-          
+
           {/* Message */}
           <div>
-            <Label htmlFor="message" className="text-muted-foreground">
-              Message<span className="text-destructive">*</span>
-            </Label>
-            <Textarea
-              id="message"
+            <label className="block text-sm text-gray-600 mb-1">
+              Message *
+            </label>
+            <textarea
               name="message"
+              required
               value={formData.message}
               onChange={handleChange}
-              required
-              className="mt-1 min-h-[108px]"
+              className="w-full min-h-[110px] rounded-md border border-gray-300 px-3 py-2"
             />
           </div>
-          
-          <Button 
-            type="submit" 
-            className="bg-[#198754] hover:bg-[#198754]/90 text-white rounded-tl-md rounded-br-md rounded-tr-none rounded-bl-none"
+
+          {/* Submit */}
+          <button
+            type="submit"
+            className="mt-2 bg-[#198754] text-white px-6 py-2 rounded-tl-md rounded-br-md hover:bg-[#157347]"
           >
             Submit
-          </Button>
+          </button>
         </form>
       </div>
     </section>

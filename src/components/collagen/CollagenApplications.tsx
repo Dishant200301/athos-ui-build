@@ -69,7 +69,7 @@ const CollagenApplications = () => {
             <h2 className="text-2xl md:text-[32px] font-bold text-primary leading-[120%] mb-10">
               Application of the Fish Collagen Peptide
             </h2>
-            
+
             <div className="space-y-8">
               {applications.map((section, index) => (
                 <div key={index}>
@@ -79,7 +79,7 @@ const CollagenApplications = () => {
                   <ul className="space-y-2">
                     {section.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start gap-3 text-muted-foreground">
-                        <span className="mt-1">•</span>
+                        <span className="mt-1 text-[#66b036]">▲</span>
                         <span className="text-base leading-[150%]">{item}</span>
                       </li>
                     ))}
@@ -88,33 +88,33 @@ const CollagenApplications = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Right Column - Images */}
           <div className="hidden lg:flex flex-col gap-6 items-center">
             <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-athos-green/20 flex items-center justify-center overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400" 
+              <img
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400"
                 alt="Fitness and health"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-athos-green/20 flex items-center justify-center overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400" 
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400"
                 alt="Healthy food"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-athos-green/20 flex items-center justify-center overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400" 
+              <img
+                src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400"
                 alt="Skincare"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
         </div>
-        
+
         {/* Highlight Box */}
         <div className="mt-12 bg-background border border-border rounded-[20px] p-6 md:p-8">
           <p className="text-lg md:text-xl font-bold text-primary text-center leading-[150%]">

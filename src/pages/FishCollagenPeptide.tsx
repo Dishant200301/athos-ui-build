@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import TopHeader from "@/components/TopHeader";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,7 +11,11 @@ import FooterCTA from "@/components/FooterCTA";
 
 const FishCollagenPeptide = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-hidden">
+      <Helmet>
+        <title>Fish Collagen Peptide - Athos Collagen | Premium Marine Collagen</title>
+        <meta name="description" content="Discover Athos Fish Collagen Peptide - premium quality marine collagen with high bioavailability. Benefits for skin, joints, hair, and overall wellness." />
+      </Helmet>
       <TopHeader />
       <Navbar />
       <main>
@@ -18,7 +23,7 @@ const FishCollagenPeptide = () => {
         <CollagenUniqueness />
         <AminoAcidComposition />
         <CollagenBenefits />
-        <CollagenApplications />
+
         <FooterCTA />
       </main>
       <Footer />

@@ -1,5 +1,4 @@
 import { Mail, Youtube, Instagram, Facebook, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const usefulLinks = [
@@ -11,74 +10,42 @@ const usefulLinks = [
 
 const Footer = () => {
   return (
-    <footer id="contact">
-      {/* CTA Section with Animated Fish Pattern */}
-      <section className="py-12 md:py-16 bg-athos-light relative overflow-hidden">
-        {/* Animated Fish Pattern */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Left fish group - moving right */}
-          <div 
-            className="absolute inset-0 animate-[swim-right_20s_linear_infinite]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40' viewBox='0 0 80 40'%3E%3Cpath d='M60 20c-8 0-15 5-20 10 5 5 12 10 20 10 5 0 10-3 15-8l-5-6 5-6c-5-5-10-8-15 0z' fill='%231D7AA3' fill-opacity='0.08'/%3E%3Ccircle cx='65' cy='18' r='2' fill='%231D7AA3' fill-opacity='0.15'/%3E%3C/svg%3E")`,
-              backgroundSize: '160px 80px',
-            }}
-          />
-          {/* Right fish group - moving left */}
-          <div 
-            className="absolute inset-0 animate-[swim-left_25s_linear_infinite]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40' viewBox='0 0 80 40'%3E%3Cpath d='M20 20c8 0 15 5 20 10-5 5-12 10-20 10-5 0-10-3-15-8l5-6-5-6c5-5 10-8 15 0z' fill='%231D7AA3' fill-opacity='0.06'/%3E%3C/svg%3E")`,
-              backgroundSize: '200px 100px',
-              backgroundPosition: '50px 20px',
-            }}
-          />
-          {/* Floating bubbles */}
-          <div 
-            className="absolute inset-0 animate-[float-up_15s_ease-in-out_infinite]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='20' cy='80' r='3' fill='%231D7AA3' fill-opacity='0.1'/%3E%3Ccircle cx='60' cy='60' r='2' fill='%231D7AA3' fill-opacity='0.08'/%3E%3Ccircle cx='85' cy='75' r='4' fill='%231D7AA3' fill-opacity='0.06'/%3E%3C/svg%3E")`,
-              backgroundSize: '200px 200px',
-            }}
-          />
-        </div>
-        
-        <div className="container-custom relative z-10 text-center">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-foreground mb-6 animate-fade-in">
-            Get in touch for a better connection.
-          </h2>
-          <Link to="/contact">
-            <Button className="btn-primary text-base px-8 py-3 hover-scale">
-              Contact Us
-            </Button>
-          </Link>
-        </div>
-      </section>
-
+    <div className="-mt-32">
       {/* Animated Wave Separator */}
-      <div className="relative h-20 md:h-24 overflow-hidden">
-        <svg
-          viewBox="0 0 1440 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute bottom-0 w-[200%] h-full animate-[wave_8s_ease-in-out_infinite]"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 120V60C120 20 240 80 360 60C480 40 600 80 720 60C840 40 960 80 1080 60C1200 40 1320 80 1440 60V120H0Z"
-            fill="hsl(var(--secondary))"
-          />
-          <path
-            d="M0 120V70C120 90 240 50 360 70C480 90 600 50 720 70C840 90 960 50 1080 70C1200 90 1320 50 1440 70V120H0Z"
-            fill="hsl(var(--secondary))"
-            fillOpacity="0.5"
-          />
+      <div className="ondebox">
+        <svg className="onde" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
+          <defs>
+            <path id="onda" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352Z" />
+          </defs>
+          <g className="parallaxonde">
+            <use xlinkHref="#onda" x="48" y="8" fill="rgba(29, 122, 163, 0.05)" />
+            <use xlinkHref="#onda" x="48" y="3" fill="rgba(29, 122, 163, 0.3)" />
+            <use xlinkHref="#onda" x="48" y="5" fill="rgba(29, 122, 163, 0.4)" />
+            <use xlinkHref="#onda" x="48" y="7" fill="hsl(var(--secondary))" />
+          </g>
         </svg>
       </div>
 
-      {/* Main Footer */}
-      <section className="bg-secondary py-12 md:py-16">
-        <div className="container-custom">
+      {/* Main Footer with Bubbles */}
+      <footer className="bg-secondary py-12 md:py-16 relative overflow-hidden">
+        {/* Bubbles Animation */}
+        <div className="bubbles">
+          <div className="bubble bubble1"></div>
+          <div className="bubble bubble2"></div>
+          <div className="bubble bubble3"></div>
+          <div className="bubble bubble4"></div>
+          <div className="bubble bubble5"></div>
+          <div className="bubble bubble6"></div>
+          <div className="bubble bubble7"></div>
+          <div className="bubble bubble8"></div>
+          <div className="bubble bubble9"></div>
+          <div className="bubble bubble10"></div>
+          <div className="bubble bubble11"></div>
+          <div className="bubble bubble12"></div>
+        </div>
+
+        <div className="max-w-[1300px] mx-auto px-4 relative z-10">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Useful Links */}
             <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
@@ -107,7 +74,7 @@ const Footer = () => {
               <h3 className="text-lg font-bold text-secondary-foreground mb-6">
                 Get In Touch
               </h3>
-              
+
               <a
                 href="mailto:inquiry@athoscollagen.com"
                 className="group flex items-center gap-3 text-secondary-foreground/90 hover:text-secondary-foreground transition-all duration-300 mb-6"
@@ -122,21 +89,21 @@ const Footer = () => {
                 <p className="text-secondary-foreground/90 mb-4">Follow Us:</p>
                 <div className="flex items-center gap-4">
                   <a
-                    href="#"
+                    href="https://www.youtube.com/watch?v=-7ex7ZuD6mQ"
                     className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-[#FF0000] hover:scale-110 group"
                     aria-label="YouTube"
                   >
                     <Youtube className="w-5 h-5 text-secondary-foreground transition-colors duration-300 group-hover:text-white" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/athoscollagen/"
                     className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737] hover:scale-110 group"
                     aria-label="Instagram"
                   >
                     <Instagram className="w-5 h-5 text-secondary-foreground transition-colors duration-300 group-hover:text-white" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/athosfishcollagen/"
                     className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-[#1877F2] hover:scale-110 group"
                     aria-label="Facebook"
                   >
@@ -158,7 +125,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </section>
+      </footer>
 
       {/* Bottom Bar */}
       <section className="h-[43px] bg-athos-footer flex items-center justify-center">
@@ -166,7 +133,221 @@ const Footer = () => {
           © 2024 Athos Collagen Pvt. Ltd. All rights reserved.
         </p>
       </section>
-    </footer>
+
+      {/* Styles for Wave and Bubble Animations */}
+      <style>{`
+        .ondebox {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          line-height: 0;
+        }
+        
+        .onde {
+          position: relative;
+          width: 100%;
+          height: 15vh;
+          margin-bottom: -7px;
+          min-height: 100px;
+          max-height: 150px;
+        }
+        
+        @media (max-width: 768px) {
+          .onde {
+            height: 40px;
+            min-height: 40px;
+          }
+        }
+        
+        .parallaxonde > use {
+          animation: move-forever 15s cubic-bezier(.55,.5,.45,.5) infinite;
+        }
+        
+        .parallaxonde > use:nth-child(1) {
+          animation-delay: -2s;
+          animation-duration: 4s;
+          animation: move-left 4s linear infinite;
+        }
+        
+        .parallaxonde > use:nth-child(2) {
+          animation-delay: -3s;
+          animation-duration: 6s;
+          animation: move-right 6s linear infinite;
+        }
+        
+        .parallaxonde > use:nth-child(3) {
+          animation-delay: -4s;
+          animation-duration: 8s;
+          animation: move-left 8s linear infinite;
+        }
+        
+        .parallaxonde > use:nth-child(4) {
+          animation-delay: -5s;
+          animation-duration: 12s;
+          animation: move-right 12s linear infinite;
+        }
+        
+        @keyframes move-forever {
+          0% {
+            transform: translate3d(-90px,0,0);
+          }
+          100% {
+            transform: translate3d(85px,0,0);
+          }
+        }
+        
+        @keyframes move-left {
+          0% {
+            transform: translate3d(90px,0,0);
+          }
+          100% {
+            transform: translate3d(-85px,0,0);
+          }
+        }
+        
+        @keyframes move-right {
+          0% {
+            transform: translate3d(-90px,0,0);
+          }
+          100% {
+            transform: translate3d(85px,0,0);
+          }
+        }
+
+        /* Bubbles Animation */
+        .bubbles {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: 5;
+          pointer-events: none;
+        }
+
+        .bubble {
+          position: absolute;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          animation: bubble-rise 4s infinite ease-in-out;
+        }
+
+        .bubble1 {
+          width: 4px;
+          height: 4px;
+          left: 8%;
+          animation-delay: 0s;
+          animation-duration: 2.8s;
+        }
+
+        .bubble2 {
+          width: 15px;
+          height: 15px;
+          left: 18%;
+          animation-delay: 0.3s;
+          animation-duration: 4.2s;
+        }
+
+        .bubble3 {
+          width: 7px;
+          height: 7px;
+          left: 28%;
+          animation-delay: 0.8s;
+          animation-duration: 3.1s;
+        }
+
+        .bubble4 {
+          width: 12px;
+          height: 12px;
+          left: 42%;
+          animation-delay: 1.2s;
+          animation-duration: 4.7s;
+        }
+
+        .bubble5 {
+          width: 5px;
+          height: 5px;
+          left: 55%;
+          animation-delay: 1.8s;
+          animation-duration: 2.9s;
+        }
+
+        .bubble6 {
+          width: 9px;
+          height: 9px;
+          left: 68%;
+          animation-delay: 2.1s;
+          animation-duration: 3.6s;
+        }
+
+        .bubble7 {
+          width: 6px;
+          height: 6px;
+          left: 78%;
+          animation-delay: 2.7s;
+          animation-duration: 3.4s;
+        }
+
+        .bubble8 {
+          width: 13px;
+          height: 13px;
+          left: 88%;
+          animation-delay: 3.2s;
+          animation-duration: 4.9s;
+        }
+
+        .bubble9 {
+          width: 3px;
+          height: 3px;
+          left: 15%;
+          animation-delay: 0.6s;
+          animation-duration: 2.5s;
+        }
+
+        .bubble10 {
+          width: 18px;
+          height: 18px;
+          left: 35%;
+          animation-delay: 1.5s;
+          animation-duration: 5.2s;
+        }
+
+        .bubble11 {
+          width: 8px;
+          height: 8px;
+          left: 62%;
+          animation-delay: 2.3s;
+          animation-duration: 3.8s;
+        }
+
+        .bubble12 {
+          width: 11px;
+          height: 11px;
+          left: 82%;
+          animation-delay: 3.8s;
+          animation-duration: 4.1s;
+        }
+
+        @keyframes bubble-rise {
+          0% {
+            bottom: 0;
+            opacity: 0;
+            transform: translateX(0) scale(0.5);
+          }
+          10% {
+            opacity: 1;
+          }
+          90% {
+            opacity: 0.8;
+          }
+          100% {
+            bottom: 100%;
+            opacity: 0;
+            transform: translateX(20px) scale(1.2);
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 

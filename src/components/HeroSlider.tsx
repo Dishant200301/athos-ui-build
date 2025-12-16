@@ -3,16 +3,24 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1920&h=1080&fit=crop",
+    image: "/image/hero-1.jpg",
     alt: "Fish collagen production facility",
+    cta: "Make life healthy & beautiful"
   },
   {
-    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&h=1080&fit=crop",
+    image: "/image/hero-2.jpg",
     alt: "Laboratory research",
+    cta: "Leading manufacturer and supplier of Fish Collagen Peptide & Fish Gelatin"
   },
   {
-    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1920&h=1080&fit=crop",
+    image: "/image/hero-3.jpg",
     alt: "Premium collagen products",
+    cta: "Fish Collagen Peptide for healthy future"
+  },
+  {
+    image: "/image/hero-4.jpg",
+    alt: "Quality assurance",
+    cta: "Worldwide Fish Collagen Peptide & Fish Gelatin specialist"
   },
 ];
 
@@ -46,25 +54,23 @@ const HeroSlider = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-700 ${index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
           >
             <img
               src={slide.image}
               alt={slide.alt}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-primary/30" />
           </div>
         ))}
       </div>
 
-      {/* CTA Overlay */}
-      <div className="absolute bottom-20 left-4 md:left-8 lg:left-16 xl:left-[300px] z-20">
-        <div className="bg-green-600/80 backdrop-blur-sm rounded-tl-2xl rounded-br-2xl px-6 md:px-10 py-4 md:py-5">
-          <p className="text-primary-foreground text-xl md:text-2xl lg:text-[28px] font-semibold text-center">
-            Make life healthy & beautiful
+      {/* CTA Overlay - Changes based on current slide */}
+      <div className="absolute bottom-20 left-4 md:left-8 lg:left-16 xl:left-[200px] z-20">
+        <div className="bg-green-600/80 backdrop-blur-sm rounded-tl-2xl rounded-br-2xl px-6 md:px-10 py-4 md:py-5 max-w-[450px]">
+          <p className="text-primary-foreground text-xl md:text-2xl lg:text-[28px] font-semibold text-center leading-tight">
+            {slides[currentSlide].cta}
           </p>
         </div>
       </div>
@@ -91,11 +97,10 @@ const HeroSlider = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`rounded-full transition-all ${
-              index === currentSlide
-                ? "w-3 h-3 bg-secondary"
-                : "w-2.5 h-2.5 bg-muted-foreground/50"
-            }`}
+            className={`rounded-full transition-all ${index === currentSlide
+              ? "w-3 h-3 bg-secondary"
+              : "w-2.5 h-2.5 bg-muted-foreground/50"
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

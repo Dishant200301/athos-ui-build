@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import TopHeader from "@/components/TopHeader";
 import Navbar from "@/components/Navbar";
 import HeroSlider from "@/components/HeroSlider";
@@ -7,10 +8,15 @@ import BenefitsSection from "@/components/BenefitsSection";
 import ExportSection from "@/components/ExportSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import Footer from "@/components/Footer";
+import FooterCTA from "@/components/FooterCTA";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
+      <Helmet>
+        <title>Athos Collagen - Premium Fish Collagen Peptide & Fish Gelatin Manufacturer</title>
+        <meta name="description" content="Leading manufacturer and exporter of premium quality Fish Collagen Peptide and Fish Gelatin. World-class marine collagen products for health and wellness globally." />
+      </Helmet>
       <TopHeader />
       <Navbar />
       <main>
@@ -21,6 +27,7 @@ const Index = () => {
         <ExportSection />
         <CertificationsSection />
       </main>
+      <FooterCTA />
       <Footer />
     </div>
   );

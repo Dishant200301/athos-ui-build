@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import TopHeader from "@/components/TopHeader";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,9 +9,13 @@ import ContactForm from "@/components/contact/ContactForm";
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Contact Us - Athos Collagen | Get in Touch</title>
+        <meta name="description" content="Contact Athos Collagen for inquiries about Fish Collagen Peptide and Fish Gelatin. Reach out to our team for product information and business inquiries." />
+      </Helmet>
       <TopHeader />
       <Navbar />
-      <main>
+      <main className="py-10">
         <ContactHero />
         <ContactInfo />
         <ContactForm />

@@ -18,8 +18,7 @@ const foodBenefits = [
   {
     title: "Film-forming Properties",
     items: [
-      "Edible films and coatings for food preservation.",
-      "Encapsulation of vitamins, colorants, and nutrients."
+      "It is used in edible films and coatings to protect food products, extend shelf life, and maintain freshness."
     ]
   },
   {
@@ -40,39 +39,36 @@ const foodBenefits = [
   },
   {
     title: "Low Allergenicity",
-    items: ["Fish gelatin is considered to have a lower allergenicity profile compared to mammalian gelatins."]
+    items: ["Fish Gelatin is less likely to cause allergic reactions compared to bovine or porcine gelatin, making it suitable for consumers with specific dietary restrictions."]
   },
   {
     title: "Emulsifying Agent",
-    items: ["Emulsified products like dressings and spreads."]
+    items: ["Fish Gelatin can stabilize emulsions."]
   },
   {
     title: "Texturizing",
-    items: ["Texturizer in products like yogurt and cheese."]
+    items: ["Fish Gelatin can improve the texture of foods, such as jelly, marshmallows, and ice cream, by giving them their gooey or creamy textures."]
   },
   {
     title: "Microencapsulation",
-    items: ["Encapsulating flavors, colorants, and nutrients."]
+    items: ["Fish Gelatin can be used to microencapsulate vitamins, colorants, and supplements."]
   },
   {
     title: "Low-fat",
-    items: ["Fat replacer in low-fat products like spreads and dressings."]
+    items: ["Fish Gelatin can replace carbohydrates and fat in many foods, such as half-fat margarine, reduced-fat cheeses, low-fat cream, and milk products."]
   },
   {
     title: "Protecting Jelly",
-    items: ["Protective coating for cured meats and fish."]
+    items: ["Fish Gelatin can protect jelly products from light and oxygen."]
   },
   {
     title: "Shelf Life",
-    items: ["Extending the shelf life of various food products."]
+    items: ["Fish Gelatin helps foods last longer, thus increasing their shelf life."]
   },
   {
     title: "Other Uses",
     items: [
-      "Jelly desserts, marshmallows, gummy candies.",
-      "Clarification of wines, beers, and juices.",
-      "Meat products, bakery products.",
-      "Low-fat spreads, sour cream, yogurt, cheese."
+      "Fish Gelatin can also be used to make sliceable meat products and sausages, prevent syneresis in yogurts, and keep pates and jelled meats appetizing."
     ]
   }
 ];
@@ -80,22 +76,22 @@ const foodBenefits = [
 const GelatinFoodIndustry = () => {
   return (
     <section className="py-12 md:py-16 bg-athos-light">
-      <div className="container-custom">
-        <h2 className="text-2xl md:text-[32px] font-bold text-primary leading-[120%] mb-10">
-          Benefits of Athos Fish Gelatin in Food Industry
+      <div className="max-w-[1300px] mx-auto px-4">
+        <h2 className="text-[24px] md:text-[32px] font-bold text-primary leading-[120%] mb-10">
+          Benefits of Athos Fish Gelatin in the Food Industry
         </h2>
-        
+
         <div className="space-y-8">
           {foodBenefits.map((benefit, index) => (
             <div key={index}>
-              <h3 className="text-lg font-semibold text-muted-foreground mb-3">
+              <h3 className="text-[18px] md:text-[18px] font-bold text-[#555555] mb-3 leading-[120%]">
                 {benefit.title}
               </h3>
               <ul className="space-y-2">
                 {benefit.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="mt-1">•</span>
-                    <span className="text-base leading-[150%]">{item}</span>
+                  <li key={itemIndex} className="flex items-start gap-3 text-[#555555]">
+                    <span className="mt-1 text-[16px] text-[#66b036]">▲</span>
+                    <span className="text-[16px] leading-[24px]">{item}</span>
                   </li>
                 ))}
               </ul>

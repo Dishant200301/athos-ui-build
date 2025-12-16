@@ -2,7 +2,7 @@ const benefits = [
   {
     title: "Skin Health",
     items: [
-      "Improve skin hydration, elasticity, roughness, and density.",
+      "It improves skin hydration, elasticity, roughness, and density.",
       "Reduce wrinkles and fine lines."
     ]
   },
@@ -57,23 +57,23 @@ const benefits = [
 
 const CollagenBenefits = () => {
   return (
-    <section className="py-12 md:py-16 bg-background">
-      <div className="container-custom">
-        <h2 className="text-2xl md:text-[32px] font-bold text-primary leading-[120%] mb-12">
+    <section className="py-12 md:py-16 bg-white">
+      <div className="max-w-[1300px] mx-auto px-4">
+        <h2 className="text-[24px] md:text-[32px] font-bold text-primary leading-[120%] mb-12">
           Benefits of the Athos Fish Collagen Peptide
         </h2>
-        
+
         <div className="space-y-8">
           {benefits.map((benefit, index) => (
             <div key={index}>
-              <h3 className="text-lg font-semibold text-muted-foreground mb-3">
+              <h3 className="text-[18px] font-semibold text-[#555555] mb-3 leading-[144%]">
                 {benefit.title}
               </h3>
               <ul className="space-y-2">
                 {benefit.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="mt-1">•</span>
-                    <span className="text-base leading-[150%]">{item}</span>
+                  <li key={itemIndex} className="flex items-start gap-3 text-[#555555]">
+                    <span className="mt-1 text-[16px] text-[#66b036]">▲</span>
+                    <span className="text-[16px] leading-[24px]">{item}</span>
                   </li>
                 ))}
               </ul>

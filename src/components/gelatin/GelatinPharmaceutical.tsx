@@ -34,32 +34,25 @@ const pharmaceuticalBenefits = [
   {
     title: "Capsules",
     items: [
-      "Hard and soft gel capsules.",
-      "Enteric-coated capsules for targeted drug release."
+      "Fish Gelatin is a key ingredient in the production of both soft and hard Gelatin capsules."
     ]
   },
   {
     title: "Tablets",
     items: [
-      "Binding agent in tablet formulations.",
-      "Coating agent for tablets and pills."
+      "Fish Gelatin is used in the formulation and coating of tablets."
     ]
   },
   {
     title: "Wound Care",
     items: [
-      "Hydrogels for wound dressings.",
-      "Bioactive wound healing products."
+      "Fish Gelatin can be used in the fabrication of wound healing pads."
     ]
   },
   {
     title: "Other Uses",
     items: [
-      "Microencapsulation of active ingredients.",
-      "Drug delivery systems.",
-      "Scaffolds for tissue engineering.",
-      "Biodegradable implants.",
-      "Cryoprotectant for cells and tissues during freezing."
+      "Fish Gelatin can also be used in the preparation of microspheres, nanospheres, scaffolds, microneedles, hydrogels, and implants."
     ]
   }
 ];
@@ -67,22 +60,22 @@ const pharmaceuticalBenefits = [
 const GelatinPharmaceutical = () => {
   return (
     <section className="py-12 md:py-16 bg-athos-light">
-      <div className="container-custom">
-        <h2 className="text-2xl md:text-[32px] font-bold text-primary leading-[120%] mb-10">
-          Benefits of Athos Fish Gelatin in Pharmaceutical Industry
+      <div className="max-w-[1300px] mx-auto px-4">
+        <h2 className="text-[24px] md:text-[32px] font-bold text-primary leading-[120%] mb-10">
+          Benefits of Athos Fish Gelatin in the Pharmaceutical Industry
         </h2>
-        
+
         <div className="space-y-8">
           {pharmaceuticalBenefits.map((benefit, index) => (
             <div key={index}>
-              <h3 className="text-lg font-semibold text-muted-foreground mb-3">
+              <h3 className="text-[18px] md:text-[18px] font-bold text-[#555555] mb-3 leading-[120%]">
                 {benefit.title}
               </h3>
               <ul className="space-y-2">
                 {benefit.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="mt-1">•</span>
-                    <span className="text-base leading-[150%]">{item}</span>
+                  <li key={itemIndex} className="flex items-start gap-3 text-[#555555]">
+                    <span className="mt-1 text-[16px] text-[#66b036]">▲</span>
+                    <span className="text-[16px] leading-[24px]">{item}</span>
                   </li>
                 ))}
               </ul>
