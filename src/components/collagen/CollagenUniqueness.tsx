@@ -31,7 +31,7 @@ const CollagenUniqueness = () => {
           {/* Right Column - Certification Image */}
           <div className="flex justify-center lg:justify-end">
             <img
-              src="/image/test.png"
+              src="/image/clinically-tested.png"
               alt="Athos Certification"
               className="w-[200px] h-auto md:w-[300px]"
             />

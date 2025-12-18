@@ -13,7 +13,7 @@ const FishGelatin = () => {
   return (
     <div className="min-h-screen bg-background overflow-hidden">
       <Helmet>
-        <title>Fish Gelatin - Athos Collagen | Premium Quality Marine Gelatin</title>
+        <title>Fish Gelatin - Athos Collagen Pvt. Ltd</title>
         <meta name="description" content="Explore Athos Fish Gelatin for pharmaceutical and food industry applications. High purity, biocompatible, and versatile marine gelatin products." />
       </Helmet>
       <TopHeader />

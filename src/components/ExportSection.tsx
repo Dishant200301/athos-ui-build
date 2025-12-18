@@ -17,7 +17,7 @@ const ExportSection = () => {
           {/* World Map Image */}
           <div className="flex items-center justify-center">
             <img
-              src="/image/world-map.webp"
+              src="/image/athos-map-1.webp"
               alt="World Map - Export Destinations"
               className="w-full max-w-[600px] h-auto"
             />

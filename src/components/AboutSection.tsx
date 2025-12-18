@@ -18,7 +18,7 @@ const AboutSection = () => {
           {/* Image */}
           <div className="order-2 lg:order-1">
             <img
-              src="/image/athos-about.webp"
+              src="/image/about-img.webp"
               alt="Athos Collagen facility"
               className="w-full h-[300px] md:h-[400px] object-cover rounded-tl-[36px] rounded-br-[36px]"
             />

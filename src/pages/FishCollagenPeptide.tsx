@@ -13,7 +13,7 @@ const FishCollagenPeptide = () => {
   return (
     <div className="min-h-screen bg-background overflow-hidden">
       <Helmet>
-        <title>Fish Collagen Peptide - Athos Collagen | Premium Marine Collagen</title>
+        <title>Fish Collagen Peptide - Athos Collagen Pvt. Ltd</title>
         <meta name="description" content="Discover Athos Fish Collagen Peptide - premium quality marine collagen with high bioavailability. Benefits for skin, joints, hair, and overall wellness." />
       </Helmet>
       <TopHeader />

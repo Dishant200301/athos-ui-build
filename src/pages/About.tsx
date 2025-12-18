@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       <Helmet>
-        <title>About Us - Athos Collagen | Leading Fish Collagen Manufacturer</title>
+        <title>About - Athos Collagen Pvt. Ltd</title>
         <meta name="description" content="Learn about Athos Collagen Pvt. Ltd., India's leading manufacturer of premium Fish Collagen Peptide and Fish Gelatin. Our mission, vision, facilities, and certifications." />
       </Helmet>
       <TopHeader />

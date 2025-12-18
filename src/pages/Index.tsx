@@ -14,7 +14,7 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-hidden">
       <Helmet>
-        <title>Athos Collagen - Premium Fish Collagen Peptide & Fish Gelatin Manufacturer</title>
+        <title>Manufacturer and Exporter of Fish Collagen and Fish Gelatin</title>
         <meta name="description" content="Leading manufacturer and exporter of premium quality Fish Collagen Peptide and Fish Gelatin. World-class marine collagen products for health and wellness globally." />
       </Helmet>
       <TopHeader />

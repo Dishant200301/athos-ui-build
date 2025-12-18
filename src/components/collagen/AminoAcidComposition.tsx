@@ -8,7 +8,7 @@ const AminoAcidComposition = () => {
 
         <div className="flex justify-center">
           <img
-            src="/image/pychart.webp"
+            src="/image/00141.webp"
             alt="Amino Acid Composition Chart"
             className="w-full max-w-[900px] h-auto"
           />

@@ -8,7 +8,7 @@ const ApplicationsFishCollagenPeptide = () => {
     return (
         <div className="min-h-screen flex flex-col overflow-hidden">
             <Helmet>
-                <title>Fish Collagen Peptide Applications - Athos Collagen</title>
+                <title>Applications of Fish Collagen - Athos Collagen Pvt. Ltd</title>
                 <meta name="description" content="Explore diverse applications of Athos Fish Collagen Peptide in nutraceuticals, food & beverages, cosmetics, pharmaceuticals, pet food, agriculture, and biotechnology." />
             </Helmet>
             <TopHeader />
@@ -199,7 +199,7 @@ const ApplicationsFishCollagenPeptide = () => {
                             {/* Right Images - Desktop Only */}
                             <div className="hidden lg:block">
                                 <img
-                                    src="/image/application-1.png"
+                                    src="/image/group-8-1.png"
                                     alt="Applications"
                                     className="w-auto h-auto max-w-[600px] object-contain"
                                 />

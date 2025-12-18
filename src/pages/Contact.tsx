@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Contact Us - Athos Collagen | Get in Touch</title>
+        <title>Contact Us - Athos Collagen Pvt. Ltd</title>
         <meta name="description" content="Contact Athos Collagen for inquiries about Fish Collagen Peptide and Fish Gelatin. Reach out to our team for product information and business inquiries." />
       </Helmet>
       <TopHeader />
