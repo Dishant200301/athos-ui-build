@@ -1,7 +1,7 @@
 const AboutContent = () => {
   return (
     <section className="py-12 md:py-16 bg-white">
-      <div className="max-w-[1200px] mx-auto px-4">
+      <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
         <h2 className="text-[32px] font-bold text-[#1D7AA3] mb-8 text-left">
           About Us
         </h2>

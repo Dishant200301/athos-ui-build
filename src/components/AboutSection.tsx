@@ -13,7 +13,7 @@ const commitments = [
 const AboutSection = () => {
   return (
     <section id="about" className="py-16 md:py-20 lg:py-24 bg-background">
-      <div className="max-w-[1200px] mx-auto px-4">
+      <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Image */}
           <div className="order-2 lg:order-1">

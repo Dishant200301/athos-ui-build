@@ -3,7 +3,7 @@ import { Phone, Mail, Factory } from "lucide-react";
 const ContactInfo = () => {
   return (
     <section className="relative bg-white">
-      <div className="max-w-[1300px] mx-auto px-4 pt-[40px] pb-[60px]">
+      <div className="max-w-[1290px] mx-auto px-4 xl:px-0 pt-[40px] pb-[60px]">
 
         {/* First Row: WhatsApp and Email */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[40px] gap-x-[60px] text-center mb-[40px]">

@@ -21,8 +21,8 @@ const CertificationsSection = () => {
   const moveDistance = (cardWidth + gap) * 2; // Move 2 cards at a time
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-white overflow-hidden max-w-[1200px] mx-auto">
-      <div className="px-4">
+    <section className="py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
+      <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
         <h2 className="text-2xl md:text-3xl lg:text-[32px] font-bold text-primary text-center mb-12">
           Globally Recognized Certifications
         </h2>

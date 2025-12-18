@@ -21,7 +21,7 @@ const InquiryForm = () => {
   return (
     <section className="bg-white py-12">
       {/* CONTAINER */}
-      <div className="max-w-[1300px] mx-auto px-4 md:px-8 lg:px-8 xl:px-0">
+      <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
         {/* HEADING */}
         <h1 className="text-[30px] md:text-[40px] font-bold text-[#1D7AA3] mb-4 ">
           Inquiry

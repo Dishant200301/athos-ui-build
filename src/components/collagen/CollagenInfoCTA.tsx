@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const CollagenInfoCTA = () => {
   return (
     <section className="py-12 md:py-16 xl:py-24 lg:py-12 bg-white">
-      <div className="max-w-[1300px] mx-auto px-4 text-center">
+      <div className="max-w-[1290px] mx-auto px-4 xl:px-0 text-center">
         <h1 className="text-[20px] md:text-[24px] lg:text-[27.2px] font-bold leading-[160%] text-[#257FA6] max-w-8xl mx-auto mb-8">
           Athos Collagen Pvt. Ltd. is leading Manufacturer and Exporter of Fish Collagen Peptide from India.
         </h1>

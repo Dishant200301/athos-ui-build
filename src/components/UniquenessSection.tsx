@@ -14,7 +14,7 @@ const UniquenessSection = () => {
       style={{ backgroundImage: "url('/image/Uniqueness.jpg')" }}
     >
 
-      <div className="max-w-[1200px] mx-auto relative z-10 px-4">
+      <div className="max-w-[1290px] mx-auto relative z-10 px-4 xl:px-0">
         <h2 className="text-2xl md:text-3xl lg:text-[32px] font-bold text-primary mb-10">
           Uniqueness of Athos Fish Collagen Peptide
         </h2>

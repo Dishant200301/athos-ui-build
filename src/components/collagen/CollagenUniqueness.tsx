@@ -10,7 +10,7 @@ const uniquenessPoints = [
 const CollagenUniqueness = () => {
   return (
     <section className="py-12 md:py-16 bg-white">
-      <div className="max-w-[1300px] mx-auto px-4">
+      <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
         <div className="grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-16 items-start">
           {/* Left Column - Text */}
           <div>

@@ -28,7 +28,7 @@ const TopHeader = () => {
 
   return (
     <header className="h-[53px] w-full bg-background border-b border-border">
-      <div className="max-w-[1200px] mx-auto h-full flex items-center justify-between px-4">
+      <div className="max-w-[1290px] mx-auto h-full flex items-center justify-between px-4 xl:px-0">
         {/* Email */}
         <a
           href="mailto:inquiry@athoscollagen.com"

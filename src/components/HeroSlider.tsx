@@ -43,7 +43,7 @@ const HeroSlider = () => {
   return (
     <section className="relative w-full bg-primary overflow-hidden">
       {/* Heading Bar */}
-      <div className="relative md:absolute md:top-0 md:left-0 md:right-0 z-20 min-h-[53px] md:h-[53px] flex items-center justify-center bg-primary/90 py-2 md:py-0">
+      <div className="relative md:absolute md:top-0 md:left-0 md:right-0 z-20 min-h-[53px] md:h-[53px] flex items-center justify-center bg-primary py-2 md:py-0">
         <h1 className="text-primary-foreground text-sm md:text-base lg:text-lg tracking-wider text-center px-4">
           World's Best Premium Quality Fish Collagen Peptide
         </h1>

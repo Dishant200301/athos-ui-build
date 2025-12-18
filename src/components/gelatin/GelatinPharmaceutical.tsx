@@ -60,7 +60,7 @@ const pharmaceuticalBenefits = [
 const GelatinPharmaceutical = () => {
   return (
     <section className="py-12 md:py-16 bg-athos-light">
-      <div className="max-w-[1300px] mx-auto px-4">
+      <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
         <h2 className="text-[24px] md:text-[32px] font-bold text-primary leading-[120%] mb-10">
           Benefits of Athos Fish Gelatin in the Pharmaceutical Industry
         </h2>

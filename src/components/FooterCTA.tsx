@@ -10,8 +10,8 @@ const FooterCTA = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute top-[29px] left-1/2 -translate-x-1/2 text-center">
-        <h2 className="w-[565px] max-w-full text-[20px] md:text-[32px] leading-[38px] font-bold text-[#1D7AA3] mb-[25px]">
+      <div className="absolute top-[29px] left-1/2 -translate-x-1/2 text-center px-6 xl:px-0">
+        <h2 className="w-[565px] max-w-full text-[18px] md:text-[32px] leading-[38px] font-bold text-[#1D7AA3] mb-[25px]">
           Get in touch for a better connection.
         </h2>
 

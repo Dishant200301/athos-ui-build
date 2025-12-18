@@ -16,7 +16,7 @@ const ApplicationsFishCollagenPeptide = () => {
 
             <main className="flex-1 bg-[#EDF5F8]">
                 <section className="py-12 md:py-16 md:px-4 lg:px-4">
-                    <div className="max-w-[1200px] mx-auto px-4 md:px-0">
+                    <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
                         <h1 className="text-[28px] md:text-[32px] font-bold text-[#1D7AA3] mb-12 px-0">
                             Application of the Fish Collagen Peptide
                         </h1>

@@ -21,7 +21,7 @@ const About = () => {
       <Navbar />
 
       <main className="flex-1">
-        <div className="max-w-[1300px] mx-auto px-4 md:py-8">
+        <div className="max-w-[1290px] mx-auto px-4 xl:px-0 md:py-8">
           <AboutHero />
         </div>
         <AboutContent />

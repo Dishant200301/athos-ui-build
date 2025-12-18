@@ -1,7 +1,7 @@
 const MissionVision = () => {
   return (
     <section className="py-12 md:py-16 bg-white">
-      <div className="max-w-[1300px] mx-auto px-4">
+      <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0">
           {/* Mission Card */}
           <div className="w-[280px] h-[280px] rounded-full bg-[#66b036] flex items-center justify-center shadow-lg">

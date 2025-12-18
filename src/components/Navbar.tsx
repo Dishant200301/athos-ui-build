@@ -64,15 +64,15 @@ const Navbar = () => {
   }, [mobileLangDropdownOpen]);
 
   return (
-    <nav className="h-[68px] w-full bg-background  top-0 z-50 shadow-sm">
-      <div className="max-w-[1200px] mx-auto h-full flex items-center justify-between px-4">
+    <nav className="h-[85px] w-full bg-background  top-0 z-50 shadow-sm">
+      <div className="max-w-[1290px] mx-auto h-full flex items-center justify-between px-4 xl:px-0">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/image/logo.webp" alt="" className="w-32 h-12" />
+          <img src="/image/logo.webp" alt="" className="xl:w-35 xl:h-[60px] w-30 h-[40px]" />
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-6">
+        <ul className="hidden xl:flex items-center gap-6">
           {navItems.map((item) => (
             <li key={item.label} className="relative group">
               {item.hasDropdown ? (
@@ -123,13 +123,13 @@ const Navbar = () => {
 
         {/* Inquiry Button */}
         <Link to="/inquiry">
-          <Button className="hidden lg:flex btn-primary rounded-[6px_0px] px-6 ">
+          <Button className="hidden xl:flex btn-primary rounded-[6px_0px] px-10 ">
             Inquiry
           </Button>
         </Link>
 
         {/* Mobile Language Selector & Menu Button */}
-        <div className="lg:hidden flex items-center gap-3">
+        <div className="xl:hidden flex items-center gap-3">
           {/* Language Button - Mobile Only */}
           <div className="relative">
             <button
@@ -185,7 +185,7 @@ const Navbar = () => {
 
       {/* Mobile Menu - Full Page Overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-background z-50 overflow-y-auto">
+        <div className="xl:hidden fixed inset-0 bg-background z-50 overflow-y-auto">
           {/* Close Button */}
           <div className="flex justify-end p-4">
             <button

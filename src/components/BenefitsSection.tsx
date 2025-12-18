@@ -34,7 +34,7 @@ const benefits = [
 const BenefitsSection = () => {
   return (
     <section id="benefits" className="py-16 md:py-20 lg:py-24 bg-white">
-      <div className="max-w-[1200px] mx-auto px-4">
+      <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
         <h2 className="text-2xl md:text-3xl lg:text-[32px] font-bold text-primary text-center mb-12">
           Benefits of Fish Collagen Peptide
         </h2>
