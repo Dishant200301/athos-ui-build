@@ -56,11 +56,52 @@
     <priority>0.6</priority>
   </url>
   
+  
   <!-- Inquiry Page -->
   <url>
     <loc>https://athoscollagen.com/inquiry</loc>
-    <lastmod>2025-12-16</lastmod>
+    <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  
+  <!-- Blog Listing Page -->
+  <url>
+    <loc>https://athoscollagen.com/blog</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Post: Unlocking Youthful Skin -->
+  <url>
+    <loc>https://athoscollagen.com/blog/unlocking-youthful-skin-fish-collagen</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Fish vs Bovine Collagen -->
+  <url>
+    <loc>https://athoscollagen.com/blog/fish-vs-bovine-collagen</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Sustainable Sourcing -->
+  <url>
+    <loc>https://athoscollagen.com/blog/sustainable-sourcing-marine-collagen</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Collagen for Joint Health -->
+  <url>
+    <loc>https://athoscollagen.com/blog/collagen-for-joint-health</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

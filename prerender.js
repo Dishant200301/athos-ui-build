@@ -77,8 +77,21 @@ function prerenderRoute(route) {
       // Example: /about -> dist/about/index.html
       const routePath = route.slice(1); // Remove leading slash
       const routeDir = path.join(distPath, routePath);
+      
+      // Ensure directory exists
       ensureDirectoryExists(routeDir);
+      
+      // Always use index.html inside the directory
       outputPath = path.join(routeDir, 'index.html');
+      
+      // If a file with the same name exists (not a directory), remove it
+      const potentialFilePath = path.join(distPath, routePath);
+      if (fs.existsSync(potentialFilePath)) {
+        const stats = fs.statSync(potentialFilePath);
+        if (stats.isFile()) {
+          fs.unlinkSync(potentialFilePath);
+        }
+      }
     }
     
     // Write the HTML file
