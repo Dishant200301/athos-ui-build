@@ -5,7 +5,7 @@ const FooterCTA = () => {
     <section
       className="relative w-full h-[380px] flex items-start justify-center pb-32"
       style={{
-        backgroundImage: "url(/image/contact-bg.jpg)",
+        backgroundImage: "url(/images/contact-bg.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

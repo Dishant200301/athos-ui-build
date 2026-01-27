@@ -199,7 +199,7 @@ const ApplicationsFishCollagenPeptide = () => {
                             {/* Right Images - Desktop Only */}
                             <div className="hidden lg:block">
                                 <img
-                                    src="/image/group-8-1.png"
+                                    src="/images/group-8-1.png"
                                     alt="Applications"
                                     className="w-auto h-auto max-w-[600px] object-contain"
                                 />

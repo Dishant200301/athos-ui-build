@@ -10,7 +10,7 @@ const ContactInfo = () => {
 
           {/* WhatsApp */}
           <div>
-            <img src="/icon/whatsapp.svg" className="w-[50px] h-[50px] mx-auto" alt="" />
+            <img src="/assets/icons/whatsapp.svg" className="w-[50px] h-[50px] mx-auto" alt="" />
             <h3 className="mt-[10px] text-[18px] leading-[22px] font-bold uppercase text-[#999999]">
               WhatsApp / Call
             </h3>
@@ -21,7 +21,7 @@ const ContactInfo = () => {
 
           {/* Email */}
           <div>
-            <img src="/icon/mail.svg" className="w-[50px] h-[50px] mx-auto" />
+            <img src="/assets/icons/mail.svg" className="w-[50px] h-[50px] mx-auto" />
             <h3 className="mt-[10px] text-[18px] leading-[22px] font-bold uppercase text-[#999999]">
               Email
             </h3>
@@ -34,7 +34,7 @@ const ContactInfo = () => {
 
         {/* Second Row: Factory Address (Centered) */}
         <div className="text-center">
-          <img src="/icon/factory.svg" className="w-[50px] h-[50px] mx-auto" />
+          <img src="/assets/icons/factory.svg" className="w-[50px] h-[50px] mx-auto" />
           <h3 className="mt-[10px] text-[18px] leading-[22px] font-bold uppercase text-[#999999]">
             Factory Address
           </h3>

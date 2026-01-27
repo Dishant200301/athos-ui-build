@@ -18,7 +18,7 @@ const MissionVision = () => {
 
           {/* Logo Card */}
           <div className="w-[280px] h-[280px] rounded-full bg-[#F4F4F4] flex items-center justify-center">
-            <img src="/image/athos-logo-full-form.webp" alt="Athos Collagen" className="w-[280px] h-auto" />
+            <img src="/images/athos-logo-full-form.webp" alt="Athos Collagen" className="w-[280px] h-auto" />
           </div>
 
           {/* Divider - Desktop Only */}

@@ -11,7 +11,7 @@ const UniquenessSection = () => {
   return (
     <section
       className="py-16 md:py-20 lg:py-24 bg-cover bg-center bg-no-repeat relative overflow-hidden"
-      style={{ backgroundImage: "url('/image/product-bg.jpg')" }}
+      style={{ backgroundImage: "url('/images/product-bg.jpg')" }}
     >
 
       <div className="max-w-[1290px] mx-auto relative z-10 px-4 xl:px-0">

@@ -1,31 +1,31 @@
 const benefits = [
   {
-    image: "/image/anti-aging.webp",
+    image: "/images/anti-aging.webp",
     title: "Anti Aging",
     description: "Minimize fine lines and wrinkles.",
   },
   {
-    image: "/image/bones.webp",
+    image: "/images/bones.webp",
     title: "Bones and Joints",
     description: "Increase bone density and reduce joint pain.",
   },
   {
-    image: "/image/hair.webp",
+    image: "/images/hair.webp",
     title: "Hair Growth",
     description: "Promotes hair growth and reduces hair loss.",
   },
   {
-    image: "/image/skain-care.webp",
+    image: "/images/skain-care.webp",
     title: "Skin Care",
     description: "Rise the strength and elasticity of the skin.",
   },
   {
-    image: "/image/nails-2.webp",
+    image: "/images/nails-2.webp",
     title: "Nail Strength",
     description: "Prevents brittleness and increase nail strength.",
   },
   {
-    image: "/image/wound-healing.webp",
+    image: "/images/wound-healing.webp",
     title: "Wound Healing",
     description: "Able to cure wounds on the skin of different intensities.",
   },

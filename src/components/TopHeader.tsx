@@ -8,13 +8,13 @@ interface Language {
 }
 
 const languages: Language[] = [
-  { code: "en", name: "English", flag: "/image/english.svg" },
-  { code: "fr", name: "French", flag: "/image/france.svg" },
-  { code: "es", name: "Spanish", flag: "/image/spanish.svg" },
-  { code: "de", name: "German", flag: "/image/german.svg" },
-  { code: "ru", name: "Russian", flag: "/image/russian.svg" },
-  { code: "ja", name: "Japanese", flag: "/image/japanese.svg" },
-  { code: "ko", name: "Korean", flag: "/image/korean.svg" },
+  { code: "en", name: "English", flag: "/images/english.svg" },
+  { code: "fr", name: "French", flag: "/images/france.svg" },
+  { code: "es", name: "Spanish", flag: "/images/spanish.svg" },
+  { code: "de", name: "German", flag: "/images/german.svg" },
+  { code: "ru", name: "Russian", flag: "/images/russian.svg" },
+  { code: "ja", name: "Japanese", flag: "/images/japanese.svg" },
+  { code: "ko", name: "Korean", flag: "/images/korean.svg" },
 ];
 
 const TopHeader = () => {

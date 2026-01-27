@@ -1,14 +1,14 @@
 const certificationLogos = [
-  "/image/FIEO.webp",
-  "/image/FSSAI.webp",
-  "/image/FSSC.webp",
-  "/image/HACCP.webp",
-  "/image/ISO-22000.webp",
-  "/image/ISO-9001.webp",
-  "/image/MPEDA.webp",
-  "/image/halal.webp",
-  "/image/kosher.webp",
-  "/image/FDA.webp",
+  "/images/FIEO.webp",
+  "/images/FSSAI.webp",
+  "/images/FSSC.webp",
+  "/images/HACCP.webp",
+  "/images/ISO-22000.webp",
+  "/images/ISO-9001.webp",
+  "/images/MPEDA.webp",
+  "/images/halal.webp",
+  "/images/kosher.webp",
+  "/images/FDA.webp",
 ];
 
 const CertificationsSection = () => {

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Ficolla", img: "/image/ficolla.png", href: "https://ficolla.com/ " },
+  { label: "Ficolla", img: "/images/ficolla.png", href: "https://ficolla.com/ " },
   { label: "Fish Collagen Peptide", href: "/fish-collagen-peptide" },
   { label: "Fish Gelatin", href: "/fish-gelatin" },
   {
@@ -25,13 +25,13 @@ interface Language {
 }
 
 const languages: Language[] = [
-  { code: "en", name: "English", flag: "/image/english.svg" },
-  { code: "fr", name: "French", flag: "/image/france.svg" },
-  { code: "es", name: "Spanish", flag: "/image/spanish.svg" },
-  { code: "de", name: "German", flag: "/image/german.svg" },
-  { code: "ru", name: "Russian", flag: "/image/russian.svg" },
-  { code: "ja", name: "Japanese", flag: "/image/japanese.svg" },
-  { code: "ko", name: "Korean", flag: "/image/korean.svg" },
+  { code: "en", name: "English", flag: "/images/english.svg" },
+  { code: "fr", name: "French", flag: "/images/france.svg" },
+  { code: "es", name: "Spanish", flag: "/images/spanish.svg" },
+  { code: "de", name: "German", flag: "/images/german.svg" },
+  { code: "ru", name: "Russian", flag: "/images/russian.svg" },
+  { code: "ja", name: "Japanese", flag: "/images/japanese.svg" },
+  { code: "ko", name: "Korean", flag: "/images/korean.svg" },
 ];
 
 const Navbar = () => {
@@ -68,7 +68,7 @@ const Navbar = () => {
       <div className="max-w-[1290px] mx-auto h-full flex items-center justify-between px-4 xl:px-0">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/image/logo.webp" alt="" className="xl:w-35 xl:h-[60px] w-30 h-[40px]" />
+          <img src="/images/logo.webp" alt="" className="xl:w-35 xl:h-[60px] w-30 h-[40px]" />
         </Link>
 
         {/* Desktop Menu */}

@@ -16,7 +16,7 @@ const AboutCertifications = () => {
       <div className="space-y-0">
         {/* Row 1 - KOSHER, HALAL, FDA */}
         <div className="flex flex-wrap justify-center">
-          <img src="/image/athos-CertificateLogo.webp" alt="Certifications" className="w-full max-w-[1000px] h-auto" />
+          <img src="/images/athos-CertificateLogo.webp" alt="Certifications" className="w-full max-w-[1000px] h-auto" />
         </div>
 
       </div>

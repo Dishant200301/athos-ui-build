@@ -3,22 +3,22 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    image: "/image/athos-slider-1.webp",
+    image: "/images/athos-slider-1.webp",
     alt: "Fish collagen production facility",
     cta: "Make life healthy & beautiful"
   },
   {
-    image: "/image/athos-slider-2.webp",
+    image: "/images/athos-slider-2.webp",
     alt: "Laboratory research",
     cta: "Leading manufacturer and supplier of Fish Collagen Peptide & Fish Gelatin"
   },
   {
-    image: "/image/athos-slider-3.webp",
+    image: "/images/athos-slider-3.webp",
     alt: "Premium collagen products",
     cta: "Fish Collagen Peptide for healthy future"
   },
   {
-    image: "/image/athos-slider-4.webp",
+    image: "/images/athos-slider-4.webp",
     alt: "Quality assurance",
     cta: "Worldwide Fish Collagen Peptide & Fish Gelatin specialist"
   },
