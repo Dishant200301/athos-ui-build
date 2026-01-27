@@ -9,7 +9,7 @@ const GelatinInfoCTA = () => {
         </h1>
 
         <Link to="/inquiry">
-          <button className="bg-primary text-white px-6 py-2.5 rounded-tl-md rounded-br-md font-medium hover:bg-gray-100 transition-colors">
+          <button className="bg-primary text-white px-6 py-2.5 rounded-tl-md rounded-br-md font-medium hover:bg-primary/90 transition-colors">
             Inquiry
           </button>
         </Link>
