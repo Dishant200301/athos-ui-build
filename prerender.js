@@ -41,6 +41,11 @@ const prerenderRoutes = [
   '/applications/fish-gelatin',
   '/contact',
   '/inquiry',
+  '/blog',
+  '/blog/unlocking-youthful-skin-fish-collagen',
+  '/blog/fish-vs-bovine-collagen',
+  '/blog/sustainable-sourcing-marine-collagen',
+  '/blog/collagen-for-joint-health',
 ];
 
 /**
