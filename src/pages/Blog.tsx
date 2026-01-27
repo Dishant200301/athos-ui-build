@@ -9,7 +9,7 @@ import FooterCTA from "@/components/FooterCTA";
 
 const Blog = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white overflow-hidden">
             <TopHeader />
             <Navbar />
             <main className="py-16">
