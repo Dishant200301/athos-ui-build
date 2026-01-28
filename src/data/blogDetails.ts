@@ -15,7 +15,7 @@ export const blogDetails: BlogDetail[] = [
     id: 1,
     slug: "what-is-collagen",
     title: "What Is Collagen? Structure, Types, and Industrial Importance",
-    image: "/images/all_blog_images/Blog_1_What_is_Collagen/image_2_1.png",
+    image: "/images/all_blog_images/Blog_1_What_is_Collagen/what-is-collagen-main.png",
     date: "Jan 28, 2026",
     author: "Dr. Sarah Mitchell",
     category: "Educational",
@@ -47,7 +47,7 @@ export const blogDetails: BlogDetail[] = [
 
         <p class="mb-6 text-gray-700 leading-relaxed">The triple-helical molecules further assemble into fibrils and fibers, creating a hierarchical structure that supports load-bearing functions in both biological and industrial systems.</p>
 
-        <img src="/images/all_blog_images/Blog_1_What_is_Collagen/image_4_1.png" alt="Structural Diagram" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_1_What_is_Collagen/collagen-structural-diagram.png" alt="Structural Diagram" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Types of Collagen</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Collagen exists in multiple structural forms, each designed to perform specific roles. To date, more than 25 types of collagen have been identified, but only a few are widely relevant in industrial and commercial applications.</p>
@@ -76,7 +76,7 @@ export const blogDetails: BlogDetail[] = [
         <h3 class="text-xl md:text-2xl font-bold mb-4 mt-6 text-gray-800">Other Sources</h3>
         <p class="mb-6 text-gray-700 leading-relaxed">Collagen may also be sourced from porcine or poultry materials, depending on the intended application and market requirements.</p>
 
-        <img src="/images/all_blog_images/Blog_1_What_is_Collagen/image_6_1.png" alt="Source Illustration" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_1_What_is_Collagen/collagen-sources-illustration.png" alt="Source Illustration" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Industrial Processing of Collagen</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">To make collagen suitable for industrial use, raw materials undergo controlled processing steps. These steps are designed to preserve functional properties while meeting global safety and quality standards.</p>
@@ -90,7 +90,7 @@ export const blogDetails: BlogDetail[] = [
 
         <p class="mb-6 text-gray-700 leading-relaxed">Each form serves different functional and technical requirements, making collagen one of the most versatile protein ingredients available to manufacturers.</p>
 
-        <img src="/images/all_blog_images/Blog_1_What_is_Collagen/image_7_1.png" alt="Process Flow Image" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_1_What_is_Collagen/collagen-process-flow.png" alt="Process Flow Image" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Industrial Applications of Collagen</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Collagen’s versatility allows it to be used across a wide range of industries.</p>
@@ -110,7 +110,7 @@ export const blogDetails: BlogDetail[] = [
         <h3 class="text-xl md:text-2xl font-bold mb-4 mt-6 text-gray-800">Biomedical and Research Applications</h3>
         <p class="mb-6 text-gray-700 leading-relaxed">Collagen-based materials are widely used in biomedical research, tissue engineering, and regenerative studies due to their structural similarity to natural extracellular matrices.</p>
 
-        <img src="/images/all_blog_images/Blog_1_What_is_Collagen/image_8_1.png" alt="Application Image" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_1_What_is_Collagen/collagen-industrial-applications.png" alt="Application Image" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Why Collagen Is Strategically Important for Manufacturers</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">For manufacturers and global buyers, collagen represents a strategic ingredient due to its broad applicability, strong market demand, and alignment with clean-label and functional product trends. Its adaptability across industries allows companies to develop diverse product portfolios while maintaining consistent sourcing strategies.</p>
@@ -122,7 +122,7 @@ export const blogDetails: BlogDetail[] = [
 
         <p class="mb-6 text-gray-700 leading-relaxed">Understanding what collagen is, how it is structured, and why it is so widely used enables manufacturers and buyers to make informed decisions when sourcing and formulating products for global markets. As demand for functional and science-backed ingredients continues to grow, collagen will remain a key driver of innovation and value creation across industries</p>
 
-        <img src="/images/all_blog_images/Blog_1_What_is_Collagen/image_10_1.png" alt="Conclusion Image" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_1_What_is_Collagen/collagen-conclusion-summary.png" alt="Conclusion Image" class="w-full rounded-lg my-8 shadow-md" />
       </div>
     `
   },
@@ -130,7 +130,7 @@ export const blogDetails: BlogDetail[] = [
     id: 2,
     slug: "marine-collagen-overview",
     title: "What Is Marine Collagen? Source, Composition, and Key Applications",
-    image: "/images/all_blog_images/Blog_2_Marine_Collagen/image_11_1.png",
+    image: "/images/all_blog_images/Blog_2_Marine_Collagen/marine-collagen-main.png",
     date: "Jan 27, 2026",
     author: "Dr. Emily Roberts",
     category: "Educational",
@@ -163,13 +163,13 @@ export const blogDetails: BlogDetail[] = [
         <p class="mb-6 text-gray-700 leading-relaxed">Fish bones provide structural collagen and are often utilized in integrated processing systems alongside skin and scales.</p>
 
         
-        <img src="/images/all_blog_images/Blog_2_Marine_Collagen/image_13_1.png" alt="Fish Collagen Sources" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_2_Marine_Collagen/marine-collagen-sources.png" alt="Fish Collagen Sources" class="w-full rounded-lg my-8 shadow-md" />
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Composition and Amino Acid Profile</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Marine collagen is primarily composed of structural amino acids that define its functional behavior. The dominant amino acids include glycine, proline, and hydroxyproline, which together support the formation and stability of the collagen triple helix.</p>
 
         <p class="mb-6 text-gray-700 leading-relaxed">The relatively uniform amino acid distribution allows marine collagen to be processed into highly functional forms without compromising structural integrity. This makes it particularly suitable for applications requiring solubility, consistency, and predictable performance.</p>
         
-        <img src="/images/all_blog_images/Blog_2_Marine_Collagen/image_14_1.png" alt="Source Diagram" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_2_Marine_Collagen/marine-collagen-diagram.png" alt="Source Diagram" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">How Marine Collagen Is Processed</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">The production of marine collagen involves controlled industrial processes designed to preserve protein integrity while ensuring safety and regulatory compliance.</p>
@@ -178,7 +178,7 @@ export const blogDetails: BlogDetail[] = [
 
         <p class="mb-6 text-gray-700 leading-relaxed">Strict quality control measures are applied throughout production to maintain consistency, purity, and performance.</p>
         
-        <img src="/images/all_blog_images/Blog_2_Marine_Collagen/image_15_1.png" alt="Composition Diagram" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_2_Marine_Collagen/marine-collagen-composition.png" alt="Composition Diagram" class="w-full rounded-lg my-8 shadow-md" />
         
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Key Applications of Marine Collagen</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Marine collagen’s adaptability allows it to be integrated across multiple industries.</p>
@@ -199,7 +199,7 @@ export const blogDetails: BlogDetail[] = [
         <p class="mb-6 text-gray-700 leading-relaxed">Marine collagen is widely studied and applied in biomedical research, tissue engineering, and regenerative technologies.</p>
 
         
-        <img src="/images/all_blog_images/Blog_2_Marine_Collagen/image_16_1.png" alt="Process Flow Image" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_2_Marine_Collagen/marine-collagen-process.png" alt="Process Flow Image" class="w-full rounded-lg my-8 shadow-md" />
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Why Marine Collagen Is Gaining Global Importance</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Marine collagen aligns with global trends emphasizing sustainability, clean sourcing, and functional performance. Its acceptance across diverse regulatory environments and industries makes it a strategic ingredient for manufacturers targeting international markets.</p>
 
@@ -209,7 +209,7 @@ export const blogDetails: BlogDetail[] = [
         <p class="mb-6 text-gray-700 leading-relaxed">Marine collagen represents a critical evolution in collagen sourcing and application. Its marine origin, structural reliability, and industrial versatility make it an essential ingredient for modern product development across nutraceutical, cosmetic, pharmaceutical, food, and biomedical sectors.</p>
 
         <p class="mb-6 text-gray-700 leading-relaxed">For manufacturers and buyers, understanding marine collagen’s source, composition, and key applications is essential for success in today's market.</p>
-        <img src="/images/all_blog_images/Blog_2_Marine_Collagen/image_17_1.png" alt="Applications Image" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_2_Marine_Collagen/marine-collagen-applications.png" alt="Applications Image" class="w-full rounded-lg my-8 shadow-md" />
       </div>
     `
   },
@@ -217,7 +217,7 @@ export const blogDetails: BlogDetail[] = [
     id: 3,
     slug: "fish-collagen-benefits",
     title: "What Is Fish Collagen? Properties, Benefits, and Uses",
-    image: "/images/all_blog_images/Blog_3_Fish_Collagen/image_18_1.png",
+    image: "/images/all_blog_images/Blog_3_Fish_Collagen/fish-collagen-main.png",
     date: "Jan 26, 2026",
     author: "James Anderson",
     category: "Educational",
@@ -240,7 +240,7 @@ export const blogDetails: BlogDetail[] = [
 
         <p class="mb-6 text-gray-700 leading-relaxed">The primary amino acids present in fish collagen include glycine, proline, and hydroxyproline. These amino acids contribute to the formation, rigidity, and thermal behavior of the collagen matrix. While structurally similar to other collagen sources, fish collagen often demonstrates favorable processing characteristics due to its molecular arrangement.</p>
 
-        <img src="/images/all_blog_images/Blog_3_Fish_Collagen/image_20_1.png" alt="Structural Diagram" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_3_Fish_Collagen/fish-collagen-structure.png" alt="Structural Diagram" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Functional Characteristics of Fish Collagen</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Fish collagen exhibits functional properties that make it suitable for diverse industrial uses. These include solubility under controlled conditions, neutral sensory characteristics, and compatibility with other formulation ingredients.</p>
@@ -252,7 +252,7 @@ export const blogDetails: BlogDetail[] = [
 
         <p class="mb-6 text-gray-700 leading-relaxed">Advanced facilities apply strict quality controls, traceability systems, and certifications to ensure consistency across batches. These measures are critical for manufacturers supplying global nutraceutical, cosmetic, pharmaceutical, and food markets.</p>
 
-        <img src="/images/all_blog_images/Blog_3_Fish_Collagen/image_21_1.png" alt="Process Flow Image" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_3_Fish_Collagen/fish-collagen-processing.png" alt="Process Flow Image" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Industrial Uses of Fish Collagen</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Fish collagen is used across a wide range of industries due to its adaptability and functional performance.</p>
@@ -261,7 +261,7 @@ export const blogDetails: BlogDetail[] = [
 
         <p class="mb-6 text-gray-700 leading-relaxed">The food and beverage industry also incorporates fish collagen as a functional protein ingredient, while biomedical and research fields use it for structural and experimental applications.</p>
 
-        <img src="/images/all_blog_images/Blog_3_Fish_Collagen/image_22_1.png" alt="Applications Image" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_3_Fish_Collagen/fish-collagen-applications.png" alt="Applications Image" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Strategic Importance for Manufacturers</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Fish collagen offers manufacturers a combination of functional performance, market acceptance, and sourcing flexibility. Its marine origin aligns with sustainability initiatives and supports efficient utilization of seafood processing by-products.</p>
@@ -277,7 +277,7 @@ export const blogDetails: BlogDetail[] = [
     id: 4,
     slug: "collagen-peptides-explained",
     title: "Collagen Peptides Explained – Structure, Functionality, and Uses",
-    image: "/images/all_blog_images/Blog_4_Collagen_Peptides/image_24_1.png",
+    image: "/images/all_blog_images/Blog_4_Collagen_Peptides/collagen-peptides-main.png",
     date: "Jan 25, 2026",
     author: "Dr. Michael Chen",
     category: "Technical",
@@ -299,7 +299,7 @@ export const blogDetails: BlogDetail[] = [
 
         <p class="mb-6 text-gray-700 leading-relaxed">The controlled breakdown process ensures that functional properties are preserved while enhancing usability for manufacturers.</p>
 
-        <img src="/images/all_blog_images/Blog_4_Collagen_Peptides/image_26_1.png" alt="Molecular Diagram" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_4_Collagen_Peptides/collagen-peptides-structure.png" alt="Molecular Diagram" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Functional Properties in Industrial Formulations</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Collagen peptides are valued for their excellent solubility, neutral sensory profile, and compatibility with other ingredients. These properties make them suitable for powders, liquids, tablets, capsules, and functional blends.</p>
@@ -311,14 +311,14 @@ export const blogDetails: BlogDetail[] = [
 
         <p class="mb-6 text-gray-700 leading-relaxed">Quality assurance measures, including filtration, purification, and certification, are essential to ensure safety, traceability, and compliance with international standards.</p>
 
-        <img src="/images/all_blog_images/Blog_4_Collagen_Peptides/image_27_1.png" alt="Process Image" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_4_Collagen_Peptides/collagen-peptides-process.png" alt="Process Image" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Industrial Applications of Collagen Peptides</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Collagen peptides are used extensively in nutraceutical formulations, cosmetic products, pharmaceutical applications, and functional foods. Their versatility allows seamless integration into diverse product formats.</p>
 
         <p class="mb-6 text-gray-700 leading-relaxed">In research and biomedical applications, collagen peptides are used as functional protein components and experimental materials.</p>
 
-        <img src="/images/all_blog_images/Blog_4_Collagen_Peptides/image_28_1.png" alt="Applications Image" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_4_Collagen_Peptides/collagen-peptides-applications.png" alt="Applications Image" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Strategic Value for Global Manufacturers</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Collagen peptides provide manufacturers with a scalable, high-performance ingredient solution aligned with global demand for functional, clean-label products. Their adaptability and consistent quality make them a core component of modern ingredient portfolios.</p>
@@ -332,7 +332,7 @@ export const blogDetails: BlogDetail[] = [
     id: 5,
     slug: "gelatin-properties-uses",
     title: "What Is Gelatin? Source, Manufacturing, and Industrial Applications",
-    image: "/images/all_blog_images/Blog_5_Gelatin/image_29_1.png",
+    image: "/images/all_blog_images/Blog_5_Gelatin/gelatin-overview-main.png",
     date: "Jan 24, 2026",
     author: "Sarah Green",
     category: "Ingredient",
@@ -354,7 +354,7 @@ export const blogDetails: BlogDetail[] = [
 
         <p class="mb-6 text-gray-700 leading-relaxed">During gelatin production, the triple-helix structure of collagen is partially broken down into single-chain or partially fragmented proteins. This structural modification enables gelatin to interact with water molecules, forming networks that create gel strength and elasticity. The degree of processing directly influences gelatin’s functional performance, such as bloom strength, viscosity, and melting behavior.</p>
 
-        <img src="/images/all_blog_images/Blog_5_Gelatin/image_31_1.png" alt="Structure Comparison Diagram" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_5_Gelatin/collagen-vs-gelatin-structure.png" alt="Structure Comparison Diagram" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Sources of Gelatin</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Gelatin can be extracted from various animal sources:</p>
@@ -365,6 +365,7 @@ export const blogDetails: BlogDetail[] = [
           <li><strong>Fish Gelatin:</strong> Marine source, suitable for pescatarian and certain religious diets, lower gelling temperature</li>
           <li><strong>Poultry Gelatin:</strong> Less common, used in specific applications</li>
         </ul>
+        <img src="/images/all_blog_images/Blog_5_Gelatin/gelatin-sources.png" alt="Gelatin Sources" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Gelatin Manufacturing Process</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Gelatin production involves carefully controlled industrial processes designed to convert collagen into a functional protein while maintaining safety, consistency, and performance.</p>
@@ -373,7 +374,7 @@ export const blogDetails: BlogDetail[] = [
 
         <p class="mb-6 text-gray-700 leading-relaxed">Each stage of production is optimized to achieve specific functional parameters, such as gel strength, clarity, and viscosity. Advanced manufacturing facilities implement strict quality control systems to ensure batch-to-batch consistency and compliance with international standards.</p>
 
-        <img src="/images/all_blog_images/Blog_5_Gelatin/image_35_1.png" alt="Manufacturing Flow Image" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_5_Gelatin/gelatin-manufacturing.png" alt="Manufacturing Flow Image" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Key Functional Properties of Gelatin</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">Gelatin’s widespread industrial use is driven by its unique functional characteristics.</p>
@@ -400,7 +401,7 @@ export const blogDetails: BlogDetail[] = [
         <h3 class="text-xl md:text-2xl font-bold mb-4 mt-6 text-gray-800">Biomedical and Research Applications</h3>
         <p class="mb-6 text-gray-700 leading-relaxed">In biomedical research, gelatin-based materials are used in tissue engineering, scaffolds, and experimental applications due to their compatibility with biological systems.</p>
 
-        <img src="/images/all_blog_images/Blog_5_Gelatin/image_35_1.png" alt="Applications Image" class="w-full rounded-lg my-8 shadow-md" />
+        <img src="/images/all_blog_images/Blog_5_Gelatin/gelatin-manufacturing.png" alt="Applications Image" class="w-full rounded-lg my-8 shadow-md" />
 
         <h2 class="text-2xl md:text-3xl font-bold mb-6 mt-8 text-gray-900">Quality, Safety, and Certifications</h2>
         <p class="mb-6 text-gray-700 leading-relaxed">High-quality gelatin production depends on rigorous quality control, traceability, and compliance with international standards. Manufacturers serving global markets typically adhere to certifications such as GMP, ISO, HACCP, FSSC, FDA registration, halal, and kosher compliance.</p>
