@@ -65,10 +65,10 @@ const BlogDetails = () => {
                                     <Calendar className="w-5 h-5 mr-2" />
                                     {post.date}
                                 </div>
-                                <div className="flex items-center">
-                                    <User className="w-5 h-5 mr-2" />
-                                    {post.author}
-                                </div>
+                                <Link to="/blog" className="flex items-center hover:text-white transition-colors">
+                                    <ArrowLeft className="w-5 h-5 mr-2" />
+                                    Back to Blog
+                                </Link>
                             </div>
                         </div>
                     </div>

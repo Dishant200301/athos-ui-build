@@ -212,10 +212,6 @@ const Blog = () => {
                                                     <Calendar className="w-4 h-4 mr-1.5 text-[#257FA6]" />
                                                     {blog.date}
                                                 </div>
-                                                <div className="flex items-center">
-                                                    <User className="w-4 h-4 mr-1.5 text-[#257FA6]" />
-                                                    {blog.author}
-                                                </div>
                                             </div>
                                         </div>
 
