@@ -43,7 +43,7 @@ const BlogDetails = () => {
 
             <main>
                 {/* Hero Section */}
-                <div className="relative h-[400px] md:h-[500px] w-full">
+                <div className="relative h-[400px] md:h-[600px] w-full">
                     <div className="absolute inset-0 bg-black/40 z-10" />
                     <div className="w-full h-full bg-gray-200">
                         <img
@@ -52,19 +52,12 @@ const BlogDetails = () => {
                             className="w-full h-full object-cover"
                         />
                     </div>
-                    <div className="absolute inset-0 z-20 flex flex-col justify-end pb-12">
+                    <div className="absolute inset-0 z-20 flex flex-col justify-end pb-8 md:pb-12">
                         <div className="max-w-[1290px] mx-auto px-4 xl:px-0 w-full">
-                            {/* <Link
-                                to="/blog"
-                                className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
-                            >
-                                <ArrowLeft className="w-4 h-4 mr-2" />
-                                Back to Blog
-                            </Link> */}
-                            <div className="flex items-center space-x-2 text-sm md:text-base font-medium text-[#1D81A5] mb-4 uppercase tracking-wider">
+                            <div className="flex items-center space-x-2 text-sm md:text-base font-medium text-white mb-4 uppercase tracking-wider">
                                 <span>{post.category}</span>
                             </div>
-                            <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white">
+                            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl text-white">
                                 {post.title}
                             </h1>
                             <div className="flex flex-wrap items-center gap-6 text-sm md:text-base text-white/90">
@@ -82,34 +75,14 @@ const BlogDetails = () => {
                 </div>
 
                 {/* Content Section */}
-                <div className="max-w-[1290px] mx-auto px-4 xl:px-0 py-16">
-                    <div className="max-w-7xl mx-auto">
-                        <article className="prose prose-lg prose-headings:text-primary prose-a:text-primary hover:prose-a:text-secondary max-w-none">
-                            <div dangerouslySetInnerHTML={{ __html: post.content }} />
-                        </article>
-
-                        {/* Tags */}
-                        <div className="mt-12 pt-8 border-t border-gray-100">
-                            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4 flex items-center">
-                                <Tag className="w-4 h-4 mr-2" />
-                                Related Tags
-                            </h3>
-                            <div className="flex flex-wrap gap-2">
-                                {post.tags.map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="px-4 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-full font-medium hover:bg-gray-200 transition-colors cursor-default"
-                                    >
-                                        #{tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                <div className="max-w-[1290px] mx-auto px-4 xl:px-0 py-8 md:py-16">
+                    <article className="prose md:prose-lg prose-headings:text-primary prose-a:text-primary hover:prose-a:text-secondary max-w-none [&_img]:max-h-[300px] md:[&_img]:max-h-[550px] [&_img]:w-full [&_img]:object-cover [&_img]:shadow-none">
+                        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                    </article>
                 </div>
 
                 {/* Related Posts Section */}
-                <div className="bg-gray-50 py-16">
+                <div className="bg-gray-50 py-8 md:py-16">
                     <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
                         <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -151,11 +124,11 @@ const BlogDetails = () => {
                         </div>
                     </div>
                 </div>
-            </main>
+            </main >
 
             <FooterCTA />
             <Footer />
-        </div>
+        </div >
     );
 };
 
