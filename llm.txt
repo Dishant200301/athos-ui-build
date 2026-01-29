@@ -22,6 +22,8 @@ Allow: /
 Allow: /*.html
 Allow: /*.pdf
 Allow: /*.txt
+Allow: /blog
+Allow: /blog/*
 
 # ==============================================================================
 # C. Training Restrictions

@@ -53,6 +53,12 @@ export const prerenderRoutes = [
     title: 'Product Inquiry - Athos Collagen | Request Information',
     description: 'Submit your inquiry for Athos Fish Collagen Peptide and Fish Gelatin products. Get detailed information and pricing for your business needs.',
   },
+  // ✅ BLOG PAGES
+  {
+    path: '/blog',
+    title: 'Blog - Athos Collagen | Marine Collagen Insights & Research',
+    description: 'Expert insights on fish collagen, marine collagen peptides, gelatin manufacturing, and industry trends. Educational content for manufacturers and buyers.',
+  },
 ];
 
 // ❌ PRIVATE ROUTES - These will NOT be prerendered

@@ -6,6 +6,7 @@ const usefulLinks = [
   { label: "Fish Collagen Peptide", href: "/fish-collagen-peptide" },
   { label: "Fish Gelatin", href: "/fish-gelatin" },
   { label: "Contact Us", href: "/contact" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const Footer = () => {
