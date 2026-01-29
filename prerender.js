@@ -42,10 +42,37 @@ const prerenderRoutes = [
   '/contact',
   '/inquiry',
   '/blog',
-  '/blog/unlocking-youthful-skin-fish-collagen',
-  '/blog/fish-vs-bovine-collagen',
-  '/blog/sustainable-sourcing-marine-collagen',
-  '/blog/collagen-for-joint-health',
+  // Blog posts
+  '/blog/what-is-collagen',
+  '/blog/marine-collagen-overview',
+  '/blog/fish-collagen-benefits',
+  '/blog/collagen-peptides-explained',
+  '/blog/gelatin-properties-uses',
+  '/blog/what-is-marine-collagen-made-of',
+  '/blog/what-is-fish-collagen-made-of',
+  '/blog/how-is-fish-collagen-made',
+  '/blog/marine-collagen-peptides-production',
+  '/blog/how-is-gelatin-made-from-fish',
+  '/blog/fish-collagen-powder-vs-peptides',
+  '/blog/marine-vs-bovine-collagen',
+  '/blog/collagen-powder-explained',
+  '/blog/collagen-from-fish-global-demand',
+  '/blog/marine-collagen-reviews',
+  '/blog/marine-collagen-anti-aging',
+  '/blog/collagen-bone-joint-health',
+  '/blog/fish-collagen-hair-health',
+  '/blog/marine-collagen-skincare',
+  '/blog/collagen-nail-strength',
+  '/blog/collagen-wound-healing',
+  '/blog/best-marine-collagen',
+  '/blog/fish-collagen-manufacturer',
+  '/blog/collagen-manufacturers-india',
+  '/blog/certified-marine-collagen-supplier',
+  '/blog/collagen-supplements-global-brands',
+  '/blog/marine-collagen-peptides-nutraceutical',
+  '/blog/marine-collagen-market-trends',
+  '/blog/fish-collagen-demand',
+  '/blog/india-fish-collagen-supply-chain',
 ];
 
 /**
@@ -99,9 +126,9 @@ function prerenderRoute(route) {
     // which will be properly rendered when the page loads
     fs.writeFileSync(outputPath, template);
     
-    console.log(`✅ Prerendered: ${route} -> ${outputPath}`);
+    console.log(` Prerendered: ${route} -> ${outputPath}`);
   } catch (error) {
-    console.error(`❌ Failed to prerender ${route}:`, error.message);
+    console.error(` Failed to prerender ${route}:`, error.message);
   }
 }
 
@@ -113,17 +140,17 @@ function prerender() {
   
   // Check if dist folder exists
   if (!fs.existsSync(distPath)) {
-    console.error('❌ dist folder not found. Run `npm run build` first.');
+    console.error(' dist folder not found. Run `npm run build` first.');
     process.exit(1);
   }
   
   // Check if template exists
   if (!fs.existsSync(templatePath)) {
-    console.error('❌ index.html not found in dist folder.');
+    console.error(' index.html not found in dist folder.');
     process.exit(1);
   }
   
-  console.log(`📄 Found ${prerenderRoutes.length} routes to prerender:\n`);
+  console.log(` Found ${prerenderRoutes.length} routes to prerender:\n`);
   prerenderRoutes.forEach(route => console.log(`   - ${route}`));
   console.log('');
   
