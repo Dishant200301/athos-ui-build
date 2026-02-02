@@ -27,7 +27,7 @@ const About = () => {
         <AboutContent />
         <MissionVision />
         <FacilitiesSection />
-        <AboutCertifications />
+        {/* <AboutCertifications /> */}
         <RDSection />
       </main>
 

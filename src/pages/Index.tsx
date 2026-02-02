@@ -25,7 +25,7 @@ const Index = () => {
         <UniquenessSection />
         <BenefitsSection />
         <ExportSection />
-        <CertificationsSection />
+        {/* <CertificationsSection /> */}
       </main>
       <FooterCTA />
       <Footer />
