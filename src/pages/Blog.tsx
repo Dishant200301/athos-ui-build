@@ -11,9 +11,10 @@ const Blog = () => {
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [currentPage, setCurrentPage] = useState(1);
 
-    const filteredBlogs = selectedCategory === "All"
+    const filteredBlogs = (selectedCategory === "All"
         ? blogs
-        : blogs.filter(blog => blog.category === selectedCategory);
+        : blogs.filter(blog => blog.category === selectedCategory))
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     const blogsPerPage = 12;
     const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);

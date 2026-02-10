@@ -12,7 +12,10 @@ import FooterCTA from "@/components/FooterCTA";
 const BlogDetails = () => {
     const { slug } = useParams<{ slug: string }>();
     const post = blogDetails.find((p) => p.slug === slug);
-    const relatedPosts = blogs.filter(b => b.slug !== slug).slice(0, 3);
+    const relatedPosts = blogs
+        .filter(b => b.slug !== slug)
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+        .slice(0, 3);
 
     useEffect(() => {
         window.scrollTo(0, 0);
