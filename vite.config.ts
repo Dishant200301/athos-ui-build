@@ -27,7 +27,6 @@ export default defineConfig(({ mode }) => ({
   /**
    * PLUGINS
    * - react(): Enables React with SWC for fast refresh
-   * - componentTagger(): Development tool (Lovable)
    */
   plugins: [
     react(),

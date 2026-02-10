@@ -11,17 +11,18 @@ const Blog = () => {
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [currentPage, setCurrentPage] = useState(1);
 
-    // Pagination logic: Page 1 = 12, Page 2 = 12, Page 3 = 6
-    const blogsPerPage = currentPage === 3 ? 6 : 12;
-    const indexOfLastBlog = currentPage === 1 ? 12 : currentPage === 2 ? 24 : 30;
-    const indexOfFirstBlog = currentPage === 1 ? 0 : currentPage === 2 ? 12 : 24;
-
     const filteredBlogs = selectedCategory === "All"
         ? blogs
         : blogs.filter(blog => blog.category === selectedCategory);
 
+    const blogsPerPage = 12;
+    const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
+
+
+
+    const indexOfLastBlog = currentPage * blogsPerPage;
+    const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
     const currentBlogs = filteredBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
-    const totalPages = 3;
 
     const handlePageChange = (pageNumber: number) => {
         setCurrentPage(pageNumber);
@@ -43,11 +44,6 @@ const Blog = () => {
 
                     {/* Filter Section - Centered */}
                     <div className="mb-12">
-                        {/* <div className="flex items-center justify-center gap-2 mb-6">
-                            <Filter className="w-5 h-5 text-[#257FA6]" />
-                            <h2 className="text-lg font-semibold text-gray-900">Filter by Category</h2>
-                        </div> */}
-
                         {/* Tablet - Two Rows (5 + 4) */}
                         <div className="hidden md:block lg:hidden">
                             <div className="flex justify-center gap-3 mb-3">
@@ -171,16 +167,6 @@ const Blog = () => {
                         </div>
                     </div>
 
-                    {/* Results Count */}
-                    {/* <div className="mb-6 text-center">
-                        <p className="text-gray-600 text-sm">
-                            Showing <span className="font-semibold text-[#257FA6]">{currentBlogs.length}</span> of <span className="font-semibold text-[#257FA6]">{filteredBlogs.length}</span> articles
-                            {selectedCategory !== "All" && (
-                                <span> in <span className="font-semibold">{selectedCategory}</span></span>
-                            )}
-                        </p>
-                    </div> */}
-
                     {/* Blog Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                         {currentBlogs.map((blog) => {
@@ -215,26 +201,6 @@ const Blog = () => {
                                             </div>
                                         </div>
 
-                                        {/* <div className="flex items-center gap-1 mb-3">
-                                            {[...Array(fullStars)].map((_, i) => (
-                                                <Star key={`full-${i}`} className="w-4 h-4 border-[#257FA6] fill-[#257FA6]" />
-                                            ))}
-                                            {hasHalfStar && (
-                                                <div className="relative w-4 h-4">
-                                                    <Star className="w-4 h-4 border-[#257FA6] fill-[#257FA6] absolute" />
-                                                    <div className="overflow-hidden w-1/2 absolute">
-                                                        <Star className="w-4 h-4 border-[#257FA6] fill-[#257FA6]" />
-                                                    </div>
-                                                </div>
-                                            )}
-                                            {[...Array(5 - Math.ceil(blog.rating))].map((_, i) => (
-                                                <Star key={`empty-${i}`} className="w-4 h-4 border-[#257FA6] fill-[#257FA6]" />
-                                            ))}
-                                            <span className="text-xs font-semibold text-gray-700 ml-1">
-                                                {blog.rating.toFixed(1)}
-                                            </span>
-                                        </div> */}
-
                                         <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#257FA6] transition-colors duration-300 line-clamp-2">
                                             {blog.title}
                                         </h3>
@@ -256,7 +222,7 @@ const Blog = () => {
                     </div>
 
                     {/* Pagination - Only for "All" category */}
-                    {selectedCategory === "All" && (
+                    {selectedCategory === "All" && totalPages > 1 && (
                         <div className="flex justify-center items-center gap-2 mt-12">
                             <button
                                 onClick={() => handlePageChange(currentPage - 1)}
@@ -269,7 +235,7 @@ const Blog = () => {
                                 <ChevronLeft className="w-5 h-5" />
                             </button>
 
-                            {[1, 2, 3].map((page) => (
+                            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                                 <button
                                     key={page}
                                     onClick={() => handlePageChange(page)}

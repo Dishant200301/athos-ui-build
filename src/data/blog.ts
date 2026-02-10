@@ -384,5 +384,77 @@ export const blogs: BlogPost[] = [
     author: "Dr. Priya Patel",
     rating: 4.5,
     featured: false
+  },
+  {
+    id: 31,
+    slug: "type-i-collagen-explained",
+    title: "Type I Collagen Explained: Structure, Sources, and Industrial Importance",
+    excerpt: "This article provides a deep, industry-focused explanation of Type I collagen, designed to support sourcing decisions and formulation strategies.",
+    image: "/images/all_blog_images/Blog_31_Type_I_Collagen_Explained/blog_31_type_i_collagen_explained-1.png",
+    date: "Dec 29, 2025",
+    category: "Technical",
+    author: "Dr. Alan Grant",
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 32,
+    slug: "molecular-weight-collagen-peptides",
+    title: "Molecular Weight of Collagen Peptides and Why It Matters",
+    excerpt: "Understanding collagen peptide molecular weight is essential for selecting the right ingredient for specific product applications.",
+    image: "/images/all_blog_images/Blog_32_Molecular_Weight_of_Collagen_Peptides/blog_32_molecular_weight_of_collagen_peptides-4.png",
+    date: "Dec 28, 2025",
+    category: "Technical",
+    author: "Dr. Laura Chen",
+    rating: 4.5,
+    featured: false
+  },
+  {
+    id: 33,
+    slug: "amino-acid-profile-marine-vs-fish-collagen",
+    title: "Amino Acid Profile of Marine vs Fish Collagen",
+    excerpt: "A detailed comparison of the amino acid profiles of marine versus fish collagen, explaining their functional implications.",
+    image: "/images/all_blog_images/Blog_33_Amino_Acid_Profile_Marine_vs_Fish_Collagen/blog_33_amino_acid_profile_marine_vs_fish_collagen-8.png",
+    date: "Dec 27, 2025",
+    category: "Comparison",
+    author: "Dr. Mark Wilson",
+    rating: 4.5,
+    featured: false
+  },
+  {
+    id: 34,
+    slug: "native-vs-hydrolyzed-collagen",
+    title: "Native Collagen vs Hydrolyzed Collagen: Structural Differences",
+    excerpt: "This technical comparison of native vs hydrolyzed collagen focuses on molecular structure, processing behavior, and industrial relevance.",
+    image: "/images/all_blog_images/Blog_34_Native_vs_Hydrolyzed_Collagen/blog_34_native_vs_hydrolyzed_collagen-12.png",
+    date: "Dec 26, 2025",
+    category: "Comparison",
+    author: "Dr. Emily Davis",
+    rating: 4,
+    featured: false
+  },
+  {
+    id: 35,
+    slug: "bioavailability-collagen-peptides",
+    title: "Bioavailability of Collagen Peptides: What Manufacturers Should Know",
+    excerpt: "Understanding the bioavailability of collagen peptides is essential for ingredient selection and formulation design.",
+    image: "/images/all_blog_images/Blog_35_Bioavailability_of_Collagen_Peptides/blog_35_bioavailability_of_collagen_peptides-15.png",
+    date: "Dec 25, 2025",
+    category: "Technical",
+    author: "Dr. James Wright",
+    rating: 5,
+    featured: true
+  },
+  {
+    id: 36,
+    slug: "thermal-stability-marine-collagen",
+    title: "Thermal Stability of Marine Collagen in Food and Pharma Applications",
+    excerpt: "How structure, composition, and processing influence marine collagen's behavior under heat exposure.",
+    image: "/images/all_blog_images/Blog_36_Thermal_Stability_of_Marine_Collagen/blog_36_thermal_stability_of_marine_collagen-19.png",
+    date: "Dec 24, 2025",
+    category: "Application",
+    author: "Dr. Linda Scott",
+    rating: 4.5,
+    featured: false
   }
 ];

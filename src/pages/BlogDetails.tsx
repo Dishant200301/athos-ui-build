@@ -82,7 +82,7 @@ const BlogDetails = () => {
                 </div>
 
                 {/* Related Posts Section */}
-                <div className="bg-gray-50 py-8 md:py-16">
+                <div className="bg-white py-8 md:py-16">
                     <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
                         <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
