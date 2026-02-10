@@ -22,8 +22,9 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: true,
   },
-  
+
   /**
    * PLUGINS
    * - react(): Enables React with SWC for fast refresh
@@ -32,7 +33,7 @@ export default defineConfig(({ mode }) => ({
     react(),
 
   ].filter(Boolean),
-  
+
   /**
    * PATH ALIASES
    * Allows importing with @ instead of relative paths
@@ -43,7 +44,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  
+
   /**
    * BUILD CONFIGURATION
    * - outDir: Where built files go
@@ -54,7 +55,7 @@ export default defineConfig(({ mode }) => ({
     outDir: 'dist',
     emptyOutDir: true,
     sourcemap: false,
-    
+
     /**
      * ROLLUP OPTIONS
      * Controls how the app is bundled
