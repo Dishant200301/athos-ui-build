@@ -355,7 +355,7 @@ export const blogs: BlogPost[] = [
     title: "Global Marine Collagen Market Trends and Growth Opportunities",
     excerpt: "This market insight blog explores key trends, drivers, and growth opportunities shaping the global marine collagen market.",
     image: "/images/all_blog_images/Blog_28_Marine_Collagen_Market_Trends/global-marine-collagen-market-growth.jpeg",
-    date: "Jan 01, 2026",
+    date: "Jan 29, 2026",
     category: "Market Insight",
     author: "Dr. Nancy Harris",
     rating: 5,
@@ -367,7 +367,7 @@ export const blogs: BlogPost[] = [
     title: "Why Demand for Fish Collagen Is Rising Across Global Industries",
     excerpt: "This market insight blog examines the key factors driving fish collagen demand across global industries.",
     image: "/images/all_blog_images/Blog_29_Fish_Collagen_Demand/fish-collagen-demand-global.jpeg",
-    date: "Dec 31, 2025",
+    date: "Jan 1, 2026",
     category: "Market Insight",
     author: "Dr. Richard Young",
     rating: 4.5,
@@ -379,7 +379,7 @@ export const blogs: BlogPost[] = [
     title: "India’s Role in the Global Fish Collagen Supply Chain",
     excerpt: "This market insight blog explores how India contributes to global fish collagen supply, why international buyers source from India, and what makes Indian suppliers competitive.",
     image: "/images/all_blog_images/Blog_30_India_Fish_Collagen_Supply_Chain/fish-collagen-suppliers-india.jpeg",
-    date: "Dec 30, 2025",
+    date: "Dec 31, 2025",
     category: "Market Insight",
     author: "Dr. Priya Patel",
     rating: 4.5,
@@ -456,5 +456,6 @@ export const blogs: BlogPost[] = [
     author: "Dr. Linda Scott",
     rating: 4.5,
     featured: false
-  }
+  },
+  
 ];
