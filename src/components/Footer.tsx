@@ -114,16 +114,31 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Factory Address */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <h3 className="text-lg font-bold text-secondary-foreground mb-6">
-                Factory Address
-              </h3>
-              <p className="text-secondary-foreground/90 leading-[27px]">
-                Plot No. B-19, Gujarat Agro Infrastructure Mega Food Park, Village Shah & Vasravi,
-                Tal. Mangrol, Dist. Surat-394410, Gujarat, India
-              </p>
+            {/* Addresses */}
+            <div className="animate-fade-in sm:col-span-2 lg:col-span-1" style={{ animationDelay: '0.3s' }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8 sm:gap-12 lg:gap-8">
+                <div>
+                  <h3 className="text-lg font-bold text-secondary-foreground mb-4">
+                    Factory Address
+                  </h3>
+                  <p className="text-secondary-foreground/90 leading-[27px]">
+                    Plot No. B-19, Gujarat Agro Infrastructure Mega Food Park, Village Shah & Vasravi,
+                    Tal. Mangrol, Dist. Surat-394410, Gujarat, India
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-secondary-foreground mb-4">
+                    Head Office
+                  </h3>
+                  <p className="text-secondary-foreground/90 leading-[27px]">
+                    317, Blue Emminence, Dandi Road, Jahangirpura, Surat, Gujarat, 395005
+                  </p>
+                </div>
+              </div>
             </div>
+
+
           </div>
         </div>
       </footer>
