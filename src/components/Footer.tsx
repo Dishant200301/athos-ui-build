@@ -122,7 +122,7 @@ const Footer = () => {
                     Head Office
                   </h3>
                   <p className="text-secondary-foreground/90 leading-[27px]">
-                    317, Blue Emminence, Dandi Road, Jahangirpura, Surat 395005, Gujarat, India
+                    317, Blu Eminence, Opp. Sangini, Jahangirabad, Dahin Nagar, Surat, Gujarat 395005, India
                   </p>
                 </div>
                 
