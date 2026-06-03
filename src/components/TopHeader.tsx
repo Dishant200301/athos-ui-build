@@ -31,11 +31,11 @@ const TopHeader = () => {
       <div className="max-w-[1290px] mx-auto h-full flex items-center justify-between px-4 xl:px-0">
         {/* Email */}
         <a
-          href="mailto:inquiry@athoscollagen.com"
+          href="mailto:athoscollagen@gmail.com"
           className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
         >
           <Mail className="w-4 h-4" />
-          <span className="text-xs sm:text-sm">inquiry@athoscollagen.com</span>
+          <span className="text-xs sm:text-sm">athoscollagen@gmail.com</span>
         </a>
 
         {/* Language Selector - Hidden on mobile, shown on desktop */}
