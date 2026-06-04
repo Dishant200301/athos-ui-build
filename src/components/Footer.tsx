@@ -77,12 +77,12 @@ const Footer = () => {
               </h3>
 
               <a
-                href="mailto:athoscollagen@gmail.com"
+                href="mailto:inquiry@athoscollagen.com"
                 className="group flex items-center gap-3 text-secondary-foreground/90 hover:text-secondary-foreground transition-all duration-300 mb-6"
               >
                 <Mail className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
                 <span className="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-secondary-foreground after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
-                  athoscollagen@gmail.com
+                  inquiry@athoscollagen.com
                 </span>
               </a>
 

@@ -25,8 +25,8 @@ const ContactInfo = () => {
             <h3 className="mt-[10px] text-[18px] leading-[22px] font-bold uppercase text-[#999999]">
               Email
             </h3>
-            <a href="mailto:athoscollagen@gmail.com" className="mt-[6px] text-[16px] leading-[24px] text-black">
-              athoscollagen@gmail.com
+            <a href="mailto:inquiry@athoscollagen.com" className="mt-[6px] text-[16px] leading-[24px] text-black">
+              inquiry@athoscollagen.com
             </a>
           </div>
 
