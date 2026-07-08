@@ -16,6 +16,7 @@ const About = () => {
       <Helmet>
         <title>About - Athos Collagen Pvt. Ltd</title>
         <meta name="description" content="Learn about Athos Collagen Pvt. Ltd., India's leading manufacturer of premium Fish Collagen Peptide and Fish Gelatin. Our mission, vision, facilities, and certifications." />
+        <link rel="canonical" href="https://athoscollagen.com/about" />
       </Helmet>
       <TopHeader />
       <Navbar />

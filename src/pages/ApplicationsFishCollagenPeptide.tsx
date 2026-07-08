@@ -10,6 +10,7 @@ const ApplicationsFishCollagenPeptide = () => {
             <Helmet>
                 <title>Applications of Fish Collagen - Athos Collagen Pvt. Ltd</title>
                 <meta name="description" content="Explore diverse applications of Athos Fish Collagen Peptide in nutraceuticals, food & beverages, cosmetics, pharmaceuticals, pet food, agriculture, and biotechnology." />
+                <link rel="canonical" href="https://athoscollagen.com/applications/fish-collagen-peptide" />
             </Helmet>
             <TopHeader />
             <Navbar />

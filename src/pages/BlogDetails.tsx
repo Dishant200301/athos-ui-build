@@ -1,5 +1,6 @@
 
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { blogDetails } from "@/data/blogDetails";
 import { blogs } from "@/data/blog";
 import { ArrowLeft, Calendar, User, Tag, ArrowRight } from "lucide-react";
@@ -39,8 +40,15 @@ const BlogDetails = () => {
         );
     }
 
+    const blogInfo = blogs.find((b) => b.slug === slug);
+
     return (
         <div className="min-h-screen bg-white overflow-hidden">
+            <Helmet>
+                <title>{post.title} - Athos Collagen</title>
+                <meta name="description" content={blogInfo?.excerpt || post.title} />
+                <link rel="canonical" href={`https://athoscollagen.com/blog/${slug}`} />
+            </Helmet>
             <TopHeader />
             <Navbar />
 

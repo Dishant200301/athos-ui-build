@@ -12,6 +12,7 @@ const Contact = () => {
       <Helmet>
         <title>Contact Us - Athos Collagen Pvt. Ltd</title>
         <meta name="description" content="Contact Athos Collagen for inquiries about Fish Collagen Peptide and Fish Gelatin. Reach out to our team for product information and business inquiries." />
+        <link rel="canonical" href="https://athoscollagen.com/contact" />
       </Helmet>
       <TopHeader />
       <Navbar />

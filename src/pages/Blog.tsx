@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { blogCategories, blogs } from "@/data/blog";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, User, Star, ChevronLeft, ChevronRight, Filter } from "lucide-react";
@@ -32,6 +33,11 @@ const Blog = () => {
 
     return (
         <div className="min-h-screen bg-white overflow-hidden">
+            <Helmet>
+                <title>Blog - Athos Collagen | Marine Collagen Insights & Research</title>
+                <meta name="description" content="Expert insights on fish collagen, marine collagen peptides, gelatin manufacturing, and industry trends. Educational content for manufacturers and buyers." />
+                <link rel="canonical" href="https://athoscollagen.com/blog" />
+            </Helmet>
             <TopHeader />
             <Navbar />
             <main className="py-16">

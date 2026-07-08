@@ -11,6 +11,7 @@ const Inquiry = () => {
       <Helmet>
         <title>Inquiry - Athos Collagen Pvt. Ltd</title>
         <meta name="description" content="Submit your inquiry for Athos Fish Collagen Peptide and Fish Gelatin products. Get detailed information and pricing for your business needs." />
+        <link rel="canonical" href="https://athoscollagen.com/inquiry" />
       </Helmet>
       <TopHeader />
       <Navbar />

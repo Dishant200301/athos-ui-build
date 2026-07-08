@@ -15,6 +15,7 @@ const FishCollagenPeptide = () => {
       <Helmet>
         <title>Fish Collagen Peptide - Athos Collagen Pvt. Ltd</title>
         <meta name="description" content="Discover Athos Fish Collagen Peptide - premium quality marine collagen with high bioavailability. Benefits for skin, joints, hair, and overall wellness." />
+        <link rel="canonical" href="https://athoscollagen.com/fish-collagen-peptide" />
       </Helmet>
       <TopHeader />
       <Navbar />

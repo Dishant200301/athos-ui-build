@@ -15,6 +15,7 @@ const FishGelatin = () => {
       <Helmet>
         <title>Fish Gelatin - Athos Collagen Pvt. Ltd</title>
         <meta name="description" content="Explore Athos Fish Gelatin for pharmaceutical and food industry applications. High purity, biocompatible, and versatile marine gelatin products." />
+        <link rel="canonical" href="https://athoscollagen.com/fish-gelatin" />
       </Helmet>
       <TopHeader />
       <Navbar />

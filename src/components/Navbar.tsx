@@ -68,7 +68,7 @@ const Navbar = () => {
       <div className="max-w-[1290px] mx-auto h-full flex items-center justify-between px-4 xl:px-0">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/images/logo.webp" alt="" className="xl:w-35 xl:h-[60px] w-30 h-[40px]" />
+          <img src="/images/logo.webp" alt="Athos Collagen" className="xl:w-35 xl:h-[60px] w-30 h-[40px]" />
         </Link>
 
         {/* Desktop Menu */}
