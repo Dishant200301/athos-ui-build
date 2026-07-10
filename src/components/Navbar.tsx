@@ -118,26 +118,26 @@ const Navbar = () => {
 
   return (
     <nav className="h-[85px] w-full bg-background  top-0 z-50 shadow-sm">
-      <div className="max-w-[1290px] mx-auto h-full flex items-center justify-between px-4 xl:px-0">
+      <div className="max-w-[1290px] mx-auto h-full flex items-center justify-between px-4 lg:px-0 relative">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/images/logo.webp" alt="Athos Collagen" className="xl:w-35 xl:h-[60px] w-30 h-[40px]" />
+          <img src="/images/logo.webp" alt="Athos Collagen" className="lg:w-35 lg:h-[60px] w-30 h-[40px]" />
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden xl:flex items-center gap-6">
+        <ul className="hidden lg:flex h-full gap-6">
           {navItems.map((item) => (
-            <li key={item.label} className="relative group">
+            <li key={item.label} className={`group ${item.hasMegaMenu ? "" : "relative"} h-full flex items-center`}>
               {item.hasMegaMenu ? (
                 <>
                   <button
-                    className="flex items-center gap-1 text-base transition-colors text-black hover:text-primary py-4"
+                    className="flex items-center gap-1 text-base transition-colors text-black group-hover:text-primary py-4"
                   >
                     {item.label}
                     <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                   </button>
                   {/* Mega Menu Dropdown */}
-                  <div className="absolute top-full left-1/2 -translate-x-[40%] mt-1 w-[1000px] bg-white border border-gray-200 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden flex">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-[1000px] bg-white border border-gray-200 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden flex">
                     {/* Left Column: Categories List */}
                     <div className="w-[32%] bg-gray-50/50 border-r border-gray-100 p-4 space-y-1">
                       {productCategories.map((cat) => (
@@ -242,13 +242,13 @@ const Navbar = () => {
 
         {/* Inquiry Button */}
         <Link to="/inquiry">
-          <Button className="hidden xl:flex btn-primary rounded-[6px_0px] px-10 ">
+          <Button className="hidden lg:flex btn-primary rounded-[6px_0px] px-10 ">
             Inquiry
           </Button>
         </Link>
 
         {/* Mobile Language Selector & Menu Button */}
-        <div className="xl:hidden flex items-center gap-3">
+        <div className="lg:hidden flex items-center gap-3">
           {/* Language Button - Mobile Only */}
           <div className="relative">
             <button
@@ -304,7 +304,7 @@ const Navbar = () => {
 
       {/* Mobile Menu - Full Page Overlay */}
       {mobileMenuOpen && (
-        <div className="xl:hidden fixed inset-0 bg-background z-50 overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 bg-background z-50 overflow-y-auto">
           {/* Close Button */}
           <div className="flex justify-end p-4">
             <button
@@ -419,7 +419,7 @@ const Navbar = () => {
             ))}
             <li className="mt-4">
               <Link to="/inquiry" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full btn-primary py-3 text-lg">Inquiry</Button>
+                <Button className="w-full rounded-[6px_0px] btn-primary py-3 text-lg">Inquiry</Button>
               </Link>
             </li>
           </ul>
