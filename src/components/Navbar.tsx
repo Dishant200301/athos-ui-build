@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -28,7 +28,7 @@ const productCategories = [
     ]
   },
   {
-    title: "Probiotic & Fermentation Ing.",
+    title: "Probiotic and Fermentation Ingredients",
     slug: "probiotic-fermentation-ingredients",
     href: "/products/probiotic-fermentation-ingredients",
     subProducts: [
@@ -40,7 +40,7 @@ const productCategories = [
     ]
   },
   {
-    title: "Nutraceutical & Pharma. Ing.",
+    title: "Nutraceutical and Pharmaceuticals Ingredients",
     slug: "nutraceutical-pharmaceutical-ingredients",
     href: "/products/nutraceutical-pharmaceutical-ingredients",
     subProducts: [
@@ -91,8 +91,13 @@ const Navbar = () => {
   const [mobileLangDropdownOpen, setMobileLangDropdownOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<Language>(languages[0]);
   const [activeCategory, setActiveCategory] = useState<typeof productCategories[0] | null>(null);
+  const [isSubProductsExpanded, setIsSubProductsExpanded] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState<string | null>(null);
   const location = useLocation();
+
+  useEffect(() => {
+    setIsSubProductsExpanded(false);
+  }, [activeCategory]);
 
   const isActive = (href: string) => {
     if (href === "/") return location.pathname === "/";
@@ -146,14 +151,14 @@ const Navbar = () => {
                   </button>
                   {/* Mega Menu Dropdown */}
                   <div 
-                    style={{ left: 'calc(50% - 125px)' }}
+                    style={{ left: 'calc(50% - 180px)' }}
                     className={`absolute top-full bg-white border border-gray-200 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden flex ${
-                      activeCategory ? "w-[570px]" : "w-[250px]"
+                      activeCategory ? "w-[680px]" : "w-[360px]"
                     }`}
                   >
                     {/* Left Column: Categories List */}
                     <div className={`transition-all duration-300 p-2 space-y-1 ${
-                      activeCategory ? "w-[250px] bg-gray-50/50 border-r border-gray-100" : "w-full bg-white"
+                      activeCategory ? "w-[360px] bg-gray-50/50 border-r border-gray-100" : "w-full bg-white"
                     }`}>
                       {productCategories.map((cat) => (
                         <div
@@ -168,9 +173,11 @@ const Navbar = () => {
                           <span className="flex-1 text-[13px] flex items-center whitespace-nowrap">
                             {cat.title}
                           </span>
-                          {activeCategory?.title === cat.title && (
-                            <ChevronDown className="w-4 h-4 -rotate-90 text-[#1D7AA3]" />
-                          )}
+                          <ChevronRight className={`w-3.5 h-3.5 transition-colors ${
+                            activeCategory?.title === cat.title
+                              ? "text-[#1D7AA3]"
+                              : "text-gray-400"
+                          }`} />
                         </div>
                       ))}
                     </div>
@@ -181,38 +188,54 @@ const Navbar = () => {
                         ? "w-[320px] p-5 min-h-[350px] opacity-100 visible" 
                         : "w-0 p-0 opacity-0 invisible overflow-hidden min-h-0 h-0"
                     }`}>
-                      {activeCategory && (
-                        <>
-                          <div>
-                            <div className="flex items-center justify-between mb-4 border-b border-gray-100 pb-3">
-                              <h4 className="text-[17px] font-bold text-[#1D7AA3]">
-                                {activeCategory.title}
-                              </h4>
-                            </div>
-                            
-                            <div className="grid grid-cols-1 gap-y-2.5 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
-                              {activeCategory.subProducts.map((sub, idx) => (
-                                <div
-                                  key={idx}
-                                  className="flex items-center gap-2 text-sm text-[#555555] hover:text-[#1D7AA3] transition-colors duration-150 py-0.5 cursor-default"
-                                >
-                                  <span className="text-[#66b036] text-[8px] flex-shrink-0">▶</span>
-                                  <span className="font-medium leading-tight">{sub}</span>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
+                      {activeCategory && (() => {
+                        const hasMoreThanLimit = activeCategory.subProducts.length > 10;
+                        const visibleSubProducts = hasMoreThanLimit && !isSubProductsExpanded
+                          ? activeCategory.subProducts.slice(0, 8)
+                          : activeCategory.subProducts;
+                        const showViewMore = hasMoreThanLimit && !isSubProductsExpanded;
+                        const showCategoryPageButton = !hasMoreThanLimit || isSubProductsExpanded;
 
-                          {/* Mega Menu Footer */}
-                          <div className="mt-4 pt-4 border-t border-gray-100 flex justify-start">
-                            <Link to={activeCategory.href}>
-                              <Button className="btn-primary rounded-[6px_0px] text-sm px-4 py-2.5 h-auto font-semibold shadow-sm w-fit">
-                                View Category Page
-                              </Button>
-                            </Link>
-                          </div>
-                        </>
-                      )}
+                        return (
+                          <>
+                            <div>
+                              
+                              <div className="grid grid-cols-1 gap-y-2.5 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+                                {visibleSubProducts.map((sub, idx) => (
+                                  <div
+                                    key={idx}
+                                    className="flex items-center gap-2 text-sm text-[#555555] hover:text-[#1D7AA3] transition-colors duration-150 py-0.5 cursor-default"
+                                  >
+                                    <span className="text-[#66b036] text-[8px] flex-shrink-0">▶</span>
+                                    <span className="font-medium leading-tight">{sub}</span>
+                                  </div>
+                                ))}
+
+                                {showViewMore && (
+                                  <button
+                                    onClick={() => setIsSubProductsExpanded(true)}
+                                    className="text-[13px] font-bold text-[#1D7AA3] hover:text-[#3186ab] flex items-center gap-1.5 mt-2.5 w-fit hover:underline text-left cursor-pointer transition-colors"
+                                  >
+                                    <span>View More</span>
+                                    <span>▼</span>
+                                  </button>
+                                )}
+                              </div>
+                            </div>
+
+                            {/* Mega Menu Footer */}
+                            {showCategoryPageButton && (
+                              <div className="mt-4 pt-4 border-t border-gray-100 flex justify-start">
+                                <Link to={activeCategory.href}>
+                                  <Button className="btn-primary rounded-[6px_0px] text-sm px-4 py-2.5 h-auto font-semibold shadow-sm w-fit">
+                                    View Category Page
+                                  </Button>
+                                </Link>
+                              </div>
+                            )}
+                          </>
+                        );
+                      })()}
                     </div>
                   </div>
                 </>
