@@ -91,6 +91,7 @@ const Navbar = () => {
   const [mobileLangDropdownOpen, setMobileLangDropdownOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<Language>(languages[0]);
   const [activeCategory, setActiveCategory] = useState(productCategories[0]);
+  const [mobileActiveCategory, setMobileActiveCategory] = useState<string | null>(null);
   const location = useLocation();
 
   const isActive = (href: string) => {
@@ -329,25 +330,41 @@ const Navbar = () => {
                       <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
                     </button>
                     {/* Mobile Dropdown Items */}
-                    <div className={`overflow-hidden transition-all duration-300 ${mobileDropdownOpen ? 'max-h-[300px] overflow-y-auto' : 'max-h-0'}`}>
-                      <ul className="pl-4 mt-2 space-y-1 border-l-2 border-primary/20">
+                    {mobileDropdownOpen && (
+                      <ul className="mt-2 space-y-1">
                         {productCategories.map((cat) => (
-                          <li key={cat.title}>
-                            <Link
-                              to={cat.href}
-                              className="block text-base py-2 text-foreground/80 hover:text-primary flex items-center justify-between"
-                              onClick={() => {
-                                setMobileMenuOpen(false);
-                                setMobileDropdownOpen(false);
-                              }}
+                          <li key={cat.title} className="border-b border-gray-50/50 pb-1">
+                            <button
+                              onClick={() => setMobileActiveCategory(mobileActiveCategory === cat.title ? null : cat.title)}
+                              className="w-full flex items-center justify-between py-2 text-[16px] text-foreground/80 hover:text-primary font-medium"
                             >
                               <span>{cat.title}</span>
-                              <ChevronDown className="w-4 h-4 -rotate-90 text-gray-400" />
-                            </Link>
+                              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileActiveCategory === cat.title ? 'rotate-180' : ''}`} />
+                            </button>
+                            {mobileActiveCategory === cat.title && (
+                              <ul className="pl-4 mt-1 space-y-1 border-l border-gray-100 pb-2">
+                                {cat.subProducts.map((sub, sIdx) => (
+                                  <li key={sIdx}>
+                                    <Link
+                                      to={cat.href}
+                                      className="block text-sm text-foreground/60 hover:text-primary py-1 flex items-center gap-1.5"
+                                      onClick={() => {
+                                        setMobileMenuOpen(false);
+                                        setMobileDropdownOpen(false);
+                                        setMobileActiveCategory(null);
+                                      }}
+                                    >
+                                      <span className="text-[#66b036] text-[7px] flex-shrink-0">▶</span>
+                                      <span>{sub}</span>
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    )}
                   </div>
                 ) : item.hasDropdown ? (
                   <div>

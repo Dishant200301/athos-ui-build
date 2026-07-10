@@ -16,7 +16,7 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col font-sans">
+    <div className="min-h-screen flex flex-col font-sans overflow-hidden">
       <Helmet>
         <title>404 Not Found | Athos</title>
         <meta name="description" content="The page you are looking for does not exist." />
