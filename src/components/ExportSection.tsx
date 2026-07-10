@@ -4,7 +4,7 @@ const ExportSection = () => {
       <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text Content */}
-          <div>
+          <div className="order-1 lg:order-2">
             <h2 className="text-2xl md:text-3xl lg:text-[32px] font-bold text-primary mb-6">
               Exporting Worldwide
             </h2>
@@ -15,7 +15,7 @@ const ExportSection = () => {
           </div>
 
           {/* World Map Image */}
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center order-2 lg:order-1">
             <img
               src="/images/athos-map-1.webp"
               alt="World Map - Export Destinations"

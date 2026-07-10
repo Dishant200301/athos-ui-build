@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import UniquenessSection from "@/components/UniquenessSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ExportSection from "@/components/ExportSection";
+import CobrandingSection from "@/components/CobrandingSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import Footer from "@/components/Footer";
 import FooterCTA from "@/components/FooterCTA";
@@ -65,6 +66,7 @@ const Index = () => {
         <UniquenessSection />
         <BenefitsSection />
         <ExportSection />
+        <CobrandingSection />
         {/* <CertificationsSection /> */}
       </main>
       <FooterCTA />
