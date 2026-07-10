@@ -3,18 +3,69 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
+const productCategories = [
+  {
+    title: "Enzymes",
+    slug: "enzymes",
+    href: "/products/enzymes",
+    subProducts: [
+      "Serratiopeptidase", "Trypsin", "Pancreatin", "Pepsin", "Amylase",
+      "Bromelain", "Rennet", "Lactase", "Lipase", "Papain",
+      "Phospholipase", "Protease", "Dextranase", "Cellulase", "Beta-Glucanase",
+      "Transglutaminase", "Laccase", "Polygalacturonase", "Xylanase", "Galactosidase",
+      "Pectinase"
+    ]
+  },
+  {
+    title: "Peptones",
+    slug: "peptones",
+    href: "/products/peptones",
+    subProducts: [
+      "Bovine Collagen Peptide", "Veg Collagen", "Fish Collagen Peptide", "Chicken Collagen",
+      "Egg Membrane Collagen", "Undenatured Collagen", "Bovine Gelatin", "Fish Gelatin",
+      "Mucopolysaccharides", "Corn Hydrolysate Protein", "Wheat Peptide", "Pea Peptide",
+      "Brown Rice Protein", "Soy Protein", "Whey Protein"
+    ]
+  },
+  {
+    title: "Probiotic & Fermentation Ing.",
+    slug: "probiotic-fermentation-ingredients",
+    href: "/products/probiotic-fermentation-ingredients",
+    subProducts: [
+      "Malt Extract", "Yeast Extract", "Liver Extract", "Meat Extract",
+      "Lactobacillus Buchneri", "Streptococcus Thermophilus", "Lactobacillus Casei", "Bifidobacterium Adolescentis",
+      "Enterococcus Faecium", "Pediococcus Acidilactici", "Bacillus Coagulans", "Bacillus Subtilis",
+      "Lactobacillus Brevis", "Saccharomyces Cerevisiae", "Bacillus Clausii", "Bifidobacterium Animalis",
+      "Bifidobacterium Longum", "Bifidobacterium Infantis", "Lactobacillus Bulgaricus", "Streptococcus Faecium"
+    ]
+  },
+  {
+    title: "Nutraceutical & Pharma. Ing.",
+    slug: "nutraceutical-pharmaceutical-ingredients",
+    href: "/products/nutraceutical-pharmaceutical-ingredients",
+    subProducts: [
+      "L-Glutathione", "Chondroitin Sulfate", "Hyaluronic Acid", "Methylsulfonylmethane (MSM)",
+      "Glucosamine", "Coenzyme Q10", "Maltodextrin", "Sodium Alginate",
+      "Guar Gum", "Bovine Colostrum Powder", "Agar Agar", "Pectin",
+      "Lecithin", "Sodium Caseinate", "Microcrystalline Cellulose"
+    ]
+  },
+  {
+    title: "Animal Nutrition",
+    slug: "animal-nutrition",
+    href: "/products/animal-nutrition",
+    subProducts: [
+      "Sodium Butyrate", "Calcium Butyrate", "Mannan Oligosaccharide", "Amino Chelated Minerals",
+      "Sodium Propionate", "Calcium Propionate", "Protein Hydrolysate", "Active Dry Yeast"
+    ]
+  }
+];
+
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Ficolla", img: "/images/ficolla.png", href: "https://ficolla.com/ " },
-  { label: "Fish Collagen Peptide", href: "/fish-collagen-peptide" },
-  { label: "Fish Gelatin", href: "/fish-gelatin" },
-  {
-    label: "Applications", href: "#", hasDropdown: true, dropdownItems: [
-      { label: "Applications of Fish Collagen Peptide", href: "/applications/fish-collagen-peptide" },
-      { label: "Applications of Fish Gelatin", href: "/applications/fish-gelatin" },
-    ]
-  },
+  { label: "Products", href: "#", hasMegaMenu: true },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -39,6 +90,7 @@ const Navbar = () => {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [mobileLangDropdownOpen, setMobileLangDropdownOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<Language>(languages[0]);
+  const [activeCategory, setActiveCategory] = useState(productCategories[0]);
   const location = useLocation();
 
   const isActive = (href: string) => {
@@ -75,7 +127,73 @@ const Navbar = () => {
         <ul className="hidden xl:flex items-center gap-6">
           {navItems.map((item) => (
             <li key={item.label} className="relative group">
-              {item.hasDropdown ? (
+              {item.hasMegaMenu ? (
+                <>
+                  <button
+                    className="flex items-center gap-1 text-base transition-colors text-black hover:text-primary py-4"
+                  >
+                    {item.label}
+                    <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                  </button>
+                  {/* Mega Menu Dropdown */}
+                  <div className="absolute top-full left-1/2 -translate-x-[40%] mt-1 w-[1000px] bg-white border border-gray-200 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden flex">
+                    {/* Left Column: Categories List */}
+                    <div className="w-[32%] bg-gray-50/50 border-r border-gray-100 p-4 space-y-1">
+                      {productCategories.map((cat) => (
+                        <div
+                          key={cat.title}
+                          onMouseEnter={() => setActiveCategory(cat)}
+                          className={`flex items-center justify-between p-3 rounded-lg cursor-pointer transition-all duration-200 ${
+                            activeCategory.title === cat.title
+                              ? "bg-[#EDF5F8] text-[#1D7AA3] font-semibold"
+                              : "text-black hover:bg-gray-100"
+                          }`}
+                        >
+                          <Link to={cat.href} className="flex-1 text-[15px] flex items-center">
+                            <span>{cat.title}</span>
+                          </Link>
+                          {activeCategory.title === cat.title && (
+                            <ChevronDown className="w-4 h-4 -rotate-90 text-[#1D7AA3]" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Right Column: Subproducts List */}
+                    <div className="w-[68%] p-6 bg-white flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center justify-between mb-4 border-b border-gray-100 pb-3">
+                          <h4 className="text-[17px] font-bold text-[#1D7AA3]">
+                            {activeCategory.title}
+                          </h4>
+                          
+                        </div>
+                        
+                        <div className="grid grid-cols-2 gap-x-6 gap-y-2.5">
+                          {activeCategory.subProducts.map((sub, idx) => (
+                            <div
+                              key={idx}
+                              className="flex items-center gap-2 text-sm text-[#555555] hover:text-[#1D7AA3] transition-colors duration-150 py-0.5 cursor-default"
+                            >
+                              <span className="text-[#66b036] text-[8px] flex-shrink-0">▶</span>
+                              <span className="font-medium leading-tight">{sub}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Mega Menu Footer */}
+                      <div className="mt-4 pt-4 border-t border-gray-100 flex justify-start">
+                        <Link to={activeCategory.href}>
+                          <Button className="btn-primary rounded-[6px_0px] text-sm px-4 py-2.5 h-auto font-semibold shadow-sm w-fit">
+                            View Category Page
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : item.hasDropdown ? (
                 <>
                   <button
                     className="flex items-center gap-1 text-base transition-colors text-black hover:text-primary"
@@ -121,22 +239,12 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* WhatsApp Button */}
-        <div className="hidden xl:flex items-center gap-4">
-          <a
-            href="https://wa.link/6vbwgc"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-[#6ebe08] hover:bg-[#5fa307] text-white px-6 h-10 rounded-[6px_0px] font-medium transition-all duration-300 shadow-md"
-            aria-label="Contact on WhatsApp"
-            title="Chat on WhatsApp"
-          >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-            </svg>
-            <span>WhatsApp</span>
-          </a>
-        </div>
+        {/* Inquiry Button */}
+        <Link to="/inquiry">
+          <Button className="hidden xl:flex btn-primary rounded-[6px_0px] px-10 ">
+            Inquiry
+          </Button>
+        </Link>
 
         {/* Mobile Language Selector & Menu Button */}
         <div className="xl:hidden flex items-center gap-3">
@@ -211,7 +319,37 @@ const Navbar = () => {
           <ul className="flex flex-col px-6 pb-6 gap-4">
             {navItems.map((item) => (
               <li key={item.label}>
-                {item.hasDropdown ? (
+                {item.hasMegaMenu ? (
+                  <div>
+                    <button
+                      onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+                      className="flex items-center justify-between w-full text-lg py-3 text-foreground hover:text-primary border-b border-border"
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    {/* Mobile Dropdown Items */}
+                    <div className={`overflow-hidden transition-all duration-300 ${mobileDropdownOpen ? 'max-h-[300px] overflow-y-auto' : 'max-h-0'}`}>
+                      <ul className="pl-4 mt-2 space-y-1 border-l-2 border-primary/20">
+                        {productCategories.map((cat) => (
+                          <li key={cat.title}>
+                            <Link
+                              to={cat.href}
+                              className="block text-base py-2 text-foreground/80 hover:text-primary flex items-center justify-between"
+                              onClick={() => {
+                                setMobileMenuOpen(false);
+                                setMobileDropdownOpen(false);
+                              }}
+                            >
+                              <span>{cat.title}</span>
+                              <ChevronDown className="w-4 h-4 -rotate-90 text-gray-400" />
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ) : item.hasDropdown ? (
                   <div>
                     <button
                       onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
@@ -263,20 +401,9 @@ const Navbar = () => {
               </li>
             ))}
             <li className="mt-4">
-              <a
-                href="https://wa.link/6vbwgc"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 bg-[#6ebe08] hover:bg-[#5fa307] text-white py-2.5 text-lg rounded-[6px_0px] font-medium transition-all duration-300 shadow-sm"
-                aria-label="Contact on WhatsApp"
-                title="Chat on WhatsApp"
-              >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-                </svg>
-                <span>WhatsApp</span>
-              </a>
+              <Link to="/inquiry" onClick={() => setMobileMenuOpen(false)}>
+                <Button className="w-full btn-primary py-3 text-lg">Inquiry</Button>
+              </Link>
             </li>
           </ul>
         </div>

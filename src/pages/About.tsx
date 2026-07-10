@@ -22,14 +22,12 @@ const About = () => {
       <Navbar />
 
       <main className="flex-1">
-        <div className="max-w-[1290px] mx-auto px-4 xl:px-0 md:py-8">
-          <AboutHero />
-        </div>
+        <AboutHero />
         <AboutContent />
         <MissionVision />
         <FacilitiesSection />
         {/* <AboutCertifications /> */}
-        <RDSection />
+        {/* <RDSection /> */}
       </main>
 
       <FooterCTA />
