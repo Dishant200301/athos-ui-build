@@ -101,11 +101,6 @@ const productCategoryData: Record<string, CategoryData> = {
         ]
       },
       {
-        name: "Bromelain",
-        slug: "bromelain",
-        bullets: []
-      },
-      {
         name: "Rennet",
         slug: "rennet",
         bullets: [
@@ -544,21 +539,7 @@ const productCategoryData: Record<string, CategoryData> = {
       { name: "Liver Extract", slug: "liver-extract", bullets: ["Supplies growth factors and vitamins", "Supports specific microorganism cultivation", "Enhances nutritional availability in biological media"] },
       { name: "Meat Extract", slug: "meat-extract", bullets: ["Offers organic nitrogen compounds and mineral salts", "Provides stable nutrient profile for cell cultures", "Aids in standard microbiological investigations"] },
       { name: "Lactobacillus Buchneri", slug: "lactobacillus-buchneri", bullets: ["Supports organic acid production", "Aids silage preservation and fermentation efficiency", "Promotes microflora balance in metabolic formulations"] },
-      { name: "Streptococcus Thermophilus", slug: "streptococcus-thermophilus", bullets: ["Supports lactic acid production in dairy formulations", "Enhances gastrointestinal health profiles", "Enables consistent yogurt and cheese manufacturing"] },
-      { name: "Lactobacillus Casei", slug: "lactobacillus-casei", bullets: [] },
-      { name: "Bifidobacterium Adolescentis", slug: "bifidobacterium-adolescentis", bullets: [] },
-      { name: "Enterococcus Faecium", slug: "enterococcus-faecium", bullets: [] },
-      { name: "Pediococcus Acidilactici", slug: "pediococcus-acidilactici", bullets: [] },
-      { name: "Bacillus Coagulans", slug: "bacillus-coagulans", bullets: [] },
-      { name: "Bacillus Subtilis", slug: "bacillus-subtilis", bullets: [] },
-      { name: "Lactobacillus Brevis", slug: "lactobacillus-brevis", bullets: [] },
-      { name: "Saccharomyces Cerevisiae", slug: "saccharomyces-cerevisiae", bullets: [] },
-      { name: "Bacillus Clausii", slug: "bacillus-clausii", bullets: [] },
-      { name: "Bifidobacterium Animalis", slug: "bifidobacterium-animalis", bullets: [] },
-      { name: "Bifidobacterium Longum", slug: "bifidobacterium-longum", bullets: [] },
-      { name: "Bifidobacterium Infantis", slug: "bifidobacterium-infantis", bullets: [] },
-      { name: "Lactobacillus Bulgaricus", slug: "lactobacillus-bulgaricus", bullets: [] },
-      { name: "Streptococcus Faecium", slug: "streptococcus-faecium", bullets: [] }
+      { name: "Streptococcus Thermophilus", slug: "streptococcus-thermophilus", bullets: ["Supports lactic acid production in dairy formulations", "Enhances gastrointestinal health profiles", "Enables consistent yogurt and cheese manufacturing"] }
     ]
   },
   "nutraceutical-pharmaceutical-ingredients": {
@@ -569,18 +550,7 @@ const productCategoryData: Record<string, CategoryData> = {
       { name: "L-Glutathione", slug: "l-glutathione", bullets: ["Acts as a powerful cellular antioxidant", "Supports detoxification pathways within the body", "Contributes to skin brightness and texture formulations"] },
       { name: "Chondroitin Sulfate", slug: "chondroitin-sulfate", bullets: ["Promotes joint fluid retention and lubrication", "Supports structural cartilage health and resilience", "Enables effective bone-and-joint health supplements"] },
       { name: "Hyaluronic Acid", slug: "hyaluronic-acid", bullets: ["Enhances hydration retention in tissues and skin", "Supports joint lubrication and cartilage function", "Provides key hydration benefits in cosmetic and health formulas"] },
-      { name: "Methylsulfonylmethane (MSM)", slug: "msm", bullets: ["Supplies organic sulfur for tissue maintenance", "Supports joint comfort and mobility profiles", "Aids in reducing cellular oxidative stress responses"] },
-      { name: "Glucosamine", slug: "glucosamine", bullets: [] },
-      { name: "Coenzyme Q10", slug: "coenzyme-q10", bullets: [] },
-      { name: "Maltodextrin", slug: "maltodextrin", bullets: [] },
-      { name: "Sodium Alginate", slug: "sodium-alginate", bullets: [] },
-      { name: "Guar Gum", slug: "guar-gum", bullets: [] },
-      { name: "Bovine Colostrum Powder", slug: "bovine-colostrum-powder", bullets: [] },
-      { name: "Agar Agar", slug: "agar-agar", bullets: [] },
-      { name: "Pectin", slug: "pectin", bullets: [] },
-      { name: "Lecithin", slug: "lecithin", bullets: [] },
-      { name: "Sodium Caseinate", slug: "sodium-caseinate", bullets: [] },
-      { name: "Microcrystalline Cellulose", slug: "microcrystalline-cellulose", bullets: [] }
+      { name: "Methylsulfonylmethane (MSM)", slug: "msm", bullets: ["Supplies organic sulfur for tissue maintenance", "Supports joint comfort and mobility profiles", "Aids in reducing cellular oxidative stress responses"] }
     ]
   },
   "animal-nutrition": {
@@ -590,12 +560,7 @@ const productCategoryData: Record<string, CategoryData> = {
     subProducts: [
       { name: "Sodium Butyrate", slug: "sodium-butyrate", bullets: ["Supports gut mucosal structure and integrity", "Enhances feed digestion and absorption efficiency", "Aids in stabilizing intestinal microflora populations"] },
       { name: "Calcium Butyrate", slug: "calcium-butyrate", bullets: ["Delivers highly bioavailable calcium and butyrate", "Promotes skeletal and digestive development", "Supports immune defense systems in growing livestock"] },
-      { name: "Mannan Oligosaccharide", slug: "mannan-oligosaccharide", bullets: ["Aids in binding and flushing harmful gut pathogens", "Supports natural immune responses in animals", "Enhances overall intestinal health and growth performance"] },
-      { name: "Amino Chelated Minerals", slug: "amino-chelated-minerals", bullets: [] },
-      { name: "Sodium Propionate", slug: "sodium-propionate", bullets: [] },
-      { name: "Calcium Propionate", slug: "calcium-propionate", bullets: [] },
-      { name: "Protein Hydrolysate", slug: "protein-hydrolysate", bullets: [] },
-      { name: "Active Dry Yeast", slug: "active-dry-yeast", bullets: [] }
+      { name: "Mannan Oligosaccharide", slug: "mannan-oligosaccharide", bullets: ["Aids in binding and flushing harmful gut pathogens", "Supports natural immune responses in animals", "Enhances overall intestinal health and growth performance"] }
     ]
   }
 };
@@ -625,7 +590,14 @@ const ProductCategory = () => {
           setActiveSub(cleanHash);
           setHasInvalidHash(false);
         } else {
-          setHasInvalidHash(true);
+          // If subproduct hash is not found, fallback to first subproduct
+          setHasInvalidHash(false);
+          setActiveIdx(0);
+          if (category.subProducts.length > 0) {
+            const fallbackSlug = category.subProducts[0].slug;
+            setActiveSub(fallbackSlug);
+            window.history.replaceState(null, "", `#${fallbackSlug}`);
+          }
         }
       } else {
         setHasInvalidHash(false);
@@ -736,7 +708,7 @@ const ProductCategory = () => {
                       <button
                         key={sub.slug}
                         onClick={() => handleNavClick(sub.slug, idx)}
-                        className={`text-left text-[15px] leading-tight font-medium transition-all ${isSelected
+                        className={`text-left py-[1px] text-[15px] leading-tight font-medium transition-all ${isSelected
                           ? "text-[#66b036]"
                           : "text-[#555555] hover:text-[#1D7AA3]"
                           }`}
