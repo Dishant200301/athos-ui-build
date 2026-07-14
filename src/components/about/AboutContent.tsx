@@ -8,6 +8,8 @@ const AboutContent = () => {
 
         <div className="space-y-6 text-[16px] leading-[27px] text-[#555555]">
           <p>
+            At Athos Collagen Pvt. Ltd., we are committed to delivering high-quality enzyme solutions that meet the evolving requirements of the pharmaceutical industry. Our focus on innovation, quality assurance, and scientific excellence enables us to support manufacturers in developing safe, effective, and reliable pharmaceutical products. As the pharmaceutical industry continues to embrace biotechnology and sustainable manufacturing, enzymes remain at the forefront of innovation. Athos Collagen Pvt. Ltd. is dedicated to providing dependable enzyme solutions that help shape the future of modern healthcare while contributing to improved patient outcomes worldwide.          </p>
+          <p>
             One of the top companies in India for producing and supplying premium quality Fish Collagen Peptide and Fish Gelatin is Athos Collagen Pvt. Ltd. We are exporting Fish Collagen Peptide and Fish Gelatin to the United States, Canada, South America, the United Kingdom, Europe, Japan, South Korea, Israel, Gulf Countries, CIS Countries, Vietnam, and other nations.
           </p>
 

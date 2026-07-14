@@ -61,7 +61,16 @@ const productCategories = [
   }
 ];
 
-const navItems = [
+interface NavItem {
+  label: string;
+  href: string;
+  img?: string;
+  hasMegaMenu?: boolean;
+  hasDropdown?: boolean;
+  dropdownItems?: { label: string; href: string }[];
+}
+
+const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Ficolla", img: "/images/ficolla.png", href: "https://ficolla.com/ " },
@@ -85,6 +94,15 @@ const languages: Language[] = [
   { code: "ko", name: "Korean", flag: "/images/korean.svg" },
 ];
 
+const getSubProductSlug = (name: string) => {
+  if (name.includes("MSM")) return "msm";
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+};
+
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
@@ -93,6 +111,7 @@ const Navbar = () => {
   const [activeCategory, setActiveCategory] = useState<typeof productCategories[0] | null>(null);
   const [isSubProductsExpanded, setIsSubProductsExpanded] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState<string | null>(null);
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -123,7 +142,7 @@ const Navbar = () => {
 
   return (
     <nav className="h-[85px] w-full bg-background  top-0 z-50 shadow-sm">
-      <div className="max-w-[1290px] mx-auto h-full flex items-center justify-between px-4 lg:px-0 relative">
+      <div className="max-w-[1290px] mx-auto h-full flex items-center justify-between px-4 lg:px-4 relative">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src="/images/logo.webp" alt="Athos Collagen" className="lg:w-35 lg:h-[60px] w-30 h-[40px]" />
@@ -135,8 +154,14 @@ const Navbar = () => {
             <li
               key={item.label}
               className="group relative h-full flex items-center"
+              onMouseEnter={() => {
+                if (item.hasMegaMenu) {
+                  setIsMegaMenuOpen(true);
+                }
+              }}
               onMouseLeave={() => {
                 if (item.hasMegaMenu) {
+                  setIsMegaMenuOpen(false);
                   setActiveCategory(null);
                 }
               }}
@@ -152,7 +177,9 @@ const Navbar = () => {
                   {/* Mega Menu Dropdown */}
                   <div 
                     style={{ left: 'calc(50% - 180px)' }}
-                    className={`absolute top-full bg-white border border-gray-200 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden flex ${
+                    className={`absolute top-full bg-white border border-gray-200 rounded-xl shadow-2xl transition-all duration-300 z-50 overflow-hidden flex ${
+                      isMegaMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                    } ${
                       activeCategory ? "w-[680px]" : "w-[360px]"
                     }`}
                   >
@@ -199,17 +226,24 @@ const Navbar = () => {
                         return (
                           <>
                             <div>
-                              
                               <div className="grid grid-cols-1 gap-y-2.5 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
-                                {visibleSubProducts.map((sub, idx) => (
-                                  <div
-                                    key={idx}
-                                    className="flex items-center gap-2 text-sm text-[#555555] hover:text-[#1D7AA3] transition-colors duration-150 py-0.5 cursor-default"
-                                  >
-                                    <span className="text-[#66b036] text-[8px] flex-shrink-0">▶</span>
-                                    <span className="font-medium leading-tight">{sub}</span>
-                                  </div>
-                                ))}
+                                {visibleSubProducts.map((sub, idx) => {
+                                  const subSlug = getSubProductSlug(sub);
+                                  return (
+                                    <Link
+                                      key={idx}
+                                      to={`/products/${activeCategory.slug}#${subSlug}`}
+                                      className="flex items-center gap-2 text-sm text-[#555555] hover:text-[#1D7AA3] transition-colors duration-150 py-0.5"
+                                      onClick={() => {
+                                        setIsMegaMenuOpen(false);
+                                        setActiveCategory(null);
+                                      }}
+                                    >
+                                      <span className="text-[#66b036] text-[8px] flex-shrink-0">▶</span>
+                                      <span className="font-medium leading-tight">{sub}</span>
+                                    </Link>
+                                  );
+                                })}
 
                                 {showViewMore && (
                                   <button
@@ -226,11 +260,17 @@ const Navbar = () => {
                             {/* Mega Menu Footer */}
                             {showCategoryPageButton && (
                               <div className="mt-4 pt-4 border-t border-gray-100 flex justify-start">
-                                <Link to={activeCategory.href}>
-                                  <Button className="btn-primary rounded-[6px_0px] text-sm px-4 py-2.5 h-auto font-semibold shadow-sm w-fit">
-                                    View Category Page
-                                  </Button>
-                                </Link>
+                                  <Link
+                                    to={activeCategory.href}
+                                    onClick={() => {
+                                      setIsMegaMenuOpen(false);
+                                      setActiveCategory(null);
+                                    }}
+                                  >
+                                    <Button className="btn-primary rounded-[6px_0px] text-sm px-4 py-2.5 h-auto font-semibold shadow-sm w-fit">
+                                      View Category Page
+                                    </Button>
+                                  </Link>
                               </div>
                             )}
                           </>
@@ -388,22 +428,25 @@ const Navbar = () => {
                             </button>
                             {mobileActiveCategory === cat.title && (
                               <ul className="pl-4 mt-1 space-y-1 border-l border-gray-100 pb-2">
-                                {cat.subProducts.map((sub, sIdx) => (
-                                  <li key={sIdx}>
-                                    <Link
-                                      to={cat.href}
-                                      className="block text-sm text-foreground/60 hover:text-primary py-1 flex items-center gap-1.5"
-                                      onClick={() => {
-                                        setMobileMenuOpen(false);
-                                        setMobileDropdownOpen(false);
-                                        setMobileActiveCategory(null);
-                                      }}
-                                    >
-                                      <span className="text-[#66b036] text-[7px] flex-shrink-0">▶</span>
-                                      <span>{sub}</span>
-                                    </Link>
-                                  </li>
-                                ))}
+                                 {cat.subProducts.map((sub, sIdx) => {
+                                  const subSlug = getSubProductSlug(sub);
+                                  return (
+                                    <li key={sIdx}>
+                                      <Link
+                                        to={`/products/${cat.slug}#${subSlug}`}
+                                        className="text-sm text-foreground/60 hover:text-primary py-1 flex items-center gap-1.5"
+                                        onClick={() => {
+                                          setMobileMenuOpen(false);
+                                          setMobileDropdownOpen(false);
+                                          setMobileActiveCategory(null);
+                                        }}
+                                      >
+                                        <span className="text-[#66b036] text-[7px] flex-shrink-0">▶</span>
+                                        <span>{sub}</span>
+                                      </Link>
+                                    </li>
+                                  );
+                                })}
                               </ul>
                             )}
                           </li>
