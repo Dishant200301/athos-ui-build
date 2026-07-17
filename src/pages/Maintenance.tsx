@@ -38,17 +38,17 @@ const Maintenance = () => {
       <main className="flex-grow flex items-center justify-center px-4 py-16">
         <div className="max-w-2xl w-full text-center relative z-10">
           {/* Logo container */}
-          <div className="mb-10 flex justify-center animate-fade-in">
+          {/* <div className="mb-10 flex justify-center animate-fade-in">
             <img 
               src="/images/logo.webp" 
               alt="Athos Collagen Pvt. Ltd." 
               className="h-20 md:h-24 w-auto transition-transform duration-300"
             />
-          </div>
+          </div> */}
 
           {/* Glowing launcher graphic */}
-          <div className="mb-8 inline-flex items-center justify-center p-6 rounded-full bg-primary/10 text-primary relative animate-pulse">
-            <div className="absolute inset-0 rounded-full bg-primary/5 animate-ping opacity-75"></div>
+          <div className="mb-8 inline-flex items-center justify-center p-6 rounded-full bg-primary/10 text-primary relative">
+            <div className="absolute inset-0 rounded-full bg-primary/5 opacity-75"></div>
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 24 24" 
