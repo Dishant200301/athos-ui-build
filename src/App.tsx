@@ -32,8 +32,14 @@ const App = () => {
             <ScrollToTop />
             <WhatsAppFloating />
             <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
+              <Route 
+                path="/" 
+                element={MAINTENANCE_MODE ? <Maintenance /> : <Index />} 
+              />
+              <Route 
+                path="/about" 
+                element={MAINTENANCE_MODE ? <Maintenance /> : <About />} 
+              />
               <Route 
                 path="/fish-collagen-peptide" 
                 element={MAINTENANCE_MODE ? <Maintenance /> : <FishCollagenPeptide />} 
@@ -50,8 +56,14 @@ const App = () => {
                 path="/applications/fish-gelatin" 
                 element={MAINTENANCE_MODE ? <Maintenance /> : <ApplicationsFishGelatin />} 
               />
-              <Route path="/products/:categorySlug" element={<ProductCategory />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route 
+                path="/products/:categorySlug" 
+                element={MAINTENANCE_MODE ? <Maintenance /> : <ProductCategory />} 
+              />
+              <Route 
+                path="/contact" 
+                element={MAINTENANCE_MODE ? <Maintenance /> : <Contact />} 
+              />
               <Route path="/inquiry" element={<Inquiry />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
