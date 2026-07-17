@@ -16,34 +16,57 @@ import Contact from "./pages/Contact";
 import Inquiry from "./pages/Inquiry";
 import ProductCategory from "./pages/ProductCategory";
 import NotFound from "./pages/NotFound";
+import Maintenance from "./pages/Maintenance";
+import { MAINTENANCE_MODE } from "./config/maintenance";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <WhatsAppFloating />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/fish-collagen-peptide" element={<FishCollagenPeptide />} />
-            <Route path="/fish-gelatin" element={<FishGelatin />} />
-            <Route path="/applications/fish-collagen-peptide" element={<ApplicationsFishCollagenPeptide />} />
-            <Route path="/applications/fish-gelatin" element={<ApplicationsFishGelatin />} />
-            <Route path="/products/:categorySlug" element={<ProductCategory />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/inquiry" element={<Inquiry />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
-);
+const App = () => {
+  if (MAINTENANCE_MODE) {
+    return (
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <ScrollToTop />
+              <Routes>
+                <Route path="*" element={<Maintenance />} />
+              </Routes>
+            </BrowserRouter>
+          </TooltipProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
+    );
+  }
+
+  return (
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <ScrollToTop />
+            <WhatsAppFloating />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/fish-collagen-peptide" element={<FishCollagenPeptide />} />
+              <Route path="/fish-gelatin" element={<FishGelatin />} />
+              <Route path="/applications/fish-collagen-peptide" element={<ApplicationsFishCollagenPeptide />} />
+              <Route path="/applications/fish-gelatin" element={<ApplicationsFishGelatin />} />
+              <Route path="/products/:categorySlug" element={<ProductCategory />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/inquiry" element={<Inquiry />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  );
+};
 
 export default App;
