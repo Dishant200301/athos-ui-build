@@ -22,25 +22,6 @@ import { MAINTENANCE_MODE } from "./config/maintenance";
 const queryClient = new QueryClient();
 
 const App = () => {
-  if (MAINTENANCE_MODE) {
-    return (
-      <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <BrowserRouter>
-              <ScrollToTop />
-              <Routes>
-                <Route path="*" element={<Maintenance />} />
-              </Routes>
-            </BrowserRouter>
-          </TooltipProvider>
-        </QueryClientProvider>
-      </HelmetProvider>
-    );
-  }
-
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
@@ -53,10 +34,22 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
-              <Route path="/fish-collagen-peptide" element={<FishCollagenPeptide />} />
-              <Route path="/fish-gelatin" element={<FishGelatin />} />
-              <Route path="/applications/fish-collagen-peptide" element={<ApplicationsFishCollagenPeptide />} />
-              <Route path="/applications/fish-gelatin" element={<ApplicationsFishGelatin />} />
+              <Route 
+                path="/fish-collagen-peptide" 
+                element={MAINTENANCE_MODE ? <Maintenance /> : <FishCollagenPeptide />} 
+              />
+              <Route 
+                path="/fish-gelatin" 
+                element={MAINTENANCE_MODE ? <Maintenance /> : <FishGelatin />} 
+              />
+              <Route 
+                path="/applications/fish-collagen-peptide" 
+                element={MAINTENANCE_MODE ? <Maintenance /> : <ApplicationsFishCollagenPeptide />} 
+              />
+              <Route 
+                path="/applications/fish-gelatin" 
+                element={MAINTENANCE_MODE ? <Maintenance /> : <ApplicationsFishGelatin />} 
+              />
               <Route path="/products/:categorySlug" element={<ProductCategory />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/inquiry" element={<Inquiry />} />

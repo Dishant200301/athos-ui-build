@@ -1,10 +1,7 @@
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-// Header, Navbar, and Footer imports commented out as requested
-// import TopHeader from "@/components/TopHeader";
-// import Navbar from "@/components/Navbar";
-// import Footer from "@/components/Footer";
-// import FooterCTA from "@/components/FooterCTA";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Maintenance = () => {
   useEffect(() => {
@@ -23,7 +20,19 @@ const Maintenance = () => {
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 
-    
+      {/* Navbar */}
+      <header className="w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50 sticky top-0">
+        <div className="max-w-[1290px] mx-auto px-4 py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center">
+            <img src="/images/logo.webp" alt="Athos Collagen" className="h-[40px] md:h-[50px] w-auto" />
+          </Link>
+          <Link to="/inquiry">
+            <Button className="btn-primary rounded-[6px_0px] text-sm px-6 py-2.5">
+              Inquiry
+            </Button>
+          </Link>
+        </div>
+      </header>
 
       {/* Main Content */}
       <main className="flex-grow flex items-center justify-center px-4 py-16">
@@ -33,7 +42,7 @@ const Maintenance = () => {
             <img 
               src="/images/logo.webp" 
               alt="Athos Collagen Pvt. Ltd." 
-              className="h-20 md:h-24 w-auto drop-shadow-sm hover:scale-105 transition-transform duration-300"
+              className="h-20 md:h-24 w-auto transition-transform duration-300"
             />
           </div>
 
@@ -78,3 +87,4 @@ const Maintenance = () => {
 };
 
 export default Maintenance;
+
