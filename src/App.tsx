@@ -32,28 +32,25 @@ const App = () => {
             <ScrollToTop />
             <WhatsAppFloating />
             <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route 
-                path="/fish-collagen-peptide" 
-                element={MAINTENANCE_MODE ? <Maintenance /> : <FishCollagenPeptide />} 
-              />
-              <Route 
-                path="/fish-gelatin" 
-                element={MAINTENANCE_MODE ? <Maintenance /> : <FishGelatin />} 
-              />
-              <Route 
-                path="/applications/fish-collagen-peptide" 
-                element={MAINTENANCE_MODE ? <Maintenance /> : <ApplicationsFishCollagenPeptide />} 
-              />
-              <Route 
-                path="/applications/fish-gelatin" 
-                element={MAINTENANCE_MODE ? <Maintenance /> : <ApplicationsFishGelatin />} 
-              />
-              <Route path="/products/:categorySlug" element={<ProductCategory />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/inquiry" element={<Inquiry />} />
-              <Route path="*" element={<NotFound />} />
+              {MAINTENANCE_MODE ? (
+                <>
+                  <Route path="/inquiry" element={<Inquiry />} />
+                  <Route path="*" element={<Maintenance />} />
+                </>
+              ) : (
+                <>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/fish-collagen-peptide" element={<FishCollagenPeptide />} />
+                  <Route path="/fish-gelatin" element={<FishGelatin />} />
+                  <Route path="/applications/fish-collagen-peptide" element={<ApplicationsFishCollagenPeptide />} />
+                  <Route path="/applications/fish-gelatin" element={<ApplicationsFishGelatin />} />
+                  <Route path="/products/:categorySlug" element={<ProductCategory />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/inquiry" element={<Inquiry />} />
+                  <Route path="*" element={<NotFound />} />
+                </>
+              )}
             </Routes>
           </BrowserRouter>
         </TooltipProvider>
