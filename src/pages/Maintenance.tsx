@@ -47,10 +47,6 @@ const Maintenance = () => {
             Due To New Products Launches
           </h2>
 
-          {/* Description */}
-          <p className="text-gray-600 max-w-lg mx-auto text-base md:text-lg leading-relaxed mb-4">
-            We are currently updating our website to introduce our brand new range of product
-          </p>
         </div>
       </main>
 
