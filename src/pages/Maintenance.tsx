@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import TopHeader from "@/components/TopHeader";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import FooterCTA from "@/components/FooterCTA";
+// Header, Navbar, and Footer imports commented out as requested
+// import TopHeader from "@/components/TopHeader";
+// import Navbar from "@/components/Navbar";
+// import Footer from "@/components/Footer";
+// import FooterCTA from "@/components/FooterCTA";
 
 const Maintenance = () => {
   useEffect(() => {
@@ -11,22 +12,26 @@ const Maintenance = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col font-sans overflow-hidden">
+    <div className="min-h-screen flex flex-col justify-between font-sans bg-gradient-to-br from-white via-[#EDF5F8] to-[#D5E6EE] relative overflow-hidden">
+      {/* Decorative background elements for premium feel */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full filter blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full filter blur-3xl pointer-events-none translate-x-1/3 translate-y-1/3"></div>
+
       <Helmet>
         <title>Under Maintenance | Athos Collagen</title>
         <meta name="description" content="Athos Collagen is currently undergoing scheduled maintenance for exciting new product launches. We will be back online shortly." />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 
-      <TopHeader />
-      <Navbar />
+    
 
-      <main className="flex-grow flex items-center justify-center py-20 bg-accent/30">
-        <div className="container-custom text-center py-16">
+      {/* Main Content */}
+      <main className="flex-grow flex items-center justify-center px-4 py-16">
+        <div className="max-w-2xl w-full text-center relative z-10">
           {/* Logo container */}
           <div className="mb-10 flex justify-center animate-fade-in">
             <img 
-              src="/images/athos-logo-full-form.webp" 
+              src="/images/logo.webp" 
               alt="Athos Collagen Pvt. Ltd." 
               className="h-20 md:h-24 w-auto drop-shadow-sm hover:scale-105 transition-transform duration-300"
             />
@@ -67,8 +72,7 @@ const Maintenance = () => {
         </div>
       </main>
 
-      <FooterCTA />
-      <Footer />
+    
     </div>
   );
 };
