@@ -1,26 +1,38 @@
-import { Link } from "react-router-dom";
+import { Mail, MessageCircle, ArrowRight } from "lucide-react";
 
 const FooterCTA = () => {
   return (
-    <section
-      className="relative w-full h-[380px] flex items-start justify-center pb-32"
-      style={{
-        backgroundImage: "url(/images/contact-bg.jpg)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="absolute top-[70px] left-1/2 -translate-x-1/2 text-center px-6 xl:px-0">
-        <h2 className="w-[565px] max-w-full text-[18px] md:text-[32px] leading-[38px] font-bold text-[#1D7AA3] mb-[25px]">
-          Get in touch for a better connection.
+    <section className="py-10 md:py-14">
+      <div className="max-w-[1290px] mx-auto px-4 xl:px-0 flex flex-col items-center justify-center text-center gap-6 md:gap-8">
+        {/* Centered Heading */}
+        <h2 className="text-2xl md:text-3xl lg:text-[32px] font-medium text-[#1D7AA3] text-center">
+          Connect with us
         </h2>
 
-        <Link
-          to="/contact"
-          className="inline-flex w-[144px] h-[40px] items-center justify-center bg-[#1D7AA3] text-white text-[16px] font-normal rounded-[6px_0px] hover:bg-[#1D7AA3]/90 transition-colors"
-        >
-          Contact Us
-        </Link>
+        {/* Right Clickable Links */}
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-48">
+          {/* Email Link */}
+          <a
+            href="mailto:inquiry@athoscollagen.com"
+            className="group flex items-center gap-3 lg:gap-4 text-[#444444] hover:text-[#1D7AA3] transition-colors cursor-pointer"
+          >
+            <Mail className="w-6 h-6 lg:w-9 lg:h-9 stroke-[1] text-[#555555] group-hover:text-[#1D7AA3] transition-colors flex-shrink-0" />
+            <span className="text-base md:text-lg lg:text-2xl font-medium">Email</span>
+            <ArrowRight className="w-4 h-4 lg:w-6 lg:h-6 text-[#666666] group-hover:text-[#1D7AA3] group-hover:translate-x-2 transition-all duration-200 flex-shrink-0" />
+          </a>
+
+          {/* Whatsapp Link */}
+          <a
+            href="https://wa.me/918780321239"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 lg:gap-4 text-[#444444] hover:text-[#1D7AA3] transition-colors cursor-pointer"
+          >
+            <MessageCircle className="w-6 h-6 lg:w-9 lg:h-9 stroke-[1] text-[#555555] group-hover:text-[#1D7AA3] transition-colors flex-shrink-0" />
+            <span className="text-base md:text-lg lg:text-2xl font-medium">Whatsapp</span>
+            <ArrowRight className="w-4 h-4 lg:w-6 lg:h-6 text-[#666666] group-hover:text-[#1D7AA3] group-hover:translate-x-2 transition-all duration-200 flex-shrink-0" />
+          </a>
+        </div>
       </div>
     </section>
   );

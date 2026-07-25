@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -73,25 +73,25 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Ficolla", img: "/images/ficolla.png", href: "https://ficolla.com/ " },
   { label: "Products", href: "#", hasMegaMenu: true },
   { label: "Contact Us", href: "/contact" },
 ];
 
 interface Language {
   code: string;
+  country: string;
   name: string;
-  flag: string;
 }
 
 const languages: Language[] = [
-  { code: "en", name: "English", flag: "/images/english.svg" },
-  { code: "fr", name: "French", flag: "/images/france.svg" },
-  { code: "es", name: "Spanish", flag: "/images/spanish.svg" },
-  { code: "de", name: "German", flag: "/images/german.svg" },
-  { code: "ru", name: "Russian", flag: "/images/russian.svg" },
-  { code: "ja", name: "Japanese", flag: "/images/japanese.svg" },
-  { code: "ko", name: "Korean", flag: "/images/korean.svg" },
+  { code: "US", country: "us", name: "English" },
+  { code: "IT", country: "it", name: "Italiano" },
+  { code: "ES", country: "es", name: "Español" },
+  { code: "FR", country: "fr", name: "Français" },
+  { code: "DE", country: "de", name: "Deutsch" },
+  { code: "JP", country: "jp", name: "日本語" },
+  { code: "KR", country: "kr", name: "한국어" },
+  { code: "RU", country: "ru", name: "Русский" },
 ];
 
 const getSubProductSlug = (name: string) => {
@@ -107,6 +107,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [mobileLangDropdownOpen, setMobileLangDropdownOpen] = useState(false);
+  const [desktopLangOpen, setDesktopLangOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<Language>(languages[0]);
   const [activeCategory, setActiveCategory] = useState<typeof productCategories[0] | null>(null);
   const [isSubProductsExpanded, setIsSubProductsExpanded] = useState(false);
@@ -126,6 +127,7 @@ const Navbar = () => {
   const handleLanguageSelect = (language: Language) => {
     setSelectedLanguage(language);
     setMobileLangDropdownOpen(false);
+    setDesktopLangOpen(false);
   };
 
   // Close language dropdown on scroll
@@ -325,12 +327,61 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Inquiry Button */}
-        <Link to="/inquiry">
-          <Button className="hidden lg:flex btn-primary rounded-[6px_0px] px-10 ">
-            Inquiry
-          </Button>
-        </Link>
+        {/* Desktop Right Actions: Email + Inquiry Button + Language Selector */}
+        <div className="hidden lg:flex items-center gap-5">
+          {/* Email Link */}
+          <a
+            href="mailto:inquiry@athoscollagen.com"
+            className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Mail className="w-3.5 h-3.5" />
+            <span>inquiry@athoscollagen.com</span>
+          </a>
+
+          {/* Inquiry Button */}
+          <Link to="/inquiry">
+            <Button className="btn-primary rounded-[6px_0px] px-8 text-base font-semibold py-2 h-auto">
+              Inquiry
+            </Button>
+          </Link>
+
+          {/* Desktop Language Selector (Right side of Inquiry Button) */}
+          <div
+            className="relative"
+            onMouseEnter={() => setDesktopLangOpen(true)}
+            onMouseLeave={() => setDesktopLangOpen(false)}
+          >
+            <button className="flex items-center gap-1.5 text-sm transition-colors py-1.5 px-2 rounded-md hover:bg-gray-100/80 cursor-pointer">
+              <span className="text-gray-500 font-medium text-xs">{selectedLanguage.country}</span>
+              <span className="font-bold text-black text-sm">{selectedLanguage.code}</span>
+              <ChevronDown className={`w-3.5 h-3.5 text-gray-600 transition-transform duration-200 ${desktopLangOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {/* Language Dropdown Menu */}
+            {desktopLangOpen && (
+              <div className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-lg shadow-xl min-w-[170px] z-50 overflow-hidden py-2 space-y-0.5">
+                {languages.map((language) => (
+                  <button
+                    key={language.code}
+                    onClick={() => handleLanguageSelect(language)}
+                    className={`w-full flex items-center gap-4 px-4 py-2 text-left transition-all duration-150 ${
+                      selectedLanguage.code === language.code
+                        ? 'bg-[#1d7aa3]/10 text-[#1d7aa3]'
+                        : 'hover:bg-gray-50 text-slate-700'
+                    }`}
+                  >
+                    <span className="text-[12px] font-bold text-slate-400 w-5 flex-shrink-0 tracking-wider">
+                      {language.code}
+                    </span>
+                    <span className="text-[14px] font-semibold text-slate-800">
+                      {language.name}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
 
         {/* Mobile Language Selector & Menu Button */}
         <div className="lg:hidden flex items-center gap-3">
@@ -338,34 +389,32 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setMobileLangDropdownOpen(!mobileLangDropdownOpen)}
-              className="flex items-center gap-1 text-sm text-white bg-[#1d7aa3] rounded-md py-1.5 px-2"
+              className="flex items-center gap-1.5 text-xs text-white bg-[#1d7aa3] rounded-md py-1.5 px-2.5"
             >
-              <img
-                src={selectedLanguage.flag}
-                alt={selectedLanguage.name}
-                className="w-5 h-3 object-cover rounded-sm"
-              />
+              <span className="opacity-80 text-[11px]">{selectedLanguage.country}</span>
+              <span className="font-bold">{selectedLanguage.code}</span>
               <ChevronDown className={`w-3 h-3 transition-transform ${mobileLangDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {/* Mobile Language Dropdown */}
             {mobileLangDropdownOpen && (
-              <div className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg min-w-[160px] z-50 overflow-hidden py-1">
+              <div className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-lg shadow-xl min-w-[170px] z-50 overflow-hidden py-2 space-y-0.5">
                 {languages.map((language) => (
                   <button
                     key={language.code}
                     onClick={() => handleLanguageSelect(language)}
-                    className={`w-full flex items-center gap-3 px-3 py-2 text-sm transition-all duration-200 ${selectedLanguage.code === language.code
-                      ? 'bg-blue-500 text-white'
-                      : 'text-gray-700 hover:bg-gray-50'
-                      }`}
+                    className={`w-full flex items-center gap-4 px-4 py-2 text-left transition-all duration-150 ${
+                      selectedLanguage.code === language.code
+                        ? 'bg-[#1d7aa3]/10 text-[#1d7aa3]'
+                        : 'hover:bg-gray-50 text-slate-700'
+                    }`}
                   >
-                    <img
-                      src={language.flag}
-                      alt={language.name}
-                      className="w-5 h-3 object-cover rounded-sm flex-shrink-0"
-                    />
-                    <span className="font-medium">{language.name}</span>
+                    <span className="text-[12px] font-bold text-slate-400 w-5 flex-shrink-0 tracking-wider">
+                      {language.code}
+                    </span>
+                    <span className="text-[14px] font-semibold text-slate-800">
+                      {language.name}
+                    </span>
                   </button>
                 ))}
               </div>

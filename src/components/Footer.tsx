@@ -2,15 +2,15 @@ import { Mail, Youtube, Instagram, Facebook, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const usefulLinks = [
+  { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Fish Collagen Peptide", href: "/fish-collagen-peptide" },
-  { label: "Fish Gelatin", href: "/fish-gelatin" },
   { label: "Contact Us", href: "/contact" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const Footer = () => {
   return (
-    <div className="-mt-32">
+    <div className="relative">
       {/* Animated Wave Separator */}
       <div className="ondebox">
         <svg className="onde" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"

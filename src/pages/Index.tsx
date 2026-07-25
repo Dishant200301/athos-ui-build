@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import TopHeader from "@/components/TopHeader";
 import Navbar from "@/components/Navbar";
 import HeroSlider from "@/components/HeroSlider";
 import AboutSection from "@/components/AboutSection";
@@ -58,7 +57,6 @@ const Index = () => {
           ])}
         </script>
       </Helmet>
-      <TopHeader />
       <Navbar />
       <main>
         <HeroSlider />
@@ -66,7 +64,7 @@ const Index = () => {
         <UniquenessSection />
         <BenefitsSection />
         <ExportSection />
-        <CobrandingSection />
+        {/* <CobrandingSection /> */}
         {/* <CertificationsSection /> */}
       </main>
       <FooterCTA />

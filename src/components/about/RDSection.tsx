@@ -6,10 +6,12 @@ const RDSection = () => {
           R&D
         </h2>
 
-        <div className="text-[16px] leading-[27px] text-[#555555]">
-          <p>
-            We have a fully equipped in-house laboratory with Protein Analyzer, Texture Analyzer, GPC Apparatus, Spectrophotometer, HPLC, Laminar Flow, BOD Incubator, Autoclave, Moisture Analyzer, Muffle Furnace, Oven, Colony Counter, etc. for internal quality, testing and R&D purpose.
-          </p>
+        <div className="w-full overflow-hidden rounded-xl shadow-sm">
+          <img
+            src="/images/R&D.png"
+            alt="Research and Development"
+            className="w-full h-[500px] md:h-[700px] object-cover block"
+          />
         </div>
       </div>
     </section>

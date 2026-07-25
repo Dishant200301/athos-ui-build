@@ -8,8 +8,7 @@ const MissionVision = () => {
             <div className="text-center px-8">
               <h3 className="text-white font-bold text-[24px] mb-4">Mission</h3>
               <p className="text-white text-[14px] leading-[20px]">
-                To provide world-class marine collagen products that enhance health and wellness globally
-              </p>
+Mission To be the most trusted and innovative leader in the ingredients  industry              </p>
             </div>
           </div>
 

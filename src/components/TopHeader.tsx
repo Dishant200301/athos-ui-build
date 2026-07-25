@@ -44,14 +44,14 @@ const TopHeader = () => {
           onMouseEnter={() => setIsDropdownOpen(true)}
           onMouseLeave={() => setIsDropdownOpen(false)}
         >
-          <button className="flex items-center gap-2 text-sm text-white transition-colors bg-[#1d7aa3] rounded-md py-2 px-2">
+          <button className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors py-1.5 px-2 rounded-md hover:bg-gray-100/80 cursor-pointer">
             <img
               src={selectedLanguage.flag}
               alt={selectedLanguage.name}
-              className="w-6 h-4 object-cover rounded-sm"
+              className="w-5 h-3.5 object-cover rounded-xs"
             />
-            <span>{selectedLanguage.name}</span>
-            <ChevronDown className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+            <span className="font-semibold text-black uppercase">{selectedLanguage.code}</span>
+            <ChevronDown className={`w-4 h-4 text-gray-600 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
           </button>
 
           {/* Dropdown Menu */}
