@@ -9,8 +9,11 @@ const ExportSection = () => {
               Exporting Worldwide
             </h2>
 
+            <p className="text-base text-athos-text leading-[27px] max-w-[636px] mb-6">
+              Athos Collagen Pvt. Ltd. supplies a diversified range of functional ingredients to manufacturers and distributors across North America, South America, Europe, the United Kingdom, the Middle East, CIS nations, East Asia, Southeast Asia, and numerous other international markets. Our product portfolio serves the nutraceutical, food & beverage, pharmaceutical, personal care, and animal nutrition industries with carefully developed ingredient solutions designed for modern formulations.
+            </p>
             <p className="text-base text-athos-text leading-[27px] max-w-[636px]">
-              Premium quality Fish Collagen Peptide and Fish Gelatin are exported by Athos Collagen Pvt. Ltd. to clients in the United States, Canada, South America, the United Kingdom, Europe, Japan, South Korea, Israel, Gulf Countries, CIS Countries, Vietnam, and other nations. Our dedication to sustainability and high quality guarantees that our Fish Collagen Peptide promotes health and wellbeing everywhere.
+              We enable customers to secure reliable ingredient solutions for both established and emerging product lines. With a strong emphasis on long-term collaboration, regulatory compliance, and consistent supply, Athos Collagen continues to support businesses seeking trusted ingredients for worldwide distribution.
             </p>
           </div>
 

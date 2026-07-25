@@ -58,6 +58,21 @@ const productCategories = [
       "Sodium Butyrate", "Calcium Butyrate", "Mannan Oligosaccharide", "Amino Chelated Minerals",
       "Sodium Propionate", "Calcium Propionate", "Protein Hydrolysate", "Active Dry Yeast"
     ]
+  },
+  {
+    title: "Extract and Essential Oils",
+    slug: "extract-and-essential-oils",
+    href: "/products/extract-and-essential-oils",
+    subProducts: [
+      "SCFE Black Pepper Oleoresin",
+      "Piperine",
+      "SCFE Ginger Oleoresin",
+      "Ginger Extract Granules",
+      "SCFE Vanilla Extract",
+      "SCFE Holy Basil Oleoresin",
+      "SCFE Seabuckthorn Oil",
+      
+    ]
   }
 ];
 

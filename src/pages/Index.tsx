@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import HeroSlider from "@/components/HeroSlider";
 import AboutSection from "@/components/AboutSection";
+import ProductCategoriesSection from "@/components/ProductCategoriesSection";
 import UniquenessSection from "@/components/UniquenessSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ExportSection from "@/components/ExportSection";
@@ -61,8 +62,9 @@ const Index = () => {
       <main>
         <HeroSlider />
         <AboutSection />
+        <ProductCategoriesSection />
         {/* <UniquenessSection /> */}
-        <BenefitsSection />
+        {/* <BenefitsSection /> */}
         <ExportSection />
         {/* <CobrandingSection /> */}
         {/* <CertificationsSection /> */}
