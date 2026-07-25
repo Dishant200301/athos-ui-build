@@ -472,10 +472,10 @@ const Navbar = () => {
                           <li key={cat.title} className="border-b border-gray-50/50 pb-1">
                             <button
                               onClick={() => setMobileActiveCategory(mobileActiveCategory === cat.title ? null : cat.title)}
-                              className="w-full flex items-center justify-between py-2 text-[16px] text-foreground/80 hover:text-primary font-medium"
+                              className="w-full flex items-center justify-between py-2 text-[16px] text-foreground/80 hover:text-primary font-medium text-left"
                             >
-                              <span>{cat.title}</span>
-                              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileActiveCategory === cat.title ? 'rotate-180' : ''}`} />
+                              <span className="truncate flex-1 pr-2">{cat.title}</span>
+                              <ChevronDown className={`w-4 h-4 shrink-0 transition-transform duration-200 ${mobileActiveCategory === cat.title ? 'rotate-180' : ''}`} />
                             </button>
                             {mobileActiveCategory === cat.title && (
                               <ul className="pl-4 mt-1 space-y-1 border-l border-gray-100 pb-2">
