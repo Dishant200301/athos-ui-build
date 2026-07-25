@@ -20,7 +20,7 @@ const AboutSection = () => {
             <img
               src="/images/about-img.webp"
               alt="Athos Collagen facility"
-              className="w-full h-[300px] md:h-[400px] object-cover rounded-tl-[36px] rounded-br-[36px]"
+              className="w-full h-[300px] md:h-[500px] object-cover rounded-tl-[36px] rounded-br-[36px]"
             />
           </div>
 
@@ -31,11 +31,7 @@ const AboutSection = () => {
             </h2>
 
             <p className="text-base text-athos-text leading-[27px] mb-8">
-              Athos Collagen Pvt. Ltd. is India's leading manufacturer and exporter of premium quality
-              Fish Collagen Peptide and Fish Gelatin. With state-of-the-art facilities and a commitment
-              to excellence, we deliver products that meet the highest international standards. Our
-              dedication to quality, innovation, and customer satisfaction has made us a trusted partner
-              for businesses worldwide.
+             Athos Collagen Pvt. Ltd. is an India-based manufacturer and global supplier of specialty ingredients developed for the nutraceutical, food & beverage, pharmaceutical, personal care, and animal nutrition industries. we serve customers across domestic and international markets with solutions that meet evolving industry requirements.Our focus extends beyond supplying ingredients we strive to build long-term business relationships through transparent communication, reliable deliveries, regulatory compliance, and dedicated customer support. As our product range continues to grow, Athos Collagen remains committed to delivering trusted ingredient solutions that help brands innovate and succeed in competitive global markets.
             </p>
 
 
