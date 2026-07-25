@@ -3,7 +3,7 @@ import { Mail, MessageCircle, ArrowRight } from "lucide-react";
 const FooterCTA = () => {
   return (
     <section className="py-10 md:py-14">
-      <div className="max-w-[1290px] mx-auto px-4 xl:px-0 flex flex-col items-center justify-center text-center gap-6 md:gap-8">
+      <div className="max-w-[1290px] mx-auto px-4 md:px-4 lg:px-10 flex flex-col items-center justify-center text-center gap-6 md:gap-8">
         {/* Centered Heading */}
         <h2 className="text-2xl md:text-3xl lg:text-[32px] font-medium text-[#1D7AA3] text-center">
           Connect with us

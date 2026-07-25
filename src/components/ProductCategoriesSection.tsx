@@ -85,7 +85,7 @@ const categories = [
 const ProductCategoriesSection = () => {
   return (
     <section className="py-16 md:py-20 lg:py-24 ">
-      <div className="max-w-[1290px] mx-auto px-4 xl:px-0">
+      <div className="max-w-[1290px] mx-auto px-4 md:px-4 lg:px-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-[32px] font-bold text-[#1D7AA3] leading-tight mb-4">

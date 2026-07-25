@@ -157,8 +157,20 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [mobileLangDropdownOpen]);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   return (
-    <nav className="h-[85px] w-full bg-background  top-0 z-50 shadow-sm">
+    <nav className="h-[85px] w-full bg-background sticky top-0 z-50 shadow-sm">
       <div className="max-w-[1290px] mx-auto h-full flex items-center justify-between px-4 lg:px-4 relative">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -445,22 +457,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu - Full Page Overlay */}
+      {/* Mobile & Tablet Dropdown Menu Panel */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-background z-50 overflow-y-auto">
-          {/* Close Button */}
-          <div className="flex justify-end p-4">
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-              aria-label="Close menu"
-            >
-              <X className="w-6 h-6 text-foreground" />
-            </button>
-          </div>
-
+        <div className="lg:hidden absolute top-full left-0 right-0 w-full bg-white border-b border-gray-200 shadow-2xl h-[calc(100vh-85px)] overflow-y-auto z-40 custom-scrollbar">
           {/* Menu Content */}
-          <ul className="flex flex-col px-6 pb-6 gap-4">
+          <ul className="flex flex-col px-6 py-6 gap-4">
             {navItems.map((item) => (
               <li key={item.label}>
                 {item.hasMegaMenu ? (
@@ -479,33 +480,48 @@ const Navbar = () => {
                           <li key={cat.title} className="border-b border-gray-50/50 pb-1">
                             <button
                               onClick={() => setMobileActiveCategory(mobileActiveCategory === cat.title ? null : cat.title)}
-                              className="w-full flex items-center justify-between py-2 text-[16px] text-foreground/80 hover:text-primary font-medium text-left"
+                              className="w-full flex items-center justify-between py-2.5 text-[16px] text-foreground/80 hover:text-primary font-medium text-left"
                             >
-                              <span className="truncate flex-1 pr-2">{cat.title}</span>
-                              <ChevronDown className={`w-4 h-4 shrink-0 transition-transform duration-200 ${mobileActiveCategory === cat.title ? 'rotate-180' : ''}`} />
+                              <span className="flex-1 pr-2 text-left leading-snug">{cat.title}</span>
+                              <ChevronDown className={`w-4 h-4 shrink-0 text-gray-500 transition-transform duration-200 ${mobileActiveCategory === cat.title ? 'rotate-180 text-primary' : ''}`} />
                             </button>
                             {mobileActiveCategory === cat.title && (
-                              <ul className="pl-4 mt-1 space-y-1 border-l border-gray-100 pb-2">
-                                {cat.subProducts.map((sub, sIdx) => {
-                                  const subSlug = getSubProductSlug(sub);
-                                  return (
-                                    <li key={sIdx}>
+                              <div className="pl-2 pr-1 py-2 space-y-2 mt-1">
+                                <div className="grid grid-cols-1 gap-1.5">
+                                  {cat.subProducts.map((sub, sIdx) => {
+                                    const subSlug = getSubProductSlug(sub);
+                                    return (
                                       <Link
+                                        key={sIdx}
                                         to={`/products/${cat.slug}#${subSlug}`}
-                                        className="text-sm text-foreground/60 hover:text-primary py-1 flex items-center gap-1.5"
+                                        className="text-xs sm:text-sm text-foreground/70 hover:text-primary py-1 px-1 flex items-center gap-2 font-medium transition-colors"
                                         onClick={() => {
                                           setMobileMenuOpen(false);
                                           setMobileDropdownOpen(false);
                                           setMobileActiveCategory(null);
                                         }}
                                       >
-                                        <span className="text-[#66b036] text-[7px] flex-shrink-0">▶</span>
+                                        <span className="text-[#66b036] text-[8px] flex-shrink-0">▶</span>
                                         <span>{sub}</span>
                                       </Link>
-                                    </li>
-                                  );
-                                })}
-                              </ul>
+                                    );
+                                  })}
+                                </div>
+                                <div className="pt-2 border-t border-gray-200/60 mt-2">
+                                  <Link
+                                    to={cat.href}
+                                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline py-1"
+                                    onClick={() => {
+                                      setMobileMenuOpen(false);
+                                      setMobileDropdownOpen(false);
+                                      setMobileActiveCategory(null);
+                                    }}
+                                  >
+                                    <span>View Category Page</span>
+                                    <span>→</span>
+                                  </Link>
+                                </div>
+                              </div>
                             )}
                           </li>
                         ))}

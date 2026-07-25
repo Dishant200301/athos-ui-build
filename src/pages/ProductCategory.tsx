@@ -1346,7 +1346,7 @@ const ProductCategory = () => {
 
         {/* Content Section */}
         <section ref={containerRef} className="py-12 bg-white lg:py-0 lg:h-[calc(100vh-110px)] lg:flex lg:items-center">
-          <div className="max-w-[1290px] mx-auto px-4 xl:px-4 w-full">
+          <div className="max-w-[1290px] mx-auto px-4 md:px-4 lg:px-10 w-full">
 
             {/* Desktop / Laptop Layout: Side Navigation + Single Active Details */}
             <div className="hidden lg:flex gap-16 items-start relative w-full">
@@ -1402,7 +1402,7 @@ const ProductCategory = () => {
                 {category.subProducts.map((sub) => (
                   <div
                     key={sub.slug}
-                    className="bg-white border border-[#E9ECEF] rounded-[16px] p-6 shadow-sm flex flex-col justify-between"
+                    className="bg-white border border-[#E9ECEF] rounded-[16px] p-4 shadow-sm flex flex-col justify-between"
                   >
                     <div>
                       <h2 className="text-[22px] font-bold text-[#1D7AA3] mb-4 pb-2 border-b border-gray-100">
