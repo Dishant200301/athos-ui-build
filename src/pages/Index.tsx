@@ -61,7 +61,7 @@ const Index = () => {
       <main>
         <HeroSlider />
         <AboutSection />
-        <UniquenessSection />
+        {/* <UniquenessSection /> */}
         <BenefitsSection />
         <ExportSection />
         {/* <CobrandingSection /> */}
