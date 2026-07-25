@@ -30,9 +30,11 @@ const AboutSection = () => {
               Welcome to Athos Collagen Pvt. Ltd.
             </h2>
 
-            <p className="text-base text-athos-text leading-[27px] mb-8">
-             Athos Collagen Pvt. Ltd. is an India-based manufacturer and global supplier of specialty ingredients developed for the nutraceutical, food & beverage, pharmaceutical, personal care, and animal nutrition industries. we serve customers across domestic and international markets with solutions that meet evolving industry requirements.Our focus extends beyond supplying ingredients we strive to build long-term business relationships through transparent communication, reliable deliveries, regulatory compliance, and dedicated customer support. As our product range continues to grow, Athos Collagen remains committed to delivering trusted ingredient solutions that help brands innovate and succeed in competitive global markets.
+            <p className="text-base text-athos-text leading-[27px] mb-4">
+             Athos Collagen Pvt. Ltd. is an India-based manufacturer and global supplier of specialty ingredients developed for the nutraceutical, food & beverage, pharmaceutical, personal care, and animal nutrition industries. we serve customers across domestic and international markets with solutions that meet evolving industry requirements.
             </p>
+            <p className="text-base text-athos-text leading-[27px] mb-4">
+Our focus extends beyond supplying ingredients we strive to build long-term business relationships through transparent communication, reliable deliveries, regulatory compliance, and dedicated customer support. As our product range continues to grow, Athos Collagen remains committed to delivering trusted ingredient solutions that help brands innovate and succeed in competitive global markets.            </p>
 
 
             {/* Lists */}

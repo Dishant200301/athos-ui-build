@@ -89,9 +89,9 @@ const ProductCategoriesSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-[32px] font-bold text-[#1D7AA3] leading-tight mb-4">
-            Benefits of Athos Fish Collagen Peptide
+            Products
           </h2>
-        
+
         </div>
 
         {/* Cards Grid matching screenshot style */}
@@ -99,32 +99,18 @@ const ProductCategoriesSection = () => {
           {categories.map((cat) => (
             <div
               key={cat.slug}
-              className="bg-white border border-[#E9ECEF] rounded-[16px] p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-[16px] p-6 shadow-md transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Heading matching screenshot style */}
-                <h3 className="text-[22px] font-bold text-[#1D7AA3] mb-3 pb-2 border-b border-gray-100 leading-tight">
+                <h3 className="text-[20px] font-bold text-[#1D7AA3] mb-3 pb-2 leading-tight">
                   {cat.title}
                 </h3>
 
-                {/* Paragraph Description */}
-                <p className="text-[14px] text-[#555555] leading-[1.6] mb-4">
-                  {cat.description}
-                </p>
-
-                {/* Bullets with green triangle matching screenshot */}
-                <ul className="space-y-2.5 mb-6">
-                  {cat.bullets.map((bullet, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-[#555555]">
-                      <span className="text-[#66b036] mt-1 text-[10px] flex-shrink-0">▲</span>
-                      <span className="text-[14px] leading-[1.4]">{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
 
               {/* Bottom Category Page Link */}
-              <div className="pt-4 border-t border-gray-100 mt-auto">
+              <div className="">
                 <Link
                   to={cat.href}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-[#1D7AA3] hover:text-[#1D7AA3] transition-colors"
