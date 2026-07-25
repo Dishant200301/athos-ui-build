@@ -56,24 +56,26 @@ const TopHeader = () => {
 
           {/* Dropdown Menu */}
           {isDropdownOpen && (
-            <div className="absolute right-0 top-full bg-white border border-gray-200 rounded-md shadow-[0_4px_12px_rgba(0,0,0,0.1)] min-w-[180px] z-[1000] overflow-hidden py-1">
-              {languages.map((language) => (
-                <button
-                  key={language.code}
-                  onClick={() => handleLanguageSelect(language)}
-                  className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-all duration-200 ${selectedLanguage.code === language.code
-                    ? 'bg-blue-500 text-white'
-                    : 'text-gray-700 hover:bg-gray-50'
-                    }`}
-                >
-                  <img
-                    src={language.flag}
-                    alt={language.name}
-                    className="w-6 h-4 object-cover rounded-sm flex-shrink-0"
-                  />
-                  <span className="font-medium">{language.name}</span>
-                </button>
-              ))}
+            <div className="absolute right-0 top-full pt-1.5 z-[1000]">
+              <div className="bg-white border border-gray-200 rounded-md shadow-[0_4px_12px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden py-1">
+                {languages.map((language) => (
+                  <button
+                    key={language.code}
+                    onClick={() => handleLanguageSelect(language)}
+                    className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-all duration-200 ${selectedLanguage.code === language.code
+                      ? 'bg-blue-500 text-white'
+                      : 'text-gray-700 hover:bg-gray-50'
+                      }`}
+                  >
+                    <img
+                      src={language.flag}
+                      alt={language.name}
+                      className="w-6 h-4 object-cover rounded-sm flex-shrink-0"
+                    />
+                    <span className="font-medium">{language.name}</span>
+                  </button>
+                ))}
+              </div>
             </div>
           )}
         </div>

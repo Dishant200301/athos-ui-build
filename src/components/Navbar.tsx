@@ -359,25 +359,27 @@ const Navbar = () => {
 
             {/* Language Dropdown Menu */}
             {desktopLangOpen && (
-              <div className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-lg shadow-xl min-w-[170px] z-50 overflow-hidden py-2 space-y-0.5">
-                {languages.map((language) => (
-                  <button
-                    key={language.code}
-                    onClick={() => handleLanguageSelect(language)}
-                    className={`w-full flex items-center gap-4 px-4 py-2 text-left transition-all duration-150 ${
-                      selectedLanguage.code === language.code
-                        ? 'bg-[#1d7aa3]/10 text-[#1d7aa3]'
-                        : 'hover:bg-gray-50 text-slate-700'
-                    }`}
-                  >
-                    <span className="text-[12px] font-bold text-slate-400 w-5 flex-shrink-0 tracking-wider">
-                      {language.code}
-                    </span>
-                    <span className="text-[14px] font-semibold text-slate-800">
-                      {language.name}
-                    </span>
-                  </button>
-                ))}
+              <div className="absolute right-0 top-full pt-1.5 z-50">
+                <div className="bg-white border border-gray-200 rounded-lg shadow-xl min-w-[170px] overflow-hidden py-2 space-y-0.5">
+                  {languages.map((language) => (
+                    <button
+                      key={language.code}
+                      onClick={() => handleLanguageSelect(language)}
+                      className={`w-full flex items-center gap-4 px-4 py-2 text-left transition-all duration-150 ${
+                        selectedLanguage.code === language.code
+                          ? 'bg-[#1d7aa3]/10 text-[#1d7aa3]'
+                          : 'hover:bg-gray-50 text-slate-700'
+                      }`}
+                    >
+                      <span className="text-[12px] font-bold text-slate-400 w-5 flex-shrink-0 tracking-wider">
+                        {language.code}
+                      </span>
+                      <span className="text-[14px] font-semibold text-slate-800">
+                        {language.name}
+                      </span>
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
           </div>
