@@ -71,7 +71,7 @@ const productCategories = [
       "SCFE Vanilla Extract",
       "SCFE Holy Basil Oleoresin",
       "SCFE Seabuckthorn Oil",
-      
+
     ]
   }
 ];
@@ -192,46 +192,40 @@ const Navbar = () => {
                     <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                   </button>
                   {/* Mega Menu Dropdown */}
-                  <div 
+                  <div
                     style={{ left: 'calc(50% - 180px)' }}
-                    className={`absolute top-full bg-white border border-gray-200 rounded-xl shadow-2xl transition-all duration-300 z-50 overflow-hidden flex ${
-                      isMegaMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-                    } ${
-                      activeCategory ? "w-[680px]" : "w-[360px]"
-                    }`}
+                    className={`absolute top-full bg-white border border-gray-200 rounded-xl shadow-2xl transition-all duration-300 z-50 overflow-hidden flex ${isMegaMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                      } ${activeCategory ? "w-[680px]" : "w-[360px]"
+                      }`}
                   >
                     {/* Left Column: Categories List */}
-                    <div className={`transition-all duration-300 p-2 space-y-1 ${
-                      activeCategory ? "w-[360px] bg-gray-50/50 border-r border-gray-100" : "w-full bg-white"
-                    }`}>
+                    <div className={`transition-all duration-300 p-2 space-y-1 ${activeCategory ? "w-[360px] bg-gray-50/50 border-r border-gray-100" : "w-full bg-white"
+                      }`}>
                       {productCategories.map((cat) => (
                         <div
                           key={cat.title}
                           onClick={() => setActiveCategory(activeCategory?.title === cat.title ? null : cat)}
-                          className={`flex items-center justify-between px-2.5 py-2 rounded-lg cursor-pointer transition-all duration-200 ${
-                            activeCategory?.title === cat.title
+                          className={`flex items-center justify-between px-2.5 py-2 rounded-lg cursor-pointer transition-all duration-200 ${activeCategory?.title === cat.title
                               ? "bg-[#EDF5F8] text-[#1D7AA3] font-semibold"
                               : "text-black hover:bg-gray-100"
-                          }`}
+                            }`}
                         >
                           <span className="flex-1 text-[13px] flex items-center whitespace-nowrap">
                             {cat.title}
                           </span>
-                          <ChevronRight className={`w-3.5 h-3.5 transition-colors ${
-                            activeCategory?.title === cat.title
+                          <ChevronRight className={`w-3.5 h-3.5 transition-colors ${activeCategory?.title === cat.title
                               ? "text-[#1D7AA3]"
                               : "text-gray-400"
-                          }`} />
+                            }`} />
                         </div>
                       ))}
                     </div>
 
                     {/* Right Column: Subproducts List */}
-                    <div className={`transition-all duration-300 bg-white flex flex-col justify-between ${
-                      activeCategory 
-                        ? "w-[320px] p-5 min-h-[350px] opacity-100 visible" 
+                    <div className={`transition-all duration-300 bg-white flex flex-col justify-between ${activeCategory
+                        ? "w-[320px] p-5 min-h-[350px] opacity-100 visible"
                         : "w-0 p-0 opacity-0 invisible overflow-hidden min-h-0 h-0"
-                    }`}>
+                      }`}>
                       {activeCategory && (() => {
                         const hasMoreThanLimit = activeCategory.subProducts.length > 10;
                         const visibleSubProducts = hasMoreThanLimit && !isSubProductsExpanded
@@ -277,17 +271,17 @@ const Navbar = () => {
                             {/* Mega Menu Footer */}
                             {showCategoryPageButton && (
                               <div className="mt-4 pt-4 border-t border-gray-100 flex justify-start">
-                                  <Link
-                                    to={activeCategory.href}
-                                    onClick={() => {
-                                      setIsMegaMenuOpen(false);
-                                      setActiveCategory(null);
-                                    }}
-                                  >
-                                    <Button className="btn-primary rounded-[6px_0px] text-sm px-4 py-2.5 h-auto font-semibold shadow-sm w-fit">
-                                      View Category Page
-                                    </Button>
-                                  </Link>
+                                <Link
+                                  to={activeCategory.href}
+                                  onClick={() => {
+                                    setIsMegaMenuOpen(false);
+                                    setActiveCategory(null);
+                                  }}
+                                >
+                                  <Button className="btn-primary rounded-[6px_0px] text-sm px-4 py-2.5 h-auto font-semibold shadow-sm w-fit">
+                                    View Category Page
+                                  </Button>
+                                </Link>
                               </div>
                             )}
                           </>
@@ -347,7 +341,7 @@ const Navbar = () => {
           {/* Email Link */}
           <a
             href="mailto:inquiry@athoscollagen.com"
-            className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+            className="flex items-center gap-1.5 text-md text-muted-foreground hover:text-primary transition-colors"
           >
             <Mail className="w-3.5 h-3.5" />
             <span>inquiry@athoscollagen.com</span>
@@ -380,16 +374,15 @@ const Navbar = () => {
                     <button
                       key={language.code}
                       onClick={() => handleLanguageSelect(language)}
-                      className={`w-full flex items-center gap-4 px-4 py-2 text-left transition-all duration-150 ${
-                        selectedLanguage.code === language.code
+                      className={`w-full flex items-center gap-4 px-4 py-2 text-left transition-all duration-150 ${selectedLanguage.code === language.code
                           ? 'bg-[#1d7aa3]/10 text-[#1d7aa3]'
                           : 'hover:bg-gray-50 text-slate-700'
-                      }`}
+                        }`}
                     >
                       <span className="text-[12px] font-bold text-slate-400 w-5 flex-shrink-0 tracking-wider">
                         {language.code}
                       </span>
-                      <span className="text-[14px] font-semibold text-slate-800">
+                      <span className="text-[14px] font-medium text-slate-800">
                         {language.name}
                       </span>
                     </button>
@@ -406,11 +399,11 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setMobileLangDropdownOpen(!mobileLangDropdownOpen)}
-              className="flex items-center gap-1.5 text-xs text-white bg-[#1d7aa3] rounded-md py-1.5 px-2.5"
+              className="flex items-center gap-1.5 text-sm transition-colors py-1.5 px-2 rounded-md hover:bg-gray-100/80 cursor-pointer"
             >
-              <span className="opacity-80 text-[11px]">{selectedLanguage.country}</span>
-              <span className="font-bold">{selectedLanguage.code}</span>
-              <ChevronDown className={`w-3 h-3 transition-transform ${mobileLangDropdownOpen ? 'rotate-180' : ''}`} />
+              <span className="text-gray-500 font-medium text-xs">{selectedLanguage.country}</span>
+              <span className="font-bold text-black text-sm">{selectedLanguage.code}</span>
+              <ChevronDown className={`w-3.5 h-3.5 text-gray-600 transition-transform duration-200 ${mobileLangDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {/* Mobile Language Dropdown */}
@@ -420,16 +413,15 @@ const Navbar = () => {
                   <button
                     key={language.code}
                     onClick={() => handleLanguageSelect(language)}
-                    className={`w-full flex items-center gap-4 px-4 py-2 text-left transition-all duration-150 ${
-                      selectedLanguage.code === language.code
+                    className={`w-full flex items-center gap-4 px-4 py-2 text-left transition-all duration-150 ${selectedLanguage.code === language.code
                         ? 'bg-[#1d7aa3]/10 text-[#1d7aa3]'
                         : 'hover:bg-gray-50 text-slate-700'
-                    }`}
+                      }`}
                   >
                     <span className="text-[12px] font-bold text-slate-400 w-5 flex-shrink-0 tracking-wider">
                       {language.code}
                     </span>
-                    <span className="text-[14px] font-semibold text-slate-800">
+                    <span className="text-[14px] font-medium text-slate-800">
                       {language.name}
                     </span>
                   </button>
@@ -494,7 +486,7 @@ const Navbar = () => {
                             </button>
                             {mobileActiveCategory === cat.title && (
                               <ul className="pl-4 mt-1 space-y-1 border-l border-gray-100 pb-2">
-                                 {cat.subProducts.map((sub, sIdx) => {
+                                {cat.subProducts.map((sub, sIdx) => {
                                   const subSlug = getSubProductSlug(sub);
                                   return (
                                     <li key={sIdx}>

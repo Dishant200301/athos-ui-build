@@ -95,7 +95,7 @@ const ProductCategoriesSection = () => {
         </div>
 
         {/* Cards Grid matching screenshot style */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
           {categories.map((cat) => (
             <div
               key={cat.slug}
@@ -103,12 +103,17 @@ const ProductCategoriesSection = () => {
             >
               <div>
                 {/* Heading matching screenshot style */}
-                <h3 className="text-[22px] font-bold text-[#1D7AA3] mb-4 pb-2 border-b border-gray-100 leading-tight">
+                <h3 className="text-[22px] font-bold text-[#1D7AA3] mb-3 pb-2 border-b border-gray-100 leading-tight">
                   {cat.title}
                 </h3>
 
+                {/* Paragraph Description */}
+                <p className="text-[14px] text-[#555555] leading-[1.6] mb-4">
+                  {cat.description}
+                </p>
+
                 {/* Bullets with green triangle matching screenshot */}
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-2.5 mb-6">
                   {cat.bullets.map((bullet, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 text-[#555555]">
                       <span className="text-[#66b036] mt-1 text-[10px] flex-shrink-0">▲</span>

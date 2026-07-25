@@ -145,7 +145,7 @@ const Footer = () => {
       </footer>
 
       {/* Bottom Bar */}
-      <section className="bg-athos-footer">
+      <section className="bg-[#2684A6]">
         <div className="max-w-[1290px] mx-auto px-4 xl:px-0 h-[43px] flex items-center justify-center">
           <p className="text-sm text-secondary-foreground/80 text-center">
             © {new Date().getFullYear()} Athos Collagen Pvt. Ltd. All rights reserved.
